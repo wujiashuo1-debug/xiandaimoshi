@@ -1,13 +1,13 @@
 {
-  "name": "软件工程刷题 V2",
+  "name": "软件工程刷题 V3",
   "short_name": "软件工程刷题",
-  "description": "手机优先的软件工程章节刷题网站，支持错题本、进度记录和离线缓存。",
+  "description": "桌面端保留章节刷题站逻辑，手机端使用独立移动刷题界面，支持错题本、进度记录和离线缓存。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#f5f7fb",
-  "theme_color": "#101827",
+  "theme_color": "#111827",
   "icons": [
     { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" },
     { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },

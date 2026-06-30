@@ -3,182 +3,278 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#101827" />
+  <meta name="theme-color" content="#111827" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="软件工程刷题" />
-  <title>软件工程刷题 V2｜手机优先版</title>
+  <title>软件工程刷题 V3｜桌面+手机双端版</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="assets/icon-192.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="app" class="app">
-    <header class="topbar">
+  <div class="device-hint">
+    <strong>软件工程刷题 V3</strong>
+    <span>电脑端保留原来的章节列表逻辑；手机端使用独立刷题界面。</span>
+  </div>
+
+  <div id="desktopShell" class="desktop-shell" aria-label="电脑端界面">
+    <aside class="desktop-sidebar">
+      <div class="desktop-brand">
+        <div class="desktop-logo">SE</div>
+        <div>
+          <h1>软件工程刷题站</h1>
+          <p>章节学习 · 刷题 · 错题复盘</p>
+        </div>
+      </div>
+
+      <div class="desktop-stats-card compact">
+        <div><span id="dTotalQuestions">0</span><small>总题数</small></div>
+        <div><span id="dDoneCount">0</span><small>已练</small></div>
+        <div><span id="dAccuracy">0%</span><small>正确率</small></div>
+      </div>
+
+      <label class="field-label" for="dChapterSelect">章节</label>
+      <select id="dChapterSelect"></select>
+      <div id="dChapterList" class="desktop-chapter-list"></div>
+
+      <div class="source-box">
+        <strong>原始资料</strong>
+        <span>题目来自你上传的中文习题册。</span>
+        <a href="assets/software_engineering_question_book.pdf" target="_blank" rel="noopener">打开原 PDF</a>
+      </div>
+    </aside>
+
+    <main class="desktop-main">
+      <header class="desktop-topbar">
+        <div>
+          <p class="eyebrow">Software Engineering Quiz</p>
+          <h2 id="dPageTitle">章节学习</h2>
+        </div>
+        <div class="desktop-search-wrap">
+          <input id="dSearchInput" type="search" placeholder="搜索题干 / 选项 / 答案..." autocomplete="off" />
+        </div>
+      </header>
+
+      <nav class="desktop-tabs" aria-label="电脑端功能切换">
+        <button class="desktop-tab active" data-d-view="learn">学习模式</button>
+        <button class="desktop-tab" data-d-view="practice">刷题模式</button>
+        <button class="desktop-tab" data-d-view="mistakes">错题本</button>
+        <button class="desktop-tab" data-d-view="dashboard">进度总览</button>
+      </nav>
+
+      <section id="dLearnView" class="desktop-view active">
+        <div class="desktop-panel intro-panel">
+          <div>
+            <h3>先学再刷，别硬背答案</h3>
+            <p>电脑端保留 V1 的逻辑：左边选章节，右边批量浏览题目，适合大屏快速复习。</p>
+          </div>
+          <div class="toolbar">
+            <button id="dShowAllAnswers" class="secondary">展开全部答案</button>
+            <button id="dHideAllAnswers" class="secondary">隐藏全部答案</button>
+          </div>
+        </div>
+        <div id="dLearnList" class="desktop-question-list"></div>
+      </section>
+
+      <section id="dPracticeView" class="desktop-view">
+        <div class="desktop-panel practice-settings">
+          <div>
+            <h3>刷题设置</h3>
+            <p>单选、判断、多选自动识别。多选题必须全选正确才算对。</p>
+          </div>
+          <div class="settings-grid">
+            <label><span>题目范围</span><select id="dPracticeScope"></select></label>
+            <label><span>题量</span><select id="dPracticeSize"><option value="10">10题</option><option value="20" selected>20题</option><option value="50">50题</option><option value="all">全部</option></select></label>
+            <label><span>顺序</span><select id="dPracticeOrder"><option value="smart">智能优先</option><option value="random">随机</option><option value="order">原题顺序</option></select></label>
+            <label class="checkbox-line"><input id="dOnlyMistakes" type="checkbox" /> 只刷错题</label>
+          </div>
+          <button id="dStartPractice" class="primary">开始刷题</button>
+        </div>
+
+        <div id="dPracticeBox" class="desktop-practice-box hidden">
+          <div class="practice-head">
+            <div>
+              <strong id="dPracticeProgress">第 1 / 20 题</strong>
+              <span id="dPracticeChapter"></span>
+            </div>
+            <div class="score-pill"><span id="dPracticeScore">0</span> 正确</div>
+          </div>
+          <div class="progress"><div id="dPracticeBar"></div></div>
+          <article id="dPracticeQuestion" class="desktop-question-card large"></article>
+          <div id="dPracticeFeedback" class="desktop-feedback hidden"></div>
+          <div class="practice-actions">
+            <button id="dSubmitAnswer" class="primary">提交答案</button>
+            <button id="dNextQuestion" class="secondary hidden">下一题</button>
+            <button id="dFinishPractice" class="ghost">结束本轮</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="dMistakesView" class="desktop-view">
+        <div class="desktop-panel intro-panel">
+          <div>
+            <h3>错题本</h3>
+            <p>做错自动进入错题本；再次做对会自动移出。这里才是你提分最快的地方。</p>
+          </div>
+          <div class="toolbar">
+            <button id="dRetryMistakes" class="primary">重刷错题</button>
+            <button id="dClearMistakes" class="danger">清空错题</button>
+          </div>
+        </div>
+        <div id="dMistakesList" class="desktop-question-list"></div>
+      </section>
+
+      <section id="dDashboardView" class="desktop-view">
+        <div class="dashboard-grid">
+          <div class="desktop-panel metric"><span id="dMetricTotal">0</span><strong>题库总题数</strong></div>
+          <div class="desktop-panel metric"><span id="dMetricAttempted">0</span><strong>已练题数</strong></div>
+          <div class="desktop-panel metric"><span id="dMetricCorrectRate">0%</span><strong>总体正确率</strong></div>
+          <div class="desktop-panel metric"><span id="dMetricMistakes">0</span><strong>当前错题数</strong></div>
+        </div>
+        <div class="desktop-panel">
+          <h3>章节掌握情况</h3>
+          <div id="dChapterProgress" class="chapter-progress"></div>
+        </div>
+        <div class="desktop-panel">
+          <h3>学习记录</h3>
+          <p class="muted">记录保存在浏览器本地。手机和电脑是不同浏览器，进度不会自动同步，可以用导出/导入迁移。</p>
+          <div class="toolbar">
+            <button id="dExportProgress" class="secondary">导出记录 JSON</button>
+            <label class="desktop-file-label secondary">导入记录 JSON<input id="dImportProgress" type="file" accept="application/json" /></label>
+            <button id="dResetProgress" class="danger">重置全部记录</button>
+          </div>
+          <textarea id="dExportBox" class="export-box" readonly placeholder="导出的记录会显示在这里"></textarea>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="mobileShell" class="mobile-shell" aria-label="手机端界面">
+    <header class="mobile-header">
       <div>
         <p class="eyebrow">Software Engineering</p>
-        <h1 id="screenTitle">软件工程刷题</h1>
+        <h1 id="mTitle">章节</h1>
       </div>
-      <button id="installBtn" class="ghost-btn install-btn" hidden>添加到桌面</button>
+      <button id="mInstallBtn" class="mobile-ghost" hidden>添加到桌面</button>
     </header>
 
-    <main class="content">
-      <section id="homeView" class="view active" aria-label="首页">
-        <div class="hero-card">
+    <main class="mobile-main">
+      <section id="mChaptersView" class="mobile-view active">
+        <div class="mobile-hero">
           <div>
-            <p class="eyebrow">V2 手机优先版</p>
-            <h2>按章节刷题，错题自动回炉。</h2>
-            <p class="muted">一次只看一道题，少滑动，少干扰，更适合考前手机复习。</p>
+            <h2>今天别乱刷，按章节推进。</h2>
+            <p>手机端重新做了逻辑：先选章节，再选择“学习”或“刷题”，减少来回跳。</p>
           </div>
-          <div class="hero-actions">
-            <button id="continueBtn" class="primary-btn">继续学习</button>
-            <button id="quickQuizBtn" class="secondary-btn">快速刷题</button>
+          <div class="mobile-quick-row">
+            <button id="mContinueStudy" class="mobile-primary">继续学习</button>
+            <button id="mQuickTen" class="mobile-secondary">10题速刷</button>
           </div>
         </div>
 
-        <div class="stat-grid compact">
-          <div class="stat-card"><span id="homeTotal">0</span><small>题目总数</small></div>
-          <div class="stat-card"><span id="homeDone">0</span><small>已练题数</small></div>
-          <div class="stat-card"><span id="homeAccuracy">0%</span><small>总正确率</small></div>
-          <div class="stat-card danger"><span id="homeMistakes">0</span><small>错题数量</small></div>
+        <div class="mobile-stats-grid">
+          <div><strong id="mTotal">0</strong><span>总题</span></div>
+          <div><strong id="mDone">0</strong><span>已练</span></div>
+          <div><strong id="mAcc">0%</strong><span>正确率</span></div>
+          <div><strong id="mWrong">0</strong><span>错题</span></div>
         </div>
 
-        <div class="section-head">
-          <h2>章节</h2>
-          <button id="homeSearchToggle" class="ghost-btn">搜索</button>
+        <div class="mobile-search-card">
+          <input id="mSearch" type="search" placeholder="搜题目关键词，例如：螺旋模型 / 黑盒测试" autocomplete="off" />
         </div>
-        <div id="homeSearchWrap" class="search-wrap hidden">
-          <input id="globalSearch" type="search" placeholder="搜索题干、选项、答案关键词" autocomplete="off" />
-        </div>
-        <div id="chapterCards" class="chapter-grid"></div>
+
+        <div id="mChapterCards" class="mobile-chapter-list"></div>
       </section>
 
-      <section id="studyView" class="view" aria-label="学习">
-        <div class="control-card sticky-control">
+      <section id="mStudyView" class="mobile-view">
+        <div class="mobile-control-card">
           <label>
-            <span>章节</span>
-            <select id="studyChapter"></select>
+            <span>当前章节</span>
+            <select id="mStudyChapter"></select>
           </label>
           <label>
-            <span>检索</span>
-            <input id="studySearch" type="search" placeholder="当前章节内搜索" autocomplete="off" />
+            <span>章节内搜索</span>
+            <input id="mStudySearch" type="search" placeholder="只搜当前学习范围" autocomplete="off" />
           </label>
         </div>
 
-        <div class="progress-strip">
-          <span id="studyCounter">0 / 0</span>
-          <div class="progress-track"><div id="studyProgressBar" class="progress-fill"></div></div>
+        <div class="mobile-progress-line">
+          <span id="mStudyCounter">0/0</span>
+          <div><i id="mStudyBar"></i></div>
         </div>
 
-        <article id="studyCard" class="question-card"></article>
-
-        <div class="bottom-actions in-flow">
-          <button id="prevStudy" class="secondary-btn">上一题</button>
-          <button id="toggleStudyAnswer" class="primary-btn">看答案</button>
-          <button id="nextStudy" class="secondary-btn">下一题</button>
-        </div>
+        <article id="mStudyCard" class="mobile-question-card"></article>
       </section>
 
-      <section id="quizView" class="view" aria-label="刷题">
-        <div id="quizSetup" class="setup-card">
+      <section id="mQuizView" class="mobile-view">
+        <div id="mQuizSetup" class="mobile-setup-card">
           <p class="eyebrow">Practice</p>
-          <h2>开始一组练习</h2>
-          <div class="form-grid">
-            <label>
-              <span>范围</span>
-              <select id="quizScope"></select>
-            </label>
-            <label>
-              <span>题量</span>
-              <select id="quizCount">
-                <option value="10">10 题</option>
-                <option value="20">20 题</option>
-                <option value="30">30 题</option>
-                <option value="9999">全部</option>
-              </select>
-            </label>
-            <label>
-              <span>顺序</span>
-              <select id="quizOrder">
-                <option value="smart">智能优先：错题 + 未练</option>
-                <option value="random">随机</option>
-                <option value="order">按原顺序</option>
-              </select>
-            </label>
-            <label class="switch-row">
-              <input id="instantFeedback" type="checkbox" checked />
-              <span>提交后立即看答案</span>
-            </label>
-          </div>
-          <button id="startQuiz" class="primary-btn wide">开始刷题</button>
+          <h2>开一组练习</h2>
+          <p class="muted">手机端不要搞复杂：选范围、选题量、开始。提交后立即告诉你错在哪。</p>
+          <label><span>范围</span><select id="mQuizScope"></select></label>
+          <label><span>题量</span><select id="mQuizCount"><option value="10">10 题</option><option value="20">20 题</option><option value="30">30 题</option><option value="9999">全部</option></select></label>
+          <label><span>顺序</span><select id="mQuizOrder"><option value="smart">智能优先：错题 + 未练</option><option value="random">随机</option><option value="order">原题顺序</option></select></label>
+          <button id="mStartQuiz" class="mobile-primary wide">开始刷题</button>
         </div>
 
-        <div id="quizPanel" class="quiz-panel hidden">
-          <div class="quiz-topline">
-            <button id="quitQuiz" class="ghost-btn">退出</button>
-            <span id="quizCounter">0 / 0</span>
+        <div id="mQuizPanel" class="mobile-quiz-panel hidden">
+          <div class="mobile-quiz-top">
+            <button id="mQuitQuiz" class="mobile-ghost">退出</button>
+            <strong id="mQuizCounter">1/10</strong>
+            <span id="mQuizScore">0 对</span>
           </div>
-          <div class="progress-track"><div id="quizProgressBar" class="progress-fill"></div></div>
-          <article id="quizCard" class="question-card"></article>
-          <div id="quizFeedback" class="feedback hidden"></div>
-          <div class="bottom-actions in-flow">
-            <button id="submitQuiz" class="primary-btn wide">提交答案</button>
-            <button id="nextQuiz" class="secondary-btn wide hidden">下一题</button>
-          </div>
+          <div class="mobile-progress-line compact"><div><i id="mQuizBar"></i></div></div>
+          <article id="mQuizCard" class="mobile-question-card quiz"></article>
+          <div id="mQuizFeedback" class="mobile-feedback hidden"></div>
         </div>
       </section>
 
-      <section id="mistakeView" class="view" aria-label="错题">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Mistakes</p>
-            <h2>错题本</h2>
-          </div>
-          <button id="retryMistakes" class="primary-btn small">重刷错题</button>
+      <section id="mMineView" class="mobile-view">
+        <div class="mobile-stats-grid big">
+          <div><strong id="mDashDone">0</strong><span>已练</span></div>
+          <div><strong id="mDashMastered">0</strong><span>掌握</span></div>
+          <div><strong id="mDashAcc">0%</strong><span>正确率</span></div>
+          <div><strong id="mDashWrong">0</strong><span>错题</span></div>
         </div>
-        <div id="mistakeList" class="card-list"></div>
-        <button id="clearMistakes" class="ghost-btn wide danger-text">清空错题本</button>
-      </section>
 
-      <section id="progressView" class="view" aria-label="进度">
-        <div class="stat-grid">
-          <div class="stat-card"><span id="dashAttempted">0</span><small>已练题</small></div>
-          <div class="stat-card"><span id="dashMastered">0</span><small>已掌握</small></div>
-          <div class="stat-card"><span id="dashAccuracy">0%</span><small>正确率</small></div>
-          <div class="stat-card danger"><span id="dashMistakes">0</span><small>错题</small></div>
+        <div class="mobile-section-head">
+          <h2>错题回炉</h2>
+          <button id="mRetryMistakes" class="mobile-primary small">重刷</button>
         </div>
-        <div class="section-head"><h2>章节进度</h2></div>
-        <div id="chapterProgress" class="progress-list"></div>
+        <div id="mMistakeList" class="mobile-mini-list"></div>
 
-        <div class="tool-card">
-          <h2>工具</h2>
-          <button id="exportData" class="secondary-btn wide">导出学习记录</button>
-          <label class="file-btn wide">
-            导入学习记录
-            <input id="importData" type="file" accept="application/json" />
-          </label>
-          <a class="secondary-btn wide link-btn" href="assets/software_engineering_question_book.pdf" target="_blank" rel="noopener">打开原始 PDF</a>
-          <button id="resetData" class="ghost-btn wide danger-text">重置全部记录</button>
+        <div class="mobile-section-head"><h2>章节进度</h2></div>
+        <div id="mProgressList" class="mobile-progress-list"></div>
+
+        <div class="mobile-tool-card">
+          <a href="assets/software_engineering_question_book.pdf" target="_blank" rel="noopener" class="mobile-secondary wide as-link">打开原 PDF</a>
+          <button id="mExportData" class="mobile-secondary wide">导出学习记录</button>
+          <label class="mobile-file wide">导入学习记录<input id="mImportData" type="file" accept="application/json" /></label>
+          <button id="mResetData" class="mobile-ghost danger-text wide">重置全部记录</button>
         </div>
       </section>
     </main>
 
-    <nav class="bottom-nav" aria-label="底部导航">
-      <button class="nav-btn active" data-view="home"><span>⌂</span><small>首页</small></button>
-      <button class="nav-btn" data-view="study"><span>◫</span><small>学习</small></button>
-      <button class="nav-btn" data-view="quiz"><span>✓</span><small>刷题</small></button>
-      <button class="nav-btn" data-view="mistake"><span>!</span><small>错题</small></button>
-      <button class="nav-btn" data-view="progress"><span>↗</span><small>进度</small></button>
+    <div id="mStudyActionBar" class="mobile-action-bar hidden">
+      <button id="mPrevStudy" class="mobile-secondary">上一题</button>
+      <button id="mToggleStudyAnswer" class="mobile-primary">看答案</button>
+      <button id="mNextStudy" class="mobile-secondary">下一题</button>
+    </div>
+
+    <div id="mQuizActionBar" class="mobile-action-bar hidden single">
+      <button id="mQuizMainAction" class="mobile-primary wide">提交答案</button>
+    </div>
+
+    <nav class="mobile-bottom-nav" aria-label="手机底部导航">
+      <button class="m-nav active" data-m-view="chapters"><span>章</span><small>章节</small></button>
+      <button class="m-nav" data-m-view="study"><span>学</span><small>学习</small></button>
+      <button class="m-nav" data-m-view="quiz"><span>刷</span><small>刷题</small></button>
+      <button class="m-nav" data-m-view="mine"><span>我</span><small>我的</small></button>
     </nav>
   </div>
 
-  <template id="emptyTemplate">
-    <div class="empty-card">
-      <strong>这里暂时没有内容</strong>
-      <p class="muted">换个章节或先做几道题。</p>
-    </div>
-  </template>
+  <div id="toast" class="toast hidden"></div>
 
   <script src="questions.js"></script>
   <script src="app.js"></script>
