@@ -1,8 +1,1 @@
-打开方式：
-
-1. 解压整个压缩包。
-2. 双击 index.html 即可使用。
-
-如果要部署到 GitHub Pages：
-- 只上传本文件夹里面的内容，不要把 software_engineering_quiz_site_v3 这个外层文件夹整体拖进去。
-- GitHub 仓库首页必须直接看到 index.html。
+软件工程刷题网站 V4：带简短解析。电脑端保留 V1/V3 逻辑，手机端独立优化。部署 GitHub Pages 时请把本文件夹里面的所有文件放到仓库根目录，确保 index.html 在最外层。

@@ -24,7 +24,8 @@ window.QUESTION_BANK = [
         "text": "为什么不能在交付软件前消除软件错误？"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "软件工程早期受硬件成本限制很大，但现在硬件成本不再是主要矛盾；真正难的是软件开发周期、成本、质量和缺陷控制。"
   },
   {
     "id": "Q002",
@@ -51,7 +52,8 @@ window.QUESTION_BANK = [
         "text": "软件备件难以得到"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "软件不会像机器零件那样“磨损”。它退化通常是因为不断修改，修改之间发生冲突，引入新的错误。"
   },
   {
     "id": "Q003",
@@ -78,7 +80,8 @@ window.QUESTION_BANK = [
         "text": "许多应用领域没有现成的备用供应软件构件。"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "很多领域业务规则很特殊，市面上没有现成构件可以直接拼出来，所以仍需要大量定制开发。"
   },
   {
     "id": "Q004",
@@ -105,7 +108,8 @@ window.QUESTION_BANK = [
         "text": "文档"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "软件通常由程序、数据和文档组成；商业策划属于项目/商业活动，不是软件产品本身的组成部分。"
   },
   {
     "id": "Q005",
@@ -132,7 +136,8 @@ window.QUESTION_BANK = [
         "text": "以上都不是"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "实际软件失效曲线一般在修改维护后会出现新的错误尖峰，而不是像硬件那样单纯磨损上升；此题图形选项需对照原 PDF。"
   },
   {
     "id": "Q006",
@@ -163,7 +168,8 @@ window.QUESTION_BANK = [
         "text": "软件开发和维护的方法不正确"
       }
     ],
-    "answer": "CE"
+    "answer": "CE",
+    "explanation": "软件危机不是简单怪程序员，而是软件本身复杂、易变，再加上传统开发维护方法不成熟导致成本、进度和质量失控。"
   },
   {
     "id": "Q007",
@@ -190,7 +196,8 @@ window.QUESTION_BANK = [
         "text": "文档"
       }
     ],
-    "answer": "BCD"
+    "answer": "BCD",
+    "explanation": "软件产品本体包括可执行程序、运行所需数据和说明文档；商业策划不是软件本体。"
   },
   {
     "id": "Q008",
@@ -217,7 +224,8 @@ window.QUESTION_BANK = [
         "text": "软件和硬件一样是被制造出来的"
       }
     ],
-    "answer": "ABC"
+    "answer": "ABC",
+    "explanation": "软件是逻辑产品，可定制、复杂、不会物理磨损但会因修改而退化；“像硬件一样制造出来”不准确。"
   },
   {
     "id": "Q009",
@@ -244,7 +252,8 @@ window.QUESTION_BANK = [
         "text": "软件没有适当的文档资料、开发生产率低也属于软件危机的典型表现"
       }
     ],
-    "answer": "ABD"
+    "answer": "ABD",
+    "explanation": "软件危机指开发维护中一系列系统性问题，包括质量不可靠、文档缺失、效率低、成本和进度失控；不是只等于功能没实现。"
   },
   {
     "id": "Q010",
@@ -263,7 +272,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "大多数系统上线后还会继续演化，例如增加功能、适配环境、修复问题，所以生命周期内通常需要增强。"
   },
   {
     "id": "Q011",
@@ -282,7 +292,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "T"
+    "answer": "T",
+    "explanation": "变化是软件生命周期常态。如果设计时没有为变化留接口和结构，后期修改会很痛苦。"
   },
   {
     "id": "Q012",
@@ -301,7 +312,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "T"
+    "answer": "T",
+    "explanation": "软件是否成功，关键看实际行为是否满足设计目标和用户期望；不是只看代码是否能运行。"
   },
   {
     "id": "Q013",
@@ -328,7 +340,8 @@ window.QUESTION_BANK = [
         "text": "工具"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "软件工程通常讲过程、方法、工具和质量关注点，“制造”是硬件生产语境，不是软件工程层次。"
   },
   {
     "id": "Q014",
@@ -355,7 +368,8 @@ window.QUESTION_BANK = [
         "text": "分析、规划、设计、编程、测试"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "通用框架活动按大方向可理解为：先沟通需求，再计划，再建模，再构建，最后部署交付。"
   },
   {
     "id": "Q015",
@@ -382,7 +396,8 @@ window.QUESTION_BANK = [
         "text": "广泛使用原型创建"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "敏捷不是不计划、不写文档，而是强调面对变化时能快速调整，所以核心是机动性和适应性。"
   },
   {
     "id": "Q016",
@@ -417,7 +432,8 @@ window.QUESTION_BANK = [
         "text": "全部正确"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "CMM/CMMI 常见等级包括已执行/初始、已管理、已定义、定量管理和优化，题中各项都属于成熟度层级口径。"
   },
   {
     "id": "Q017",
@@ -444,7 +460,8 @@ window.QUESTION_BANK = [
         "text": "从业者有权控制软件工作产品的质量"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "PSP 强调个人自我估算、自我度量和自我质量控制，不是靠项目经理时时监督。"
   },
   {
     "id": "Q018",
@@ -475,7 +492,8 @@ window.QUESTION_BANK = [
         "text": "已优化级"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "“已管理级”意味着基本项目管理已经建立，可以管理成本、进度和需求等。"
   },
   {
     "id": "Q019",
@@ -494,7 +512,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "保护性活动如质量保证、配置管理、度量和评审贯穿整个软件过程，不只发生在开始阶段。"
   },
   {
     "id": "Q020",
@@ -513,7 +532,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "T"
+    "answer": "T",
+    "explanation": "软件过程不是死模板，可以根据项目规模、风险、团队和需求特点进行裁剪和重构。"
   },
   {
     "id": "Q021",
@@ -540,7 +560,8 @@ window.QUESTION_BANK = [
         "text": "不能在现代环境中使用的老式模型。"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "线性顺序/瀑布模型适合需求稳定清楚的项目，因为它要求阶段按顺序推进。"
   },
   {
     "id": "Q022",
@@ -571,7 +592,8 @@ window.QUESTION_BANK = [
         "text": "A 和D"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "线性顺序模型也叫经典生命周期模型，也常被称为瀑布模型。"
   },
   {
     "id": "Q023",
@@ -598,7 +620,8 @@ window.QUESTION_BANK = [
         "text": "不用于商业产品的革命性模型。"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "增量模型先做核心功能，再一批批扩展，适合需要尽快交付可用核心产品的场景。"
   },
   {
     "id": "Q024",
@@ -625,7 +648,8 @@ window.QUESTION_BANK = [
         "text": "以上全是"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "RAD 可以理解为强调快速构建和交付的高速版线性顺序模型。"
   },
   {
     "id": "Q025",
@@ -652,7 +676,8 @@ window.QUESTION_BANK = [
         "text": "以上全是"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "演化模型通过迭代逐步完善，能适应需求变化，也通常不会一次性做出完全废弃的大系统。"
   },
   {
     "id": "Q026",
@@ -679,7 +704,8 @@ window.QUESTION_BANK = [
         "text": "很少生产有意义的产品的风险模型。"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "原型模型适合客户说不清需求时，先做一个样品帮助双方澄清需求。"
   },
   {
     "id": "Q027",
@@ -706,7 +732,8 @@ window.QUESTION_BANK = [
         "text": "以上全是"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "螺旋模型每轮都包含风险分析，适合大型、高风险、需求不完全明确的项目。"
   },
   {
     "id": "Q028",
@@ -733,7 +760,8 @@ window.QUESTION_BANK = [
         "text": "在预期有大量变更请求时使用。"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "并行开发可把多个构件并行推进，常见于客户机/服务器等可分解结构的系统。"
   },
   {
     "id": "Q029",
@@ -760,7 +788,8 @@ window.QUESTION_BANK = [
         "text": "以上全是"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "形式化方法用数学来描述规格、推导实现和验证正确性，因此三项都符合。"
   },
   {
     "id": "Q030",
@@ -787,7 +816,8 @@ window.QUESTION_BANK = [
         "text": "验证阶段"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "统一过程常见阶段是初始、细化、构建、移交；“验证阶段”不是它的标准阶段名。"
   },
   {
     "id": "Q031",
@@ -806,7 +836,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "T"
+    "answer": "T",
+    "explanation": "统一过程是迭代式的，需求不会只在一个阶段一次性冻结，而会跨阶段逐步明确。"
   },
   {
     "id": "Q032",
@@ -833,7 +864,8 @@ window.QUESTION_BANK = [
         "text": "在增量模型中，软件项目在开发早期通常对软件需求的认识是模糊的、不确定的"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "航天、财务等高可靠系统不能只依赖原型试错，需求和验证必须更严格；题目问“不正确”，所以选它。"
   },
   {
     "id": "Q033",
@@ -860,7 +892,8 @@ window.QUESTION_BANK = [
         "text": "每个阶段开始时的任务是确定该阶段的目标、为完成这些目标选择方案及设定这些方案 的约束条件。"
       }
     ],
-    "answer": "ABCD"
+    "answer": "ABCD",
+    "explanation": "螺旋模型的本质是“目标—方案—风险—开发—计划”的循环，尤其适合不确定性和风险较高的大型项目。"
   },
   {
     "id": "Q034",
@@ -887,7 +920,8 @@ window.QUESTION_BANK = [
         "text": "RSD"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "XP、Scrum、ASD 都是敏捷相关方法；RSD 不是常见敏捷过程模型。"
   },
   {
     "id": "Q035",
@@ -914,7 +948,8 @@ window.QUESTION_BANK = [
         "text": "RSD"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "结对编程是 XP 的典型实践，两个人共同写代码、即时评审。"
   },
   {
     "id": "Q036",
@@ -941,7 +976,8 @@ window.QUESTION_BANK = [
         "text": "强调协作以收集需求。"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "XP 更强调编码实践、持续测试、小版本交付；“协作收集需求”更像通用需求工程，不是 XP 的特征点。"
   },
   {
     "id": "Q037",
@@ -968,7 +1004,8 @@ window.QUESTION_BANK = [
         "text": "Agile 方法可能最适合大中型业务系统或PC 产品。"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "敏捷通常更适合需求变化快、规模较小到中等、可迭代交付的项目；说它最适合大中型业务系统或 PC 产品过于绝对。"
   },
   {
     "id": "Q038",
@@ -995,7 +1032,8 @@ window.QUESTION_BANK = [
         "text": "DSDM"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "DSDM 强调时间盒和优先级，常用 80/20 的帕累托思想：先抓最有价值的功能。"
   },
   {
     "id": "Q039",
@@ -1022,7 +1060,8 @@ window.QUESTION_BANK = [
         "text": "DSDM"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "每天站会、沟通最大化、时间紧张下快速迭代，是 Scrum 的典型特征。"
   },
   {
     "id": "Q040",
@@ -1049,7 +1088,8 @@ window.QUESTION_BANK = [
         "text": "DSDM"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "ASD 即自适应软件开发，强调协作、自组织、学习和反思。"
   },
   {
     "id": "Q041",
@@ -1076,7 +1116,8 @@ window.QUESTION_BANK = [
         "text": "敏捷建模"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "敏捷建模强调“够用就好”的多模型建模，不追求一次性建完整大模型。"
   },
   {
     "id": "Q042",
@@ -1103,7 +1144,8 @@ window.QUESTION_BANK = [
         "text": "瀑布模型"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "按题库口径，本题把 Crystal 作为不属于轻量级方法的选项处理；考试时以题库答案为准。"
   },
   {
     "id": "Q043",
@@ -1134,7 +1176,8 @@ window.QUESTION_BANK = [
         "text": "A、B 和C"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "项目启动要搞清楚基本问题、解决方案性质和利益相关者，不是直接开始写代码。"
   },
   {
     "id": "Q044",
@@ -1165,7 +1208,8 @@ window.QUESTION_BANK = [
         "text": "B,C 和D"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "需求获取难在范围不清、理解不一致、需求会变化；预算问题重要，但不是这里的三个经典障碍。"
   },
   {
     "id": "Q045",
@@ -1192,7 +1236,8 @@ window.QUESTION_BANK = [
         "text": "所有上述问题"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "需求精化后的分析模型要描述信息、功能和行为三个方面。"
   },
   {
     "id": "Q046",
@@ -1219,7 +1264,8 @@ window.QUESTION_BANK = [
         "text": "系统仿真所需的时间"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "SRS 描述系统要做什么、性能如何、受什么约束，而不是说明每个功能怎么实现。"
   },
   {
     "id": "Q047",
@@ -1246,7 +1292,8 @@ window.QUESTION_BANK = [
         "text": "通过问题清单逐个检查每个需求"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "需求评审不能凭感觉扫一眼，最好按检查清单逐条检查完整性、一致性、可验证性等。"
   },
   {
     "id": "Q048",
@@ -1273,7 +1320,8 @@ window.QUESTION_BANK = [
         "text": "以上都不对"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "需求追溯表把需求和设计、代码、测试关联起来，方便跟踪需求变更影响。"
   },
   {
     "id": "Q049",
@@ -1300,7 +1348,8 @@ window.QUESTION_BANK = [
         "text": "谁将使用该解决方案？"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "上下文无关问题是为了理解业务目标、付款者、使用者等，“谁反对项目”不是典型启动问题。"
   },
   {
     "id": "Q050",
@@ -1327,7 +1376,8 @@ window.QUESTION_BANK = [
         "text": "必须是外部人员"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "协作需求收集中的主持人负责控制节奏、协调讨论、防止会议跑偏。"
   },
   {
     "id": "Q051",
@@ -1354,7 +1404,8 @@ window.QUESTION_BANK = [
         "text": "正常需求"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "QFD 常见分类是正常需求、期望需求、令人兴奋的需求；“强制需求”不是这个分类中的标准名称。"
   },
   {
     "id": "Q052",
@@ -1381,7 +1432,8 @@ window.QUESTION_BANK = [
         "text": "项目共利益者的需求"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "需求获取产物会随产品规模变化，小系统可能很轻量，大系统需要更正式的文档和模型。"
   },
   {
     "id": "Q053",
@@ -1408,7 +1460,8 @@ window.QUESTION_BANK = [
         "text": "状态图"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "活动图、类图、状态图属于 UML；数据流图不是 UML 图。"
   },
   {
     "id": "Q054",
@@ -1435,7 +1488,8 @@ window.QUESTION_BANK = [
         "text": "领域需求"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "系统需求包括功能、非功能和领域需求；用户需求是另一层次的需求描述，不属于系统需求内部分类。"
   },
   {
     "id": "Q055",
@@ -1462,7 +1516,8 @@ window.QUESTION_BANK = [
         "text": "功能需求"
       }
     ],
-    "answer": "ABC"
+    "answer": "ABC",
+    "explanation": "软件需求可按层次理解为业务需求、用户需求和系统需求；功能需求只是系统需求中的一种。"
   },
   {
     "id": "Q056",
@@ -1481,7 +1536,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "需求工程要按项目规模、领域、风险和团队裁剪，不同项目不可能完全一样。"
   },
   {
     "id": "Q057",
@@ -1500,7 +1556,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "T"
+    "answer": "T",
+    "explanation": "不同利益相关者目标不同，需求冲突很正常，需求工程要做协调和取舍。"
   },
   {
     "id": "Q058",
@@ -1519,7 +1576,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "协作不是“大家必须一致投票通过”，而是共同发现、澄清、协商需求。"
   },
   {
     "id": "Q059",
@@ -1538,7 +1596,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "需求工程师不只是分类信息，还要促进沟通、建模、验证、管理变更。"
   },
   {
     "id": "Q060",
@@ -1557,7 +1616,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "利益相关者不只包括购买者，还包括用户、客户、开发者、维护者、管理者和受系统影响的人。"
   },
   {
     "id": "Q061",
@@ -1576,7 +1636,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "用例通常由开发人员和用户/客户共同创建，但目的不只是“了解功能”，还要描述参与者和系统的交互场景；题库按原句处理为错。"
   },
   {
     "id": "Q062",
@@ -1595,7 +1656,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "用例参与者可以是人，也可以是外部系统、设备或其他组织。"
   },
   {
     "id": "Q063",
@@ -1614,7 +1676,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "分析模型描述问题，不负责给常见问题提供设计解决方案；解决方案模式属于设计阶段。"
   },
   {
     "id": "Q064",
@@ -1633,7 +1696,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "双赢谈判要求双方关键利益都被照顾，不能只满足客户而牺牲开发者。"
   },
   {
     "id": "Q065",
@@ -1652,7 +1716,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "需求评审不仅看技术可行性，还要看需求是否清晰、完整、一致、可验证、可追踪。"
   },
   {
     "id": "Q066",
@@ -1679,7 +1744,8 @@ window.QUESTION_BANK = [
         "text": "为软件设计建立基础"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "分析模型的目标是描述需求和问题域、为设计打基础，不是直接构建解决方案。"
   },
   {
     "id": "Q067",
@@ -1710,7 +1776,8 @@ window.QUESTION_BANK = [
         "text": "A 和B"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "数据字典记录数据对象、控制项等定义，相当于模型中术语和数据的说明书。"
   },
   {
     "id": "Q068",
@@ -1737,7 +1804,8 @@ window.QUESTION_BANK = [
         "text": "基于场景的元素"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "面向对象分析模型常见元素包括场景、类、行为等；“数据要素”不是其标准元素名。"
   },
   {
     "id": "Q069",
@@ -1768,7 +1836,8 @@ window.QUESTION_BANK = [
         "text": "A 和C"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "数据模型关系重点看基数和形态，例如一对一、一对多、多对多。"
   },
   {
     "id": "Q070",
@@ -1795,7 +1864,8 @@ window.QUESTION_BANK = [
         "text": "表示系统对外部事件的反应"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "ER 图就是实体—关系图，用来描述数据对象之间的关系。"
   },
   {
     "id": "Q071",
@@ -1818,7 +1888,8 @@ window.QUESTION_BANK = [
         "text": "超类"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "类就是对一组具有相似属性和行为的对象的抽象。"
   },
   {
     "id": "Q072",
@@ -1845,7 +1916,8 @@ window.QUESTION_BANK = [
         "text": "基于场景的元素"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "活动图能描述某个场景或用例中的活动流程，所以常用于基于场景的分析。"
   },
   {
     "id": "Q073",
@@ -1876,7 +1948,8 @@ window.QUESTION_BANK = [
         "text": "B 和C"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "数据流图描述数据如何流动，以及数据经过哪些加工/转换。"
   },
   {
     "id": "Q074",
@@ -1907,7 +1980,8 @@ window.QUESTION_BANK = [
         "text": "A 和D"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "控制流图适合事件驱动、实时系统，强调控制事件而不是普通数据。"
   },
   {
     "id": "Q075",
@@ -1934,7 +2008,8 @@ window.QUESTION_BANK = [
         "text": "以上所有"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "候选对象可以来自人、地点、事件、结构、设备等问题空间名词。"
   },
   {
     "id": "Q076",
@@ -1965,7 +2040,8 @@ window.QUESTION_BANK = [
         "text": "请求对象状态"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "对象操作常见类别包括计算、数据操作、事件监控、状态请求等；数据转换不属于该分类口径。"
   },
   {
     "id": "Q077",
@@ -1992,7 +2068,8 @@ window.QUESTION_BANK = [
         "text": "类职责"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "CRC 卡写类名、职责和协作者，不写“类可靠性”。"
   },
   {
     "id": "Q078",
@@ -2019,7 +2096,8 @@ window.QUESTION_BANK = [
         "text": "它的属性和操作"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "类的职责体现为它知道什么和能做什么，也就是属性和操作。"
   },
   {
     "id": "Q079",
@@ -2046,7 +2124,8 @@ window.QUESTION_BANK = [
         "text": "以上所有"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "参与者交互、操作调用、对象消息传递都可能触发事件。"
   },
   {
     "id": "Q080",
@@ -2073,7 +2152,8 @@ window.QUESTION_BANK = [
         "text": "表示系统对外部事件的反应"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "状态图描述对象或系统面对事件时状态如何变化。"
   },
   {
     "id": "Q081",
@@ -2100,7 +2180,8 @@ window.QUESTION_BANK = [
         "text": "可观察的行为模式"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "行为建模里的状态是可观察的行为模式，例如“待审核”“已发布”。"
   },
   {
     "id": "Q082",
@@ -2119,7 +2200,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "域分析不只是“发现可重用类”，还包括发现可复用分析模式、信息和领域概念。"
   },
   {
     "id": "Q083",
@@ -2138,7 +2220,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "分析模型要描述问题域中的重要数据对象，不只限于最后会被类实现的实体。"
   },
   {
     "id": "Q084",
@@ -2157,7 +2240,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "对象唯一性来自对象标识，不是靠属性值；两个对象可能属性值一样但仍是不同对象。"
   },
   {
     "id": "Q085",
@@ -2176,7 +2260,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "严格说，操作是对象提供的服务规约，真正被调用执行的是方法/过程实现；题库按此区分为错。"
   },
   {
     "id": "Q086",
@@ -2195,7 +2280,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "使用场景有时用文字就够，不一定每次都画图。"
   },
   {
     "id": "Q087",
@@ -2214,7 +2300,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "DFD 只画流和加工不够，功能需求还需要文字补充说明细节和约束。"
   },
   {
     "id": "Q088",
@@ -2233,7 +2320,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "类的属性可以在分析阶段初步识别，不必等到设计完全结束。"
   },
   {
     "id": "Q089",
@@ -2252,7 +2340,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "分析包用于把相关分析元素分组，方便组织和理解大模型。"
   },
   {
     "id": "Q090",
@@ -2283,7 +2372,8 @@ window.QUESTION_BANK = [
         "text": "A, B, C"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "设计模型关注架构、数据、接口和构件等，项目范围主要属于需求/管理层面。"
   },
   {
     "id": "Q091",
@@ -2310,7 +2400,8 @@ window.QUESTION_BANK = [
         "text": "质量"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "软件设计直接决定系统是否可维护、可测试、可扩展，所以关键词是质量。"
   },
   {
     "id": "Q092",
@@ -2341,7 +2432,8 @@ window.QUESTION_BANK = [
         "text": "B 和D"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "好设计要覆盖需求，并能呈现软件整体结构；强耦合不是好设计。"
   },
   {
     "id": "Q093",
@@ -2360,7 +2452,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "设计过程必须根据项目特点裁剪，不能不加修改地套到任何项目。"
   },
   {
     "id": "Q094",
@@ -2391,7 +2484,8 @@ window.QUESTION_BANK = [
         "text": "A、B、D"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "设计常用控制抽象、数据抽象和过程抽象来降低复杂度。"
   },
   {
     "id": "Q095",
@@ -2418,7 +2512,8 @@ window.QUESTION_BANK = [
         "text": "以上皆是"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "体系结构模型表示系统高层结构、组件及其关系。"
   },
   {
     "id": "Q096",
@@ -2437,7 +2532,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "设计模式正是面向对象设计中常用的可复用解决方案。"
   },
   {
     "id": "Q097",
@@ -2456,7 +2552,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "题库强调模块化的重要性：合理分解模块可以降低复杂度；实际工程中仍要避免过度碎片化。"
   },
   {
     "id": "Q098",
@@ -2475,7 +2572,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "信息隐藏把模块内部数据和过程细节封装起来，外部只通过接口使用，维护时影响更小。"
   },
   {
     "id": "Q099",
@@ -2502,7 +2600,8 @@ window.QUESTION_BANK = [
         "text": "连接其他模块和外部世界。"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "内聚性看一个模块内部是否围绕单一目标工作；越专注，内聚越高。"
   },
   {
     "id": "Q100",
@@ -2521,7 +2620,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "结构化设计需要逐步求精，把大功能逐层细化成可实现模块。"
   },
   {
     "id": "Q101",
@@ -2548,7 +2648,8 @@ window.QUESTION_BANK = [
         "text": "连接其它模块和外部世界。"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "耦合描述模块与其他模块或外部环境的连接程度；连接越多，耦合越高。"
   },
   {
     "id": "Q102",
@@ -2567,7 +2668,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "重构在不改变外部行为的前提下改善内部结构，能提升集成、测试和维护性。"
   },
   {
     "id": "Q103",
@@ -2594,7 +2696,8 @@ window.QUESTION_BANK = [
         "text": "消除封装带来的障碍。"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "多态允许不同对象响应同名操作，扩展新类型时不必大量改调用方代码。"
   },
   {
     "id": "Q104",
@@ -2621,7 +2724,8 @@ window.QUESTION_BANK = [
         "text": "用户接口类"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "教材中的设计类类型通常包括用户接口类、业务领域类、过程类、持久类、系统类等；“实体类”不在这套五类名称里。"
   },
   {
     "id": "Q105",
@@ -2648,7 +2752,8 @@ window.QUESTION_BANK = [
         "text": "界面设计元素"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "信息模型主要描述数据结构和数据关系，所以对应数据设计元素。"
   },
   {
     "id": "Q106",
@@ -2675,7 +2780,8 @@ window.QUESTION_BANK = [
         "text": "界面设计"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "体系结构设计像房屋平面图，描述整体布局和主要组成部分。"
   },
   {
     "id": "Q107",
@@ -2702,7 +2808,8 @@ window.QUESTION_BANK = [
         "text": "接口设计"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "接口设计像房屋与外部公用设施/内部接入点的连接图，关注系统之间、组件之间如何交互。"
   },
   {
     "id": "Q108",
@@ -2729,7 +2836,8 @@ window.QUESTION_BANK = [
         "text": "界面设计"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "构件级设计像每个房间的详细图纸，关注模块内部细节。"
   },
   {
     "id": "Q109",
@@ -2748,7 +2856,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "可重用模式太多时，真正困难的是检索和选择合适模式，而不是模式不存在。"
   },
   {
     "id": "Q110",
@@ -2767,7 +2876,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "设计模式是设计层面的经验方案，不是具体代码模板或编码模式。"
   },
   {
     "id": "Q111",
@@ -2786,7 +2896,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "框架是半成品结构和可复用代码，设计模式是解决设计问题的思想模板，二者不是一回事。"
   },
   {
     "id": "Q112",
@@ -2817,7 +2928,8 @@ window.QUESTION_BANK = [
         "text": "A,B,C 和D"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "体系结构风格包含组件、连接器、约束和语义模型等元素。"
   },
   {
     "id": "Q113",
@@ -2844,7 +2956,8 @@ window.QUESTION_BANK = [
         "text": "设计模式"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "选择架构风格要依据系统特征和约束，例如性能、安全、可靠性、部署环境等。"
   },
   {
     "id": "Q114",
@@ -2875,7 +2988,8 @@ window.QUESTION_BANK = [
         "text": "A、B 和C"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "系统环境中与目标系统交互的系统可分为上级、下级、同级等。"
   },
   {
     "id": "Q115",
@@ -2906,7 +3020,8 @@ window.QUESTION_BANK = [
         "text": "A、B 和C"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "同级系统就是和目标系统在对等基础上交互的系统。"
   },
   {
     "id": "Q116",
@@ -2937,7 +3052,8 @@ window.QUESTION_BANK = [
         "text": "A、B 和C"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "按题库口径，体系结构权衡分析中这里要求从用户视图描述风格；核心是让质量属性影响能被评估。"
   },
   {
     "id": "Q117",
@@ -2968,7 +3084,8 @@ window.QUESTION_BANK = [
         "text": "B 和C"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "依赖关系越复杂，架构整体复杂度越高，后续维护和变更风险也越大。"
   },
   {
     "id": "Q118",
@@ -2995,7 +3112,8 @@ window.QUESTION_BANK = [
         "text": "变换流"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "数据沿少数直线路径顺序流动，典型就是变换流。"
   },
   {
     "id": "Q119",
@@ -3022,7 +3140,8 @@ window.QUESTION_BANK = [
         "text": "转换流"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "一个输入触发多条可能路径，像事务分发一样选择处理分支，就是事务流。"
   },
   {
     "id": "Q120",
@@ -3049,7 +3168,8 @@ window.QUESTION_BANK = [
         "text": "细化模块视图"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "事务映射首先要从 DFD 推导出控制层次结构，再分配处理模块。"
   },
   {
     "id": "Q121",
@@ -3080,7 +3200,8 @@ window.QUESTION_BANK = [
         "text": "B 和C"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "映射得到的架构还需要用模块接口描述和模块过程详述补充，否则只是骨架。"
   },
   {
     "id": "Q122",
@@ -3107,7 +3228,8 @@ window.QUESTION_BANK = [
         "text": "控制类"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "控制类负责协调流程和业务逻辑，界面类负责显示交互，实体类保存数据。"
   },
   {
     "id": "Q123",
@@ -3134,7 +3256,8 @@ window.QUESTION_BANK = [
         "text": "②③⑤⑥"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "从管理角度，常把软件设计分成概要设计和详细设计两大层次。"
   },
   {
     "id": "Q124",
@@ -3161,7 +3284,8 @@ window.QUESTION_BANK = [
         "text": "一组协作类"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "面向对象中的构件通常是一组协作类，而不是单个属性或单个对象实例。"
   },
   {
     "id": "Q125",
@@ -3188,7 +3312,8 @@ window.QUESTION_BANK = [
         "text": "以上所有内容"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "传统模块既可能承担控制、基础设施，也可能承担问题域功能。"
   },
   {
     "id": "Q126",
@@ -3215,7 +3340,8 @@ window.QUESTION_BANK = [
         "text": "简约复杂性原理"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "构件级设计原则常见有开闭、依赖倒置、接口分离等；“简约复杂性原理”不是标准四原则之一。"
   },
   {
     "id": "Q127",
@@ -3246,7 +3372,8 @@ window.QUESTION_BANK = [
         "text": "B、C 和D"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "构件精化要把属性、接口、操作等细节说明清楚，源代码属于后续实现。"
   },
   {
     "id": "Q128",
@@ -3277,7 +3404,8 @@ window.QUESTION_BANK = [
         "text": "B 和C"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "持久数据源指程序结束后仍保存的数据来源，典型是数据库和文件。"
   },
   {
     "id": "Q129",
@@ -3308,7 +3436,8 @@ window.QUESTION_BANK = [
         "text": "B、C 和D"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "结构化编程的三种基本控制结构是顺序、选择/条件、循环。"
   },
   {
     "id": "Q130",
@@ -3335,7 +3464,8 @@ window.QUESTION_BANK = [
         "text": "流程图"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "流程图是用图形符号表达过程细节的常见方式。"
   },
   {
     "id": "Q131",
@@ -3362,7 +3492,8 @@ window.QUESTION_BANK = [
         "text": "当一组复杂的条件和动作出现在构件中时使用"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "条件和动作组合很复杂时，决策表比一堆 if-else 更清楚。"
   },
   {
     "id": "Q132",
@@ -3389,7 +3520,8 @@ window.QUESTION_BANK = [
         "text": "表示软件体系结构的有用方法"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "PDL 是介于自然语言和程序语言之间的过程设计描述，既有结构又有文字。"
   },
   {
     "id": "Q133",
@@ -3420,7 +3552,8 @@ window.QUESTION_BANK = [
         "text": "A、B 和C"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "好的设计符号应易维护、模块化、简洁，不能只追求形式。"
   },
   {
     "id": "Q134",
@@ -3439,7 +3572,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "T"
+    "answer": "T",
+    "explanation": "构件就是软件的模块化构建块，用来组织和复用系统功能。"
   },
   {
     "id": "Q135",
@@ -3458,7 +3592,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "T"
+    "answer": "T",
+    "explanation": "复用不是万能的，如果没有合适构件，工程师仍需从头设计实现。"
   },
   {
     "id": "Q136",
@@ -3477,7 +3612,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "构件级设计仍要考虑子系统归属、打包和组织结构，否则后期集成会混乱。"
   },
   {
     "id": "Q137",
@@ -3496,7 +3632,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "T"
+    "answer": "T",
+    "explanation": "原型能帮助在详细设计阶段看清构件职责、接口和交互。"
   },
   {
     "id": "Q138",
@@ -3515,7 +3652,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "T"
+    "answer": "T",
+    "explanation": "功能、层级或通信内聚较好的构件职责清楚，因此更容易实现、测试和维护。"
   },
   {
     "id": "Q139",
@@ -3534,7 +3672,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "耦合不可能在所有系统中完全避免，关键是控制在合理范围并降低不必要耦合。"
   },
   {
     "id": "Q140",
@@ -3553,7 +3692,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "T"
+    "answer": "T",
+    "explanation": "OCL 用形式化语句补充 UML，可表达约束，使模型更精确。"
   },
   {
     "id": "Q141",
@@ -3572,7 +3712,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "F"
+    "answer": "F",
+    "explanation": "OCL 可以描述前置条件、后置条件和不变式等约束，所以说它不能描述前后条件是错的。"
   },
   {
     "id": "Q142",
@@ -3599,7 +3740,8 @@ window.QUESTION_BANK = [
         "text": "为完成任务仅提供一种定义的方法"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "只提供一种固定完成方法会限制用户控制，违背“用户掌控交互”的原则。"
   },
   {
     "id": "Q143",
@@ -3630,7 +3772,8 @@ window.QUESTION_BANK = [
         "text": "ABC 都选"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "直观快捷键、渐进披露、合理默认值都能减少用户需要记住的东西。"
   },
   {
     "id": "Q144",
@@ -3661,7 +3804,8 @@ window.QUESTION_BANK = [
         "text": "B 和D"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "一致性主要体现在输入机制、导航和视觉组织遵循统一规则。"
   },
   {
     "id": "Q145",
@@ -3688,7 +3832,8 @@ window.QUESTION_BANK = [
         "text": "系统模型"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "用户模型描述最终用户的特征、经验、能力和需求。"
   },
   {
     "id": "Q146",
@@ -3715,7 +3860,8 @@ window.QUESTION_BANK = [
         "text": "心理模型或系统感知"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "心理模型是用户脑子里对系统如何工作的理解。"
   },
   {
     "id": "Q147",
@@ -3742,7 +3888,8 @@ window.QUESTION_BANK = [
         "text": "心理模型系统感知"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "实现模型呈现给用户的是界面的外观、感觉和帮助信息。"
   },
   {
     "id": "Q148",
@@ -3769,7 +3916,8 @@ window.QUESTION_BANK = [
         "text": "用户和任务分析"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "界面设计通常关注用户任务分析、界面结构和验证；成本估算属于项目管理。"
   },
   {
     "id": "Q149",
@@ -3800,7 +3948,8 @@ window.QUESTION_BANK = [
         "text": "C 和D"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "观察用户做任务、研究现有解决方案最能帮助理解真实任务流程。"
   },
   {
     "id": "Q150",
@@ -3819,7 +3968,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "T"
+    "answer": "T",
+    "explanation": "记忆负担低，用户就不必反复想“下一步怎么做”，交互自然更快。"
   },
   {
     "id": "Q151",
@@ -3838,7 +3988,8 @@ window.QUESTION_BANK = [
         "text": "错误 / False"
       }
     ],
-    "answer": "T"
+    "answer": "T",
+    "explanation": "用户已经形成习惯时，随意改变交互模型会造成困惑和错误。"
   },
   {
     "id": "Q152",
@@ -3865,7 +4016,8 @@ window.QUESTION_BANK = [
         "text": "开发人员和测试人员之间的参数减少"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "独立测试团队更容易站在破坏性角度找问题，也不容易被开发者思维限制。"
   },
   {
     "id": "Q153",
@@ -3892,7 +4044,8 @@ window.QUESTION_BANK = [
         "text": "验证测试 A. a，d，c，b B. b，d，a，c C. c，a，d，b D. d，b，c，a"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "传统测试通常从小到大：先单元测试，再集成测试，再确认/验证测试，最后系统测试。"
   },
   {
     "id": "Q154",
@@ -3923,7 +4076,8 @@ window.QUESTION_BANK = [
         "text": "A 和B"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "测试成功的前提是需求可量化、早期技术评审充分；测试计划不能等代码写完才开始。"
   },
   {
     "id": "Q155",
@@ -3954,7 +4108,8 @@ window.QUESTION_BANK = [
         "text": "C 和D"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "单元测试重点看模块内部路径、边界、错误处理等，尤其是执行路径和错误处理。"
   },
   {
     "id": "Q156",
@@ -3985,7 +4140,8 @@ window.QUESTION_BANK = [
         "text": "B 和C"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "自上而下先测高层控制和关键决策点，且不需要驱动程序，但通常需要桩模块。"
   },
   {
     "id": "Q157",
@@ -4012,7 +4168,8 @@ window.QUESTION_BANK = [
         "text": "不需要回归测试"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "自下而上从底层模块开始测，已经有真实下层模块，所以不需要桩模块，但常需要驱动程序。"
   },
   {
     "id": "Q158",
@@ -4043,7 +4200,8 @@ window.QUESTION_BANK = [
         "text": "A 和B"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "新模块加入会引入新的控制逻辑和数据流路径，旧功能可能被破坏，所以要回归测试。"
   },
   {
     "id": "Q159",
@@ -4070,7 +4228,8 @@ window.QUESTION_BANK = [
         "text": "小型程序的单元测试"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "冒烟测试是滚动式集成中的快速基本检查，先确认构建没有明显大故障。"
   },
   {
     "id": "Q160",
@@ -4097,7 +4256,8 @@ window.QUESTION_BANK = [
         "text": "以上都不对"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "面向对象集成测试关注一组会协作或通信的类，而不只是单独函数。"
   },
   {
     "id": "Q161",
@@ -4124,7 +4284,8 @@ window.QUESTION_BANK = [
         "text": "系统工程师"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "验收测试由最终用户或客户确认系统是否满足真实需求。"
   },
   {
     "id": "Q162",
@@ -4155,7 +4316,8 @@ window.QUESTION_BANK = [
         "text": "A、B 和C"
       }
     ],
-    "answer": "E"
+    "answer": "E",
+    "explanation": "常见调试方法包括回溯、蛮力和原因排除；代码重组不是典型调试方法分类。"
   },
   {
     "id": "Q163",
@@ -4174,7 +4336,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "验证问“产品是否按规格正确构建”，确认问“构建出来的是不是用户真正要的”，二者不同。"
   },
   {
     "id": "Q164",
@@ -4193,7 +4356,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "面向对象中类是基本测试单元，所以类测试相当于传统模块的单元测试。"
   },
   {
     "id": "Q165",
@@ -4212,7 +4376,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "软件可靠性模型能辅助判断测试充分性，但不能给出绝对有意义、完全可靠的完成准则。"
   },
   {
     "id": "Q166",
@@ -4231,7 +4396,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "按题库答案处理为正确：单元测试强调模块独立测试；但实际工程里常需要驱动程序和桩程序辅助隔离模块。"
   },
   {
     "id": "Q167",
@@ -4250,7 +4416,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "类测试不只是单独测试每个操作，还要测试状态、属性变化和操作之间的交互。"
   },
   {
     "id": "Q168",
@@ -4269,7 +4436,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "确认测试就是看软件是否满足需求，用户发现“不符合需求”的地方是重点。"
   },
   {
     "id": "Q169",
@@ -4288,7 +4456,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "软件确认常通过用户在实际或近似实际环境中的测试来完成。"
   },
   {
     "id": "Q170",
@@ -4307,7 +4476,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "回归测试不能替代配置审查；配置审查要确保版本、文档、变更项一致。"
   },
   {
     "id": "Q171",
@@ -4326,7 +4496,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "恢复测试故意制造故障，检查系统能否恢复、不中断或尽快恢复服务。"
   },
   {
     "id": "Q172",
@@ -4345,7 +4516,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "安全测试验证访问控制、防护机制是否能抵抗不正当入侵。"
   },
   {
     "id": "Q173",
@@ -4364,7 +4536,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "压力测试不是测用户心理压力，而是测系统在高负载、资源紧张等极端条件下表现。"
   },
   {
     "id": "Q174",
@@ -4383,7 +4556,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "性能测试不仅实时/嵌入式系统需要，普通 Web、业务系统也需要响应时间和吞吐量。"
   },
   {
     "id": "Q175",
@@ -4402,7 +4576,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "测试负责暴露错误，调试负责定位和修复错误；调试通常由测试发现问题后触发。"
   },
   {
     "id": "Q176",
@@ -4421,7 +4596,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "测试只能尽可能发现缺陷，不能证明所有缺陷都被消除。"
   },
   {
     "id": "Q177",
@@ -4448,7 +4624,8 @@ window.QUESTION_BANK = [
         "text": "以上所有"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "可测试软件应容易观察结果、控制输入、结构简单稳定，所以这些都是特征。"
   },
   {
     "id": "Q178",
@@ -4475,7 +4652,8 @@ window.QUESTION_BANK = [
         "text": "白盒测试"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "黑盒测试从外部功能出发，看输入输出是否满足规格，不关心内部代码。"
   },
   {
     "id": "Q179",
@@ -4502,7 +4680,8 @@ window.QUESTION_BANK = [
         "text": "白盒测试"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "白盒测试根据程序内部逻辑设计用例，关注路径、条件、循环等。"
   },
   {
     "id": "Q180",
@@ -4529,7 +4708,8 @@ window.QUESTION_BANK = [
         "text": "排版错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "黑盒只看外部行为，内部逻辑路径错误可能刚好没有暴露；白盒更容易发现逻辑错误。"
   },
   {
     "id": "Q181",
@@ -4548,7 +4728,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "程序流程图偏算法流程，程序流图是白盒测试中用于表示控制流节点和边的抽象图，二者不完全相同。"
   },
   {
     "id": "Q182",
@@ -4575,7 +4756,8 @@ window.QUESTION_BANK = [
         "text": "程序中的语句"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "环复杂度衡量程序中线性独立路径数量，用来估计基本路径测试数量。"
   },
   {
     "id": "Q183",
@@ -4594,7 +4776,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "PDL 中的控制结构足以推导环复杂度，不一定非要先画完整流图。"
   },
   {
     "id": "Q184",
@@ -4621,7 +4804,8 @@ window.QUESTION_BANK = [
         "text": "专注于测试循环结构的有效性"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "条件测试专门针对逻辑条件，如复合条件、布尔表达式等。"
   },
   {
     "id": "Q185",
@@ -4648,7 +4832,8 @@ window.QUESTION_BANK = [
         "text": "专注于测试循环结构的有效性"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "数据流测试关注变量在哪里定义、在哪里使用，以及定义—使用路径。"
   },
   {
     "id": "Q186",
@@ -4675,7 +4860,8 @@ window.QUESTION_BANK = [
         "text": "专注于测试循环结构的有效性"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "循环测试专门测试简单循环、嵌套循环等循环结构是否正确。"
   },
   {
     "id": "Q187",
@@ -4702,7 +4888,8 @@ window.QUESTION_BANK = [
         "text": "以上所有"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "黑盒测试能发现功能缺失、接口问题、性能问题等外部可观察错误。"
   },
   {
     "id": "Q188",
@@ -4721,7 +4908,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "按本题题库口径，基于图的测试放在面向对象测试语境下，因此判断为正确；实际教材版本可能表述更宽。"
   },
   {
     "id": "Q189",
@@ -4740,7 +4928,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "等价类把输入划成有效/无效类别，每类选代表值，减少测试用例数量。"
   },
   {
     "id": "Q190",
@@ -4759,7 +4948,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "边界值分析属于黑盒常用技术，不是只能用于白盒。"
   },
   {
     "id": "Q191",
@@ -4778,7 +4968,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "比较测试通过对比多个版本或竞争产品，常用于发布前评估质量和市场表现。"
   },
   {
     "id": "Q192",
@@ -4797,7 +4988,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "正交阵列用较少组合覆盖多因素取值，适合输入组合很多但不能全测的情况。"
   },
   {
     "id": "Q193",
@@ -4816,7 +5008,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "面向对象测试“尽可能小”不是只由单个操作算法决定，还要考虑类状态和对象交互。"
   },
   {
     "id": "Q194",
@@ -4835,7 +5028,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "封装会隐藏对象内部状态，测试时反而不容易直接获取状态信息。"
   },
   {
     "id": "Q195",
@@ -4854,7 +5048,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "用例描述用户与系统交互，可直接转成黑盒场景测试，也可辅助状态测试。"
   },
   {
     "id": "Q196",
@@ -4881,7 +5076,8 @@ window.QUESTION_BANK = [
         "text": "操作者算法的白盒测试"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "基于故障的测试优先瞄准最可能出错、最关键或最可疑的类和操作。"
   },
   {
     "id": "Q197",
@@ -4904,7 +5100,8 @@ window.QUESTION_BANK = [
         "text": "B 和C"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "继承和多态会让同一操作在不同类中行为不同，测试覆盖和组合更复杂。"
   },
   {
     "id": "Q198",
@@ -4931,7 +5128,8 @@ window.QUESTION_BANK = [
         "text": "A 和B"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "基于场景测试围绕参与者与软件交互；它可能忽略规格说明本身的错误，所以不能替代需求评审。"
   },
   {
     "id": "Q199",
@@ -4958,7 +5156,8 @@ window.QUESTION_BANK = [
         "text": "测试用户可观察到的结构"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "深层结构测试关注对象内部行为、通信和依赖，不是测试用户可见的外部结构。"
   },
   {
     "id": "Q200",
@@ -4977,7 +5176,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "随机顺序测试通过随机事件序列观察对象生命周期轨迹，适合状态相关测试。"
   },
   {
     "id": "Q201",
@@ -5004,7 +5204,8 @@ window.QUESTION_BANK = [
         "text": "基于状态的分区"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "类层面分区通常按属性、类别、状态分区；等价类分区是更一般的黑盒输入域方法。"
   },
   {
     "id": "Q202",
@@ -5023,7 +5224,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "多类测试虽然复杂，但仍可以使用随机测试用例辅助覆盖对象交互。"
   },
   {
     "id": "Q203",
@@ -5050,7 +5252,8 @@ window.QUESTION_BANK = [
         "text": "用例图"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "行为类模型描述状态变化，因此导出的测试应基于状态图。"
   },
   {
     "id": "Q204",
@@ -5069,7 +5272,8 @@ window.QUESTION_BANK = [
         "text": "错误"
       }
     ],
-    "answer": "B"
+    "answer": "B",
+    "explanation": "C/S 架构虽然受网络负载影响，但可以通过模拟、压力测试和环境控制进行正确测试。"
   },
   {
     "id": "Q205",
@@ -5096,7 +5300,8 @@ window.QUESTION_BANK = [
         "text": "时间"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "实时软件的难点在时间约束，结果正确还不够，必须在规定时间内完成。"
   },
   {
     "id": "Q206",
@@ -5123,7 +5328,8 @@ window.QUESTION_BANK = [
         "text": "开发人员，用户"
       }
     ],
-    "answer": "C"
+    "answer": "C",
+    "explanation": "黑盒站在用户角度看功能是否满足；白盒站在开发者角度看代码内部逻辑是否覆盖。"
   },
   {
     "id": "Q207",
@@ -5150,7 +5356,8 @@ window.QUESTION_BANK = [
         "text": "程序的功能"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "白盒测试用例依据程序内部逻辑和覆盖准则设计，例如语句、分支、路径覆盖。"
   },
   {
     "id": "Q208",
@@ -5177,7 +5384,8 @@ window.QUESTION_BANK = [
         "text": "尽可能多地发现软件中的错误"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "测试的目标不是证明软件正确，而是在有限时间内尽可能多地发现错误。"
   },
   {
     "id": "Q209",
@@ -5204,7 +5412,8 @@ window.QUESTION_BANK = [
         "text": "确认测试，集成测试，单元测试"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "需求对应确认测试，设计对应集成测试，编码对应单元测试，这是 V 模型的基本映射。"
   },
   {
     "id": "Q210",
@@ -5231,7 +5440,8 @@ window.QUESTION_BANK = [
         "text": "测试"
       }
     ],
-    "answer": "A"
+    "answer": "A",
+    "explanation": "白盒测试把程序看作控制路径的集合，通过覆盖路径来发现内部逻辑问题。"
   },
   {
     "id": "Q211",
@@ -5258,7 +5468,8 @@ window.QUESTION_BANK = [
         "text": "项目开发计划"
       }
     ],
-    "answer": "D"
+    "answer": "D",
+    "explanation": "测试数据主要依据需求、设计和源程序设计；项目开发计划偏管理安排，通常与具体测试数据无直接关系。"
   }
 ];
 

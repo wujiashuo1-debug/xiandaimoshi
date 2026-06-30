@@ -348,7 +348,7 @@
       <div class="question-meta"><span class="tag">${q.id}</span>${typeTag(q)}<span>${esc(q.chapter)}</span><span>原题号：${q.number}</span>${r.mastered ? '<span class="pill">已掌握</span>' : ''}${data.bookmarks.includes(q.id) ? '<span class="pill">已收藏</span>' : ''}</div>
       <h4>${esc(q.question)}</h4>
       <div class="options">${q.options.map(o => `<div class="option"><span class="key">${esc(o.key)}</span><span>${esc(o.text)}</span></div>`).join('')}</div>
-      <div class="answer-row ${reveal ? '' : 'hidden'}">答案：${esc(answerText(q))}</div>
+      <div class="answer-row ${reveal ? '' : 'hidden'}"><div><strong>答案：</strong>${esc(answerText(q))}</div>${explanationHTML(q)}</div>
       <div class="card-actions">
         <button class="secondary" data-d-toggle-answer>查看/隐藏答案</button>
         <button class="ghost" data-d-master="${q.id}">${r.mastered ? '取消掌握' : '标记掌握'}</button>
@@ -406,7 +406,7 @@
     if (p.submitted) {
       const ok = isCorrect(q, p.selected);
       $('#dPracticeFeedback').className = `desktop-feedback ${ok ? '' : ''}`;
-      $('#dPracticeFeedback').innerHTML = `${ok ? '✅ 正确。' : '❌ 错误。'} 正确答案：${esc(answerText(q))}`;
+      $('#dPracticeFeedback').innerHTML = `<div>${ok ? '✅ 正确。' : '❌ 错误。'} 正确答案：${esc(answerText(q))}</div>${explanationHTML(q)}`;
     }
     $('#dSubmitAnswer').textContent = '提交答案';
     $('#dSubmitAnswer').classList.toggle('hidden', p.submitted);
@@ -464,7 +464,7 @@
       root.innerHTML = matches.map(q => `<article class="mobile-chapter-card mobile-search-result">
         <div class="mobile-q-top"><span class="tag">${q.id}</span>${typeTag(q)}<span class="pill">${esc(q.chapter)}</span></div>
         <h3>${esc(q.question)}</h3>
-        <p>答案：${esc(answerText(q))}</p>
+        <p>答案：${esc(answerText(q))}</p>${explanationHTML(q)}
         <div class="mobile-chapter-actions"><button class="mobile-primary" data-m-study-qid="${q.id}">学习这题</button></div>
       </article>`).join('');
       return;
@@ -518,7 +518,7 @@
     return `<div class="mobile-q-top"><span class="tag">${q.id}</span>${typeTag(q)}<span class="pill">原题 ${q.number}</span>${r.mastered ? '<span class="pill">已掌握</span>' : ''}</div>
       <h2 class="mobile-q-title">${esc(q.question)}</h2>
       <div class="mobile-options">${q.options.map(o => `<div class="mobile-option"><span class="key">${esc(o.key)}</span><span>${esc(o.text)}</span></div>`).join('')}</div>
-      ${reveal ? `<div class="mobile-answer-box">答案：${esc(answerText(q))}</div>` : ''}
+      ${reveal ? `<div class="mobile-answer-box"><div><strong>答案：</strong>${esc(answerText(q))}</div>${explanationHTML(q)}</div>` : ''}
       <div class="mobile-card-actions">
         <button class="mobile-secondary small ${r.mastered ? 'active' : ''}" data-m-master="${q.id}">${r.mastered ? '已掌握' : '掌握'}</button>
         <button class="mobile-secondary small ${data.mistakes.includes(q.id) ? 'active' : ''}" data-m-mistake="${q.id}">${data.mistakes.includes(q.id) ? '错题中' : '错题'}</button>
@@ -574,7 +574,7 @@
     if (qz.submitted) {
       const ok = isCorrect(q, qz.selected);
       $('#mQuizFeedback').className = `mobile-feedback ${ok ? 'ok' : 'bad'}`;
-      $('#mQuizFeedback').innerHTML = `${ok ? '✅ 正确。' : '❌ 错误。'}<br>正确答案：${esc(answerText(q))}`;
+      $('#mQuizFeedback').innerHTML = `<div>${ok ? '✅ 正确。' : '❌ 错误。'}<br>正确答案：${esc(answerText(q))}</div>${explanationHTML(q)}`;
       $('#mQuizMainAction').textContent = qz.index >= qz.list.length - 1 ? '完成本轮' : '下一题';
     } else {
       $('#mQuizMainAction').textContent = q.type === 'multiple' ? '提交答案（可多选）' : '提交答案';
@@ -632,7 +632,7 @@
     const mistakes = QUESTION_BANK.filter(q => ids.has(q.id));
     $('#mMistakeList').innerHTML = mistakes.length ? mistakes.slice(0, 20).map(q => `<article class="mobile-mini-card">
       <div class="mobile-q-top"><span class="tag">${q.id}</span>${typeTag(q)}</div>
-      <h3>${esc(q.question)}</h3><p>答案：${esc(answerText(q))}</p>
+      <h3>${esc(q.question)}</h3><p>答案：${esc(answerText(q))}</p>${explanationHTML(q)}
       <div class="mobile-mini-actions"><button class="mobile-secondary small" data-m-study-qid="${q.id}">去学习</button><button class="mobile-ghost small" data-m-remove-mistake="${q.id}">移除</button></div>
     </article>`).join('') : `<div class="mobile-empty">目前没有错题。不要自我感觉良好，刷一组再看。</div>`;
 
@@ -671,7 +671,7 @@
         $$('#dPracticeQuestion [data-d-option]').forEach(btn => btn.onclick = () => selectDesktopPracticeOption(btn.dataset.dOption));
       }, 0);
     }
-    return `<div class="${topClass}"><span class="tag">${q.id}</span>${typeTag(q)}<span class="pill">原题 ${q.number}</span></div><h4 class="${titleClass}">${esc(q.question)}</h4><div class="${rootClass}">${options}</div>`;
+    return `<div class="${topClass}"><span class="tag">${q.id}</span>${typeTag(q)}<span class="pill">原题 ${q.number}</span></div><h4 class="${titleClass}">${esc(q.question)}</h4><div class="${rootClass}">${options}</div>${submitted ? explanationHTML(q) : ''}`;
   }
 
   function selectDesktopPracticeOption(key) {
@@ -807,6 +807,10 @@
 
   function normalize(arr) {
     return [...new Set(arr)].sort().join('');
+  }
+
+  function explanationHTML(q) {
+    return q.explanation ? `<div class="explanation-box"><strong>解析：</strong>${esc(q.explanation)}</div>` : '';
   }
 
   function answerText(q) {
