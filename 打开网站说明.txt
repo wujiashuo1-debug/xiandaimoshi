@@ -1,0 +1,13 @@
+软件工程刷题网站 V2 使用说明
+
+电脑本地使用：
+1. 解压 software_engineering_quiz_site_v2.zip
+2. 双击 index.html
+
+手机使用推荐：
+1. 把整个文件夹上传到 GitHub Pages / Vercel / Netlify / Cloudflare Pages
+2. 用手机浏览器打开生成的网址
+3. iPhone：Safari 分享按钮 -> 添加到主屏幕
+4. Android Chrome：右上角菜单 -> 添加到主屏幕 / 安装应用
+
+不要长期依赖微信/QQ文件预览打开，本地记录和离线缓存可能不稳定。
