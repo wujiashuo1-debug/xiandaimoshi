@@ -1,7 +1,7 @@
 {
-  "name": "软件工程刷题 V3",
-  "short_name": "软件工程刷题",
-  "description": "桌面端保留章节刷题站逻辑，手机端使用独立移动刷题界面，支持错题本、进度记录和离线缓存。",
+  "name": "现代模式识别刷题 V1",
+  "short_name": "模式识别刷题",
+  "description": "现代模式识别期末冲刺题库刷题站，桌面端保留章节刷题逻辑，手机端独立移动刷题界面，支持解析、错题本和进度记录。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -9,8 +9,23 @@
   "background_color": "#f5f7fb",
   "theme_color": "#111827",
   "icons": [
-    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" },
-    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
-    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }

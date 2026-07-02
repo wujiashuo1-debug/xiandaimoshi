@@ -1,5537 +1,4202 @@
 window.QUESTION_BANK = [
   {
-    "id": "Q001",
-    "chapter": "第1章｜软件工程导论",
-    "originalChapter": "Chapter 1 - Introduction to Software Engineering",
+    "id": "MPR001",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别概述与基础概念",
     "number": 1,
     "type": "single",
-    "question": "现代软件工程师不再关心哪个问题？",
+    "question": "模式识别系统的核心基本骨架流程是：",
     "options": [
       {
         "key": "A",
-        "text": "为什么计算机硬件成本如此之高？"
+        "text": "预处理 → 数据采集 → 特征提取 → 分类/聚类判定"
       },
       {
         "key": "B",
-        "text": "为什么软件需要很长时间才能完成？"
+        "text": "数据采集 → 预处理 → 特征提取 → 分类/聚类判定"
       },
       {
         "key": "C",
-        "text": "为什么开发一个软件要花这么多钱？"
+        "text": "特征提取 → 数据采集 → 预处理 → 分类/聚类判定"
       },
       {
         "key": "D",
-        "text": "为什么不能在交付软件前消除软件错误？"
+        "text": "数据采集 → 特征提取 → 预处理 → 分类/聚类判定"
       }
     ],
-    "answer": "A",
-    "explanation": "软件工程早期受硬件成本限制很大，但现在硬件成本不再是主要矛盾；真正难的是软件开发周期、成本、质量和缺陷控制。"
+    "answer": "B",
+    "explanation": "模式识别的标准流程是先拿到数据，再做清洗/预处理，然后把有用信息提成特征，最后用分类或聚类算法做判定。"
   },
   {
-    "id": "Q002",
-    "chapter": "第1章｜软件工程导论",
-    "originalChapter": "Chapter 1 - Introduction to Software Engineering",
+    "id": "MPR002",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别概述与基础概念",
     "number": 2,
     "type": "single",
-    "question": "软件会退化而不是磨损，因为",
+    "question": "分类（Classification）与聚类（Clustering）的核心区别在于：",
     "options": [
       {
         "key": "A",
-        "text": "软件经常暴露在恶劣环境中"
+        "text": "分类是无监督学习，聚类是有监督学习"
       },
       {
         "key": "B",
-        "text": "软件使用频繁则更容易出现缺陷"
+        "text": "分类已知类别标签，聚类不知道类别标签"
       },
       {
         "key": "C",
-        "text": "多个变更请求在组件交互中引入错误"
+        "text": "分类不需要特征空间，聚类需要特征空间"
       },
       {
         "key": "D",
-        "text": "软件备件难以得到"
+        "text": "分类只能处理线性数据，聚类只能处理非线性数据"
+      }
+    ],
+    "answer": "B",
+    "explanation": "分类是有监督任务，训练时知道样本标签；聚类是无监督任务，标签未知，只能靠相似性自动分组。"
+  },
+  {
+    "id": "MPR003",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别概述与基础概念",
+    "number": 3,
+    "type": "single",
+    "question": "在分类器设计中，如果模型过于复杂、包裹了训练集中的每一个点及噪声，通常会导致：",
+    "options": [
+      {
+        "key": "A",
+        "text": "欠拟合（Underfitting）"
+      },
+      {
+        "key": "B",
+        "text": "过拟合（Overfitting）"
+      },
+      {
+        "key": "C",
+        "text": "泛化能力增强"
+      },
+      {
+        "key": "D",
+        "text": "训练精度下降"
+      }
+    ],
+    "answer": "B",
+    "explanation": "模型把训练集每个点甚至噪声都包住，本质是在记答案，不是在学规律，所以训练好看但泛化差。"
+  },
+  {
+    "id": "MPR004",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别概述与基础概念",
+    "number": 4,
+    "type": "single",
+    "question": "下列哪项技术不属于模式识别在计算机视觉中的生物特征识别应用？",
+    "options": [
+      {
+        "key": "A",
+        "text": "虹膜识别"
+      },
+      {
+        "key": "B",
+        "text": "步态识别"
+      },
+      {
+        "key": "C",
+        "text": "知识图谱实体抽取"
+      },
+      {
+        "key": "D",
+        "text": "触摸动态行为认证"
       }
     ],
     "answer": "C",
-    "explanation": "软件不会像机器零件那样“磨损”。它退化通常是因为不断修改，修改之间发生冲突，引入新的错误。"
+    "explanation": "知识图谱实体抽取属于自然语言处理/知识工程方向，不是计算机视觉里的生物特征识别。"
   },
   {
-    "id": "Q003",
-    "chapter": "第1章｜软件工程导论",
-    "originalChapter": "Chapter 1 - Introduction to Software Engineering",
-    "number": 3,
-    "type": "single",
-    "question": "大多数软件仍然是客户定制的，因为",
-    "options": [
-      {
-        "key": "A",
-        "text": "构件重用在软件开发中很常见。"
-      },
-      {
-        "key": "B",
-        "text": "可重用构件的使用成本太高。"
-      },
-      {
-        "key": "C",
-        "text": "软件更容易构建，而无需使用其他人的构件。"
-      },
-      {
-        "key": "D",
-        "text": "许多应用领域没有现成的备用供应软件构件。"
-      }
-    ],
-    "answer": "D",
-    "explanation": "很多领域业务规则很特殊，市面上没有现成构件可以直接拼出来，所以仍需要大量定制开发。"
-  },
-  {
-    "id": "Q004",
-    "chapter": "第1章｜软件工程导论",
-    "originalChapter": "Chapter 1 - Introduction to Software Engineering",
-    "number": 4,
-    "type": "single",
-    "question": "软件不包含以下哪个部分",
-    "options": [
-      {
-        "key": "A",
-        "text": "商业策划"
-      },
-      {
-        "key": "B",
-        "text": "程序"
-      },
-      {
-        "key": "C",
-        "text": "数据"
-      },
-      {
-        "key": "D",
-        "text": "文档"
-      }
-    ],
-    "answer": "A",
-    "explanation": "软件通常由程序、数据和文档组成；商业策划属于项目/商业活动，不是软件产品本身的组成部分。"
-  },
-  {
-    "id": "Q005",
-    "chapter": "第1章｜软件工程导论",
-    "originalChapter": "Chapter 1 - Introduction to Software Engineering",
+    "id": "MPR005",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别概述与基础概念",
     "number": 5,
     "type": "single",
-    "question": "下面哪个图为实际情况下的软件失效曲线图？",
+    "question": "以特征为坐标轴构成的空间被称为：",
     "options": [
       {
         "key": "A",
-        "text": "图示选项A（请参考原PDF对应图片）"
+        "text": "物理空间"
       },
       {
         "key": "B",
-        "text": "图示选项B（请参考原PDF对应图片）"
+        "text": "样本空间"
       },
       {
         "key": "C",
-        "text": "图示选项C（请参考原PDF对应图片）"
+        "text": "特征空间"
       },
       {
         "key": "D",
-        "text": "以上都不是"
-      }
-    ],
-    "answer": "B",
-    "explanation": "实际软件失效曲线一般在修改维护后会出现新的错误尖峰，而不是像硬件那样单纯磨损上升；此题图形选项需对照原 PDF。"
-  },
-  {
-    "id": "Q006",
-    "chapter": "第1章｜软件工程导论",
-    "originalChapter": "Chapter 1 - Introduction to Software Engineering",
-    "number": 6,
-    "type": "multiple",
-    "question": "软件危机产生的主要原因是：",
-    "options": [
-      {
-        "key": "A",
-        "text": "开发人员编写程序能力差"
-      },
-      {
-        "key": "B",
-        "text": "缺少领导者"
-      },
-      {
-        "key": "C",
-        "text": "软件本身的特点有关"
-      },
-      {
-        "key": "D",
-        "text": "计算机性能不够好"
-      },
-      {
-        "key": "E",
-        "text": "软件开发和维护的方法不正确"
-      }
-    ],
-    "answer": "CE",
-    "explanation": "软件危机不是简单怪程序员，而是软件本身复杂、易变，再加上传统开发维护方法不成熟导致成本、进度和质量失控。"
-  },
-  {
-    "id": "Q007",
-    "chapter": "第1章｜软件工程导论",
-    "originalChapter": "Chapter 1 - Introduction to Software Engineering",
-    "number": 7,
-    "type": "multiple",
-    "question": "软件包含以下哪个部分",
-    "options": [
-      {
-        "key": "A",
-        "text": "商业策划"
-      },
-      {
-        "key": "B",
-        "text": "程序"
-      },
-      {
-        "key": "C",
-        "text": "数据"
-      },
-      {
-        "key": "D",
-        "text": "文档"
-      }
-    ],
-    "answer": "BCD",
-    "explanation": "软件产品本体包括可执行程序、运行所需数据和说明文档；商业策划不是软件本体。"
-  },
-  {
-    "id": "Q008",
-    "chapter": "第1章｜软件工程导论",
-    "originalChapter": "Chapter 1 - Introduction to Software Engineering",
-    "number": 8,
-    "type": "multiple",
-    "question": "以下属于软件特点的是",
-    "options": [
-      {
-        "key": "A",
-        "text": "软件是逻辑体，而不是物理实体"
-      },
-      {
-        "key": "B",
-        "text": "软件是可定制的，并且是复杂的"
-      },
-      {
-        "key": "C",
-        "text": "软件不会磨损，但会退化"
-      },
-      {
-        "key": "D",
-        "text": "软件和硬件一样是被制造出来的"
-      }
-    ],
-    "answer": "ABC",
-    "explanation": "软件是逻辑产品，可定制、复杂、不会物理磨损但会因修改而退化；“像硬件一样制造出来”不准确。"
-  },
-  {
-    "id": "Q009",
-    "chapter": "第1章｜软件工程导论",
-    "originalChapter": "Chapter 1 - Introduction to Software Engineering",
-    "number": 9,
-    "type": "multiple",
-    "question": "下列说法正确的是",
-    "options": [
-      {
-        "key": "A",
-        "text": "软件危机泛指软件开发中所遇到的一系列问题"
-      },
-      {
-        "key": "B",
-        "text": "软件质量不可靠是软件危机的一个典型表现"
-      },
-      {
-        "key": "C",
-        "text": "软件危机指软件不能完成用户要求的功能"
-      },
-      {
-        "key": "D",
-        "text": "软件没有适当的文档资料、开发生产率低也属于软件危机的典型表现"
-      }
-    ],
-    "answer": "ABD",
-    "explanation": "软件危机指开发维护中一系列系统性问题，包括质量不可靠、文档缺失、效率低、成本和进度失控；不是只等于功能没实现。"
-  },
-  {
-    "id": "Q010",
-    "chapter": "第1章｜软件工程导论",
-    "originalChapter": "Chapter 1 - Introduction to Software Engineering",
-    "number": 1,
-    "type": "truefalse",
-    "question": "大多数计算机系统的功能不需要在系统的生命周期内增强。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "大多数系统上线后还会继续演化，例如增加功能、适配环境、修复问题，所以生命周期内通常需要增强。"
-  },
-  {
-    "id": "Q011",
-    "chapter": "第1章｜软件工程导论",
-    "originalChapter": "Chapter 1 - Introduction to Software Engineering",
-    "number": 2,
-    "type": "truefalse",
-    "question": "大多数软件系统都不容易适应变化，除非系统在设计时就考虑到了变化。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "T",
-    "explanation": "变化是软件生命周期常态。如果设计时没有为变化留接口和结构，后期修改会很痛苦。"
-  },
-  {
-    "id": "Q012",
-    "chapter": "第1章｜软件工程导论",
-    "originalChapter": "Chapter 1 - Introduction to Software Engineering",
-    "number": 3,
-    "type": "truefalse",
-    "question": "一般来说，软件只有在其行为与其设计者的目标一致时才能成功。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "T",
-    "explanation": "软件是否成功，关键看实际行为是否满足设计目标和用户期望；不是只看代码是否能运行。"
-  },
-  {
-    "id": "Q013",
-    "chapter": "第2.1章｜过程通用视图",
-    "originalChapter": "Chapter 2.1 – A Generic View of Process",
-    "number": 1,
-    "type": "single",
-    "question": "下面列出的哪一项不是软件工程层之一？",
-    "options": [
-      {
-        "key": "A",
-        "text": "过程"
-      },
-      {
-        "key": "B",
-        "text": "制造"
-      },
-      {
-        "key": "C",
-        "text": "方法"
-      },
-      {
-        "key": "D",
-        "text": "工具"
-      }
-    ],
-    "answer": "B",
-    "explanation": "软件工程通常讲过程、方法、工具和质量关注点，“制造”是硬件生产语境，不是软件工程层次。"
-  },
-  {
-    "id": "Q014",
-    "chapter": "第2.1章｜过程通用视图",
-    "originalChapter": "Chapter 2.1 – A Generic View of Process",
-    "number": 2,
-    "type": "single",
-    "question": "五个通用软件工程框架活动描述正确的是？",
-    "options": [
-      {
-        "key": "A",
-        "text": "沟通、策划、建模、构建、部署"
-      },
-      {
-        "key": "B",
-        "text": "沟通、风险管理、测量、生产、审查"
-      },
-      {
-        "key": "C",
-        "text": "分析、设计、编程、调试、维护"
-      },
-      {
-        "key": "D",
-        "text": "分析、规划、设计、编程、测试"
-      }
-    ],
-    "answer": "A",
-    "explanation": "通用框架活动按大方向可理解为：先沟通需求，再计划，再建模，再构建，最后部署交付。"
-  },
-  {
-    "id": "Q015",
-    "chapter": "第2.1章｜过程通用视图",
-    "originalChapter": "Chapter 2.1 – A Generic View of Process",
-    "number": 3,
-    "type": "single",
-    "question": "过程模型之所以被称为敏捷，主要因为它们",
-    "options": [
-      {
-        "key": "A",
-        "text": "无需繁琐的文档"
-      },
-      {
-        "key": "B",
-        "text": "强调机动性和适应性"
-      },
-      {
-        "key": "C",
-        "text": "不将开发时间浪费在策划活动上"
-      },
-      {
-        "key": "D",
-        "text": "广泛使用原型创建"
-      }
-    ],
-    "answer": "B",
-    "explanation": "敏捷不是不计划、不写文档，而是强调面对变化时能快速调整，所以核心是机动性和适应性。"
-  },
-  {
-    "id": "Q016",
-    "chapter": "第2.1章｜过程通用视图",
-    "originalChapter": "Chapter 2.1 – A Generic View of Process",
-    "number": 4,
-    "type": "single",
-    "question": "下列属于能力成熟度模型中的级别的是？",
-    "options": [
-      {
-        "key": "A",
-        "text": "已执行级"
-      },
-      {
-        "key": "B",
-        "text": "已管理级"
-      },
-      {
-        "key": "C",
-        "text": "已定义级"
-      },
-      {
-        "key": "D",
-        "text": "已定量管理级"
-      },
-      {
-        "key": "E",
-        "text": "已优化级"
-      },
-      {
-        "key": "F",
-        "text": "全部正确"
-      }
-    ],
-    "answer": "F",
-    "explanation": "CMM/CMMI 常见等级包括已执行/初始、已管理、已定义、定量管理和优化，题中各项都属于成熟度层级口径。"
-  },
-  {
-    "id": "Q017",
-    "chapter": "第2.1章｜过程通用视图",
-    "originalChapter": "Chapter 2.1 – A Generic View of Process",
-    "number": 5,
-    "type": "single",
-    "question": "以下哪一项不是个人软件过程的特征？",
-    "options": [
-      {
-        "key": "A",
-        "text": "强调个人对工作产品的衡量"
-      },
-      {
-        "key": "B",
-        "text": "从业者需要项目经理的仔细监督"
-      },
-      {
-        "key": "C",
-        "text": "个体从业者负责估算和安排"
-      },
-      {
-        "key": "D",
-        "text": "从业者有权控制软件工作产品的质量"
-      }
-    ],
-    "answer": "B",
-    "explanation": "PSP 强调个人自我估算、自我度量和自我质量控制，不是靠项目经理时时监督。"
-  },
-  {
-    "id": "Q018",
-    "chapter": "第2.1章｜过程通用视图",
-    "originalChapter": "Chapter 2.1 – A Generic View of Process",
-    "number": 6,
-    "type": "single",
-    "question": "下面哪项管理级别中已实现基本的项目管理：",
-    "options": [
-      {
-        "key": "A",
-        "text": "已执行级"
-      },
-      {
-        "key": "B",
-        "text": "已管理级"
-      },
-      {
-        "key": "C",
-        "text": "已定义级"
-      },
-      {
-        "key": "D",
-        "text": "已定量管理级"
-      },
-      {
-        "key": "E",
-        "text": "已优化级"
-      }
-    ],
-    "answer": "B",
-    "explanation": "“已管理级”意味着基本项目管理已经建立，可以管理成本、进度和需求等。"
-  },
-  {
-    "id": "Q019",
-    "chapter": "第2.1章｜过程通用视图",
-    "originalChapter": "Chapter 2.1 – A Generic View of Process",
-    "number": 1,
-    "type": "truefalse",
-    "question": "软件工程保护性活动仅适用于软件开发项目的初始阶段。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "保护性活动如质量保证、配置管理、度量和评审贯穿整个软件过程，不只发生在开始阶段。"
-  },
-  {
-    "id": "Q020",
-    "chapter": "第2.1章｜过程通用视图",
-    "originalChapter": "Chapter 2.1 – A Generic View of Process",
-    "number": 2,
-    "type": "truefalse",
-    "question": "为了最好地满足软件项目的需要，软件过程可以被重建或重造。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "T",
-    "explanation": "软件过程不是死模板，可以根据项目规模、风险、团队和需求特点进行裁剪和重构。"
-  },
-  {
-    "id": "Q021",
-    "chapter": "第2.2章｜过程模型",
-    "originalChapter": "Chapter 2.2 – Process Models",
-    "number": 1,
-    "type": "single",
-    "question": "有关线性顺序模型，说法正确的是",
-    "options": [
-      {
-        "key": "A",
-        "text": "需求定义明确时的一种合理的方法。"
-      },
-      {
-        "key": "B",
-        "text": "当需要快速执行工作程序时的一种很好的方法。"
-      },
-      {
-        "key": "C",
-        "text": "大型开发团队项目的最佳使用方法。"
-      },
-      {
-        "key": "D",
-        "text": "不能在现代环境中使用的老式模型。"
-      }
-    ],
-    "answer": "A",
-    "explanation": "线性顺序/瀑布模型适合需求稳定清楚的项目，因为它要求阶段按顺序推进。"
-  },
-  {
-    "id": "Q022",
-    "chapter": "第2.2章｜过程模型",
-    "originalChapter": "Chapter 2.2 – Process Models",
-    "number": 2,
-    "type": "single",
-    "question": "线性顺序模型也称为",
-    "options": [
-      {
-        "key": "A",
-        "text": "经典生命周期模型"
-      },
-      {
-        "key": "B",
-        "text": "喷泉模型"
-      },
-      {
-        "key": "C",
-        "text": "螺旋模型"
-      },
-      {
-        "key": "D",
-        "text": "瀑布模型"
-      },
-      {
-        "key": "E",
-        "text": "A 和D"
-      }
-    ],
-    "answer": "E",
-    "explanation": "线性顺序模型也叫经典生命周期模型，也常被称为瀑布模型。"
-  },
-  {
-    "id": "Q023",
-    "chapter": "第2.2章｜过程模型",
-    "originalChapter": "Chapter 2.2 – Process Models",
-    "number": 3,
-    "type": "single",
-    "question": "软件开发的增量模型是",
-    "options": [
-      {
-        "key": "A",
-        "text": "当需求定义明确时的一种合理的方法。"
-      },
-      {
-        "key": "B",
-        "text": "当需要快速开发核心产品时的一个很好的方法。"
-      },
-      {
-        "key": "C",
-        "text": "大型开发团队项目的最佳使用方法。"
-      },
-      {
-        "key": "D",
-        "text": "不用于商业产品的革命性模型。"
-      }
-    ],
-    "answer": "B",
-    "explanation": "增量模型先做核心功能，再一批批扩展，适合需要尽快交付可用核心产品的场景。"
-  },
-  {
-    "id": "Q024",
-    "chapter": "第2.2章｜过程模型",
-    "originalChapter": "Chapter 2.2 – Process Models",
-    "number": 4,
-    "type": "single",
-    "question": "快速应用开发模型是",
-    "options": [
-      {
-        "key": "A",
-        "text": "基于组件的开发的另一个名称。"
-      },
-      {
-        "key": "B",
-        "text": "当客户无法明确定义需求时的一种有用的方法。"
-      },
-      {
-        "key": "C",
-        "text": "线性顺序模型的高速变种"
-      },
-      {
-        "key": "D",
-        "text": "以上全是"
+        "text": "状态空间"
       }
     ],
     "answer": "C",
-    "explanation": "RAD 可以理解为强调快速构建和交付的高速版线性顺序模型。"
+    "explanation": "把每个特征当作坐标轴后，样本就变成空间中的点，这个空间就叫特征空间。"
   },
   {
-    "id": "Q025",
-    "chapter": "第2.2章｜过程模型",
-    "originalChapter": "Chapter 2.2 – Process Models",
-    "number": 5,
-    "type": "single",
-    "question": "演化过程模型",
-    "options": [
-      {
-        "key": "A",
-        "text": "本质上是迭代的"
-      },
-      {
-        "key": "B",
-        "text": "能够轻松适应产品需求的变化"
-      },
-      {
-        "key": "C",
-        "text": "一般不产生废弃的系统"
-      },
-      {
-        "key": "D",
-        "text": "以上全是"
-      }
-    ],
-    "answer": "D",
-    "explanation": "演化模型通过迭代逐步完善，能适应需求变化，也通常不会一次性做出完全废弃的大系统。"
-  },
-  {
-    "id": "Q026",
-    "chapter": "第2.2章｜过程模型",
-    "originalChapter": "Chapter 2.2 – Process Models",
+    "id": "MPR006",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别概述与基础概念",
     "number": 6,
     "type": "single",
-    "question": "软件开发的原型模型是",
+    "question": "在特征空间中，用于将不同类别样本分开的边界被称为：",
     "options": [
       {
         "key": "A",
-        "text": "当要求定义明确时的一种合理的方法。"
+        "text": "判定线/面（Decision Boundary）"
       },
       {
         "key": "B",
-        "text": "当客户无法明确定义需求时的一种有用的方法。"
+        "text": "坐标轴"
       },
       {
         "key": "C",
-        "text": "大型开发团队项目的最佳使用方法。"
+        "text": "特征向量"
       },
       {
         "key": "D",
-        "text": "很少生产有意义的产品的风险模型。"
+        "text": "投影轴"
       }
     ],
-    "answer": "B",
-    "explanation": "原型模型适合客户说不清需求时，先做一个样品帮助双方澄清需求。"
+    "answer": "A",
+    "explanation": "判定边界就是把不同类别区域隔开的线、面或超平面，是分类器真正做决策的位置。"
   },
   {
-    "id": "Q027",
-    "chapter": "第2.2章｜过程模型",
-    "originalChapter": "Chapter 2.2 – Process Models",
+    "id": "MPR007",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别概述与基础概念",
     "number": 7,
     "type": "single",
-    "question": "软件开发的螺旋模型",
+    "question": "下列关于无监督学习的说法中，正确的是：",
     "options": [
       {
         "key": "A",
-        "text": "以软件产品的交付结束"
+        "text": "必须依赖人工标注的类别标签"
       },
       {
         "key": "B",
-        "text": "比增量模型更混乱"
+        "text": "经典代表算法包括朴素贝叶斯和SVM"
       },
       {
         "key": "C",
-        "text": "每个迭代周期都有项目风险评估"
+        "text": "靠算法自动发现数据内部的相似性与结构"
       },
       {
         "key": "D",
-        "text": "以上全是"
+        "text": "其核心任务是求解最小错误率决策面"
       }
     ],
-    "answer": "D",
-    "explanation": "螺旋模型每轮都包含风险分析，适合大型、高风险、需求不完全明确的项目。"
+    "answer": "C",
+    "explanation": "无监督学习没有人工标签，典型目标是让算法自己发现数据里的相似性、簇结构或潜在规律。"
   },
   {
-    "id": "Q028",
-    "chapter": "第2.2章｜过程模型",
-    "originalChapter": "Chapter 2.2 – Process Models",
+    "id": "MPR008",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别概述与基础概念",
     "number": 8,
     "type": "single",
-    "question": "并行开发模型",
+    "question": "为了提高分类器的泛化能力，在设计判定边界时通常应当选择：",
     "options": [
       {
         "key": "A",
-        "text": "快速应用开发模型的另一个名称。"
+        "text": "极其复杂的完全包裹数据的非线性曲线"
       },
       {
         "key": "B",
-        "text": "常用于开发客户机/服务器应用程序。"
+        "text": "尽可能平滑且保持合理间隔的优化分类器边界"
       },
       {
         "key": "C",
-        "text": "仅用于开发并行或分布式系统。"
+        "text": "放弃任何边界，直接采用随机猜测"
       },
       {
         "key": "D",
-        "text": "在预期有大量变更请求时使用。"
+        "text": "迫使所有类别的类内散布矩阵为零的边界"
       }
     ],
     "answer": "B",
-    "explanation": "并行开发可把多个构件并行推进，常见于客户机/服务器等可分解结构的系统。"
+    "explanation": "边界太复杂会过拟合。更好的边界通常应平滑、有合理间隔，能兼顾训练效果和泛化能力。"
   },
   {
-    "id": "Q029",
-    "chapter": "第2.2章｜过程模型",
-    "originalChapter": "Chapter 2.2 – Process Models",
+    "id": "MPR009",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别概述与基础概念",
     "number": 9,
     "type": "single",
-    "question": "形式化软件开发模型利用数学方法",
+    "question": "模式识别通用模型 $y = f(x)$ 中，符号 $x$ 通常代表：",
     "options": [
       {
         "key": "A",
-        "text": "为基于计算机的系统定义了规格说明"
+        "text": "系统输出的类别标签"
       },
       {
         "key": "B",
-        "text": "开发无缺陷的计算机系统"
+        "text": "分类器映射关系"
       },
       {
         "key": "C",
-        "text": "验证计算机系统的正确性"
+        "text": "观测数据（输入的特征向量）"
       },
       {
         "key": "D",
-        "text": "以上全是"
+        "text": "先验概率分布"
       }
     ],
-    "answer": "D",
-    "explanation": "形式化方法用数学来描述规格、推导实现和验证正确性，因此三项都符合。"
+    "answer": "C",
+    "explanation": "在 y=f(x) 中，x 是输入样本或特征向量，f 是分类/识别模型，y 是输出类别或结果。"
   },
   {
-    "id": "Q030",
-    "chapter": "第2.2章｜过程模型",
-    "originalChapter": "Chapter 2.2 – Process Models",
+    "id": "MPR010",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别概述与基础概念",
     "number": 10,
     "type": "single",
-    "question": "下列哪一个不是统一过程模型定义的阶段名称",
+    "question": "自动驾驶感知系统中，用于获取周围环境3D点云测距的核心传感器是：",
     "options": [
       {
         "key": "A",
-        "text": "初始阶段"
+        "text": "摄像头"
       },
       {
         "key": "B",
-        "text": "细化阶段"
+        "text": "激光雷达（LiDAR）"
       },
       {
         "key": "C",
-        "text": "构建阶段"
+        "text": "毫米波雷达"
       },
       {
         "key": "D",
-        "text": "验证阶段"
+        "text": "超声波雷达"
       }
     ],
-    "answer": "D",
-    "explanation": "统一过程常见阶段是初始、细化、构建、移交；“验证阶段”不是它的标准阶段名。"
+    "answer": "B",
+    "explanation": "激光雷达通过激光测距获得三维点云，是自动驾驶获取空间几何结构的核心传感器。"
   },
   {
-    "id": "Q031",
-    "chapter": "第2.2章｜过程模型",
-    "originalChapter": "Chapter 2.2 – Process Models",
+    "id": "MPR011",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
     "number": 11,
-    "type": "truefalse",
-    "question": "在统一流程模型中，需求是迭代确定的，可能跨越流程的多个阶段。",
+    "type": "single",
+    "question": "聚类流程的5个步骤顺序正确的是：",
     "options": [
       {
-        "key": "T",
-        "text": "正确 / True"
+        "key": "A",
+        "text": "选定特征 → 确定相似度 → 设定聚类准则 → 选择聚类算法 → 聚类结果评估"
       },
       {
-        "key": "F",
-        "text": "错误 / False"
+        "key": "B",
+        "text": "确定相似度 → 选定特征 → 设定聚类准则 → 选择聚类算法 → 聚类结果评估"
+      },
+      {
+        "key": "C",
+        "text": "选定特征 → 选择聚类算法 → 确定相似度 → 设定聚类准则 → 聚类结果评估"
+      },
+      {
+        "key": "D",
+        "text": "设定聚类准则 → 选定特征 → 确定相似度 → 选择聚类算法 → 聚类结果评估"
       }
     ],
-    "answer": "T",
-    "explanation": "统一过程是迭代式的，需求不会只在一个阶段一次性冻结，而会跨阶段逐步明确。"
+    "answer": "A",
+    "explanation": "聚类先明确用哪些特征，再定义相似度，然后设准则、选算法，最后才评价结果是否合理。"
   },
   {
-    "id": "Q032",
-    "chapter": "第2.2章｜过程模型",
-    "originalChapter": "Chapter 2.2 – Process Models",
+    "id": "MPR012",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
     "number": 12,
     "type": "single",
-    "question": "下列关于软件过程模型的说法，不正确的是",
+    "question": "关于聚类分析的根本局限性，下列说法正确的是：",
     "options": [
       {
         "key": "A",
-        "text": "各个软件过程模型含有的基本框架活动均不相同，定义了不同的过程流以不同的方式 执行自己的框架活动。"
+        "text": "聚类结果绝对唯一，不受特征选择影响"
       },
       {
         "key": "B",
-        "text": "在瀑布模型中阶段间具有顺序性和依赖性：必须等前一阶段的工作完成之后，才能开 始后一阶段的工作"
+        "text": "聚类具有可逆性，合并后可以完全无损拆分"
       },
       {
         "key": "C",
-        "text": "可以使用原型模型开发航天相关系统和公司的财务系统"
+        "text": "聚类极易陷入局部最优，且其操作过程是不可逆的"
       },
       {
         "key": "D",
-        "text": "在增量模型中，软件项目在开发早期通常对软件需求的认识是模糊的、不确定的"
+        "text": "聚类必须基于类条件概率密度才能进行"
       }
     ],
     "answer": "C",
-    "explanation": "航天、财务等高可靠系统不能只依赖原型试错，需求和验证必须更严格；题目问“不正确”，所以选它。"
+    "explanation": "聚类没有唯一标准，且许多合并/分裂操作会丢失原始细节；局部最优和不可逆是它的典型问题。"
   },
   {
-    "id": "Q033",
-    "chapter": "第2.2章｜过程模型",
-    "originalChapter": "Chapter 2.2 – Process Models",
+    "id": "MPR013",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
     "number": 13,
-    "type": "multiple",
-    "question": "下列关于螺旋模型的说法正确的是：",
+    "type": "single",
+    "question": "在最近邻规则试探法聚类中，若圆的半径阈值 $T$ 设定过大，容易导致：",
     "options": [
       {
         "key": "A",
-        "text": "螺旋模型的过程包括制定方案、风险分析、制定计划、阶段实施"
+        "text": "产生大量仅包含单个样本的孤立小类"
       },
       {
         "key": "B",
-        "text": "螺旋模型支持系统的可维护性，每次维护过程只是沿螺旋模型继续多走一两个周期。"
+        "text": "大量本不属于同类的样本被错误归为一类"
       },
       {
         "key": "C",
-        "text": "支持需求不明确、特别是大型软件系统的开发，并支持面向规格说明、面向过程、面向 对象等多种软件开发方法，是一种具有广阔前景的模型"
+        "text": "算法无法收敛并死循环"
       },
       {
         "key": "D",
-        "text": "每个阶段开始时的任务是确定该阶段的目标、为完成这些目标选择方案及设定这些方案 的约束条件。"
+        "text": "聚类中心数量无限增加"
+      }
+    ],
+    "answer": "B",
+    "explanation": "阈值 T 太大，相当于圆半径太宽，很多距离较远、原本不相似的样本也会被并到一类。"
+  },
+  {
+    "id": "MPR014",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 14,
+    "type": "single",
+    "question": "最近邻规则试探法最突出的不足之处是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "计算复杂度呈指数级增长"
+      },
+      {
+        "key": "B",
+        "text": "结果极度依赖输入样本的先后顺序"
+      },
+      {
+        "key": "C",
+        "text": "无法处理在线增量学习"
+      },
+      {
+        "key": "D",
+        "text": "必须预先指定固定的类别数 $K$"
+      }
+    ],
+    "answer": "B",
+    "explanation": "最近邻试探法通常按样本输入顺序逐个处理，前面的归类会影响后面的结果，所以顺序敏感。"
+  },
+  {
+    "id": "MPR015",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 15,
+    "type": "single",
+    "question": "层次聚类算法中的融合算法（Agglomerative）采用的是什么方向的构建策略？",
+    "options": [
+      {
+        "key": "A",
+        "text": "自顶向下"
+      },
+      {
+        "key": "B",
+        "text": "自底向上"
+      },
+      {
+        "key": "C",
+        "text": "动态随机调整"
+      },
+      {
+        "key": "D",
+        "text": "基于密度两极划分"
+      }
+    ],
+    "answer": "B",
+    "explanation": "融合层次聚类从每个样本单独成类开始，逐步把相似类合并，所以是自底向上。"
+  },
+  {
+    "id": "MPR016",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 16,
+    "type": "single",
+    "question": "与融合算法相比，层次聚类的分解算法（Divisive）在计算量上的特点是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "前期计算量巨大（需要考虑所有可能的拆分组合），后期快速下降"
+      },
+      {
+        "key": "B",
+        "text": "全程计算量平稳且极小"
+      },
+      {
+        "key": "C",
+        "text": "前期计算量极小，后期呈指数级上升"
+      },
+      {
+        "key": "D",
+        "text": "计算量与样本总数完全无关"
+      }
+    ],
+    "answer": "A",
+    "explanation": "分解法一开始要考虑把整体如何拆成子类，可能组合很多，所以前期计算量大，后面类变小后下降。"
+  },
+  {
+    "id": "MPR017",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 17,
+    "type": "single",
+    "question": "K-Means（$K$均值）算法的优化核心是最小化准则函数 $E$，该函数代表：",
+    "options": [
+      {
+        "key": "A",
+        "text": "类间散布矩阵的特征值之和"
+      },
+      {
+        "key": "B",
+        "text": "每个样本到其所属类中心的距离平方和"
+      },
+      {
+        "key": "C",
+        "text": "各类别先验概率的熵"
+      },
+      {
+        "key": "D",
+        "text": "错分样本的加权错误率之和"
+      }
+    ],
+    "answer": "B",
+    "explanation": "K-Means每轮都在让样本离自己的类中心更近，其准则 E 就是类内距离平方和。"
+  },
+  {
+    "id": "MPR018",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 18,
+    "type": "single",
+    "question": "在实际应用中，确定K-Means算法中 $K$ 值的经典定性/定量结合方法是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "拉格朗日乘子法"
+      },
+      {
+        "key": "B",
+        "text": "肘部法则（Look for the elbow in E-k curve）"
+      },
+      {
+        "key": "C",
+        "text": "伪逆法"
+      },
+      {
+        "key": "D",
+        "text": "留一交叉验证法"
+      }
+    ],
+    "answer": "B",
+    "explanation": "肘部法看 E 随 K 增大下降的曲线，下降幅度明显变缓的位置就是较合理的 K。"
+  },
+  {
+    "id": "MPR019",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 19,
+    "type": "single",
+    "question": "当K-Means算法达到收敛状态时，准则函数 $E$ 的变化情况是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "持续剧烈震荡"
+      },
+      {
+        "key": "B",
+        "text": "保持线性增长"
+      },
+      {
+        "key": "C",
+        "text": "不再发生变化或变化量小于给定阈值"
+      },
+      {
+        "key": "D",
+        "text": "突变为零"
+      }
+    ],
+    "answer": "C",
+    "explanation": "收敛时样本分配和类中心基本稳定，准则函数 E 不再明显变化，继续迭代意义不大。"
+  },
+  {
+    "id": "MPR020",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 20,
+    "type": "single",
+    "question": "ISODATA算法作为K-Means的升级版，其最核心的突破在于：",
+    "options": [
+      {
+        "key": "A",
+        "text": "能够将计算复杂度降低到 $O(1)$"
+      },
+      {
+        "key": "B",
+        "text": "可以在迭代过程中自动合并和分裂聚类中心"
+      },
+      {
+        "key": "C",
+        "text": "不需要计算任何距离度量"
+      },
+      {
+        "key": "D",
+        "text": "绝对不会陷入局部最优解"
+      }
+    ],
+    "answer": "B",
+    "explanation": "ISODATA比K-Means灵活，能根据类间距离和类内离散程度自动合并或分裂类中心。"
+  },
+  {
+    "id": "MPR021",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 21,
+    "type": "single",
+    "question": "在ISODATA算法中，决定两个聚类中心是否应当执行“合并”操作的直接条件是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "这两类包含的样本数完全相等"
+      },
+      {
+        "key": "B",
+        "text": "它们之间的距离小于预设的阈值 $\\theta_c$"
+      },
+      {
+        "key": "C",
+        "text": "某一类的类内标准差大于分裂阈值 $\\theta_s$"
+      },
+      {
+        "key": "D",
+        "text": "迭代次数达到了最大上限"
+      }
+    ],
+    "answer": "B",
+    "explanation": "ISODATA合并判断看两个中心是否过近；距离小于合并阈值 θc，就说明它们可能应合为一类。"
+  },
+  {
+    "id": "MPR022",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 22,
+    "type": "single",
+    "question": "ISODATA合并两个旧中心后，新聚类中心的计算方式是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "两个旧中心的简单算术平均"
+      },
+      {
+        "key": "B",
+        "text": "随机在两个旧中心之间取一点"
+      },
+      {
+        "key": "C",
+        "text": "依据各自包含样本数进行加权平均"
+      },
+      {
+        "key": "D",
+        "text": "选取包含样本数较少的那个旧中心的值"
+      }
+    ],
+    "answer": "C",
+    "explanation": "合并后的中心要考虑两类样本数量，样本多的一类对新中心影响更大，所以用加权平均。"
+  },
+  {
+    "id": "MPR023",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 23,
+    "type": "single",
+    "question": "基于密度的聚类算法（如DBSCAN）的核心思想是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "通过优化样本到类中心的几何距离来划分区域"
+      },
+      {
+        "key": "B",
+        "text": "一个点是核心点还是噪声，取决于它在 $\\varepsilon$ 半径邻域内的邻居数"
+      },
+      {
+        "key": "C",
+        "text": "假设数据完全服从多元正态分布"
+      },
+      {
+        "key": "D",
+        "text": "自底向上建立一棵复杂的聚类树"
+      }
+    ],
+    "answer": "B",
+    "explanation": "DBSCAN不追求中心点，而是看一个点附近密度够不够；邻域内点数达到阈值就可能形成簇。"
+  },
+  {
+    "id": "MPR024",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 24,
+    "type": "single",
+    "question": "DBSCAN算法中，若一个点 $x_i$ 的 $\\varepsilon$ 邻域内包含的样本数大于或等于 $MinPts$，则该点被定义为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "边界点"
+      },
+      {
+        "key": "B",
+        "text": "核心点（Core Point）"
+      },
+      {
+        "key": "C",
+        "text": "噪声点（Noise Point）"
+      },
+      {
+        "key": "D",
+        "text": "孤立点"
+      }
+    ],
+    "answer": "B",
+    "explanation": "ε 邻域内样本数达到 MinPts 的点就是核心点，它具备向周围扩展出密度簇的能力。"
+  },
+  {
+    "id": "MPR025",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 25,
+    "type": "single",
+    "question": "相比于K-Means算法，DBSCAN算法最显著的优势是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "需要人为指定更为复杂的 $K$ 值"
+      },
+      {
+        "key": "B",
+        "text": "对球形簇的聚类效果明显更好"
+      },
+      {
+        "key": "C",
+        "text": "能够自动识别并排除噪声点，且能发现任意形状的簇"
+      },
+      {
+        "key": "D",
+        "text": "内存消耗与样本数呈线性关系"
+      }
+    ],
+    "answer": "C",
+    "explanation": "K-Means偏爱球形簇且怕噪声；DBSCAN能识别噪声点，也能发现环形、弯曲等任意形状簇。"
+  },
+  {
+    "id": "MPR026",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 26,
+    "type": "single",
+    "question": "下列距离度量公式中，代表曼哈顿距离（L1距离）的是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "$d(x,y) = \\sqrt{\\sum (x_i - y_i)^2}$"
+      },
+      {
+        "key": "B",
+        "text": "$d(x,y) = \\sum |x_i - y_i|$"
+      },
+      {
+        "key": "C",
+        "text": "$d(x,y) = \\max |x_i - y_i|$"
+      },
+      {
+        "key": "D",
+        "text": "$d(x,y) = x^T \\Sigma^{-1} y$"
+      }
+    ],
+    "answer": "B",
+    "explanation": "曼哈顿距离就是各维度绝对差相加，像在城市网格中沿横竖街道走路，所以是 L1 距离。"
+  },
+  {
+    "id": "MPR027",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 27,
+    "type": "single",
+    "question": "若要度量两个不同类别中心之间的离散程度，在模式识别中通常使用：",
+    "options": [
+      {
+        "key": "A",
+        "text": "类内散布矩阵 $S_w$"
+      },
+      {
+        "key": "B",
+        "text": "类间散布矩阵 $S_b$"
+      },
+      {
+        "key": "C",
+        "text": "总体散布矩阵 $S_t$"
+      },
+      {
+        "key": "D",
+        "text": "模糊矩阵"
+      }
+    ],
+    "answer": "B",
+    "explanation": "类间散布矩阵衡量不同类别中心之间分得有多开；类内散布矩阵才衡量同类内部是否紧凑。"
+  },
+  {
+    "id": "MPR028",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 28,
+    "type": "single",
+    "question": "K-Means算法对下列哪种因素非常敏感，容易导致不同的运行结果？",
+    "options": [
+      {
+        "key": "A",
+        "text": "样本特征的物理意义"
+      },
+      {
+        "key": "B",
+        "text": "初始聚类中心的选择"
+      },
+      {
+        "key": "C",
+        "text": "数据的存储格式"
+      },
+      {
+        "key": "D",
+        "text": "是否进行了去中心化"
+      }
+    ],
+    "answer": "B",
+    "explanation": "K-Means初始中心不同，后续迭代路径不同，容易落到不同局部最优结果。"
+  },
+  {
+    "id": "MPR029",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 29,
+    "type": "single",
+    "question": "下列关于聚类评估的说法，错误的是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "聚类评估旨在判断分组是否合理"
+      },
+      {
+        "key": "B",
+        "text": "可以通过类内紧凑度和类间分离度进行评估"
+      },
+      {
+        "key": "C",
+        "text": "聚类评估由于没有绝对的真值标签，通常是完全主观的"
+      },
+      {
+        "key": "D",
+        "text": "好的聚类结果通常满足类内高相似、类间低相似"
+      }
+    ],
+    "answer": "C",
+    "explanation": "聚类虽然没有天然标签，但仍可用类内紧凑、类间分离、轮廓系数等指标评价，不是完全主观。"
+  },
+  {
+    "id": "MPR030",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 30,
+    "type": "single",
+    "question": "若一个数据集包含明显的环形多层嵌套条带分布，首选的聚类算法是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "K-Means"
+      },
+      {
+        "key": "B",
+        "text": "最近邻规则试探法"
+      },
+      {
+        "key": "C",
+        "text": "DBSCAN"
+      },
+      {
+        "key": "D",
+        "text": "ISODATA"
+      }
+    ],
+    "answer": "C",
+    "explanation": "环形嵌套不是球形簇，K-Means会切错；DBSCAN按密度连通性聚类，更适合这类形状。"
+  },
+  {
+    "id": "MPR031",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 31,
+    "type": "single",
+    "question": "在层次聚类中，一旦两个子类被合并，后续步骤将无法将它们重新拆分，这体现了层次聚类的：",
+    "options": [
+      {
+        "key": "A",
+        "text": "高效性"
+      },
+      {
+        "key": "B",
+        "text": "健壮性"
+      },
+      {
+        "key": "C",
+        "text": "不可逆性"
+      },
+      {
+        "key": "D",
+        "text": "收敛性"
+      }
+    ],
+    "answer": "C",
+    "explanation": "层次聚类一旦合并就不会再反悔拆开，这种历史决定后续结果的特点就是不可逆。"
+  },
+  {
+    "id": "MPR032",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 32,
+    "type": "single",
+    "question": "DBSCAN算法中，低于 $MinPts$ 且不落在任何核心点邻域内的点会被标记为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "核心点"
+      },
+      {
+        "key": "B",
+        "text": "噪声点"
+      },
+      {
+        "key": "C",
+        "text": "聚类中心"
+      },
+      {
+        "key": "D",
+        "text": "边界点"
+      }
+    ],
+    "answer": "B",
+    "explanation": "既不是核心点，又不在任何核心点邻域内，说明它无法被密度簇吸收，因此被标为噪声点。"
+  },
+  {
+    "id": "MPR033",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 33,
+    "type": "single",
+    "question": "在K-Means迭代过程中，当所有样本的类别分配均不再发生任何改变时，算法：",
+    "options": [
+      {
+        "key": "A",
+        "text": "进入死循环"
+      },
+      {
+        "key": "B",
+        "text": "达到收敛，停止迭代"
+      },
+      {
+        "key": "C",
+        "text": "触发分裂机制"
+      },
+      {
+        "key": "D",
+        "text": "必须重新初始化"
+      }
+    ],
+    "answer": "B",
+    "explanation": "样本类别分配不再变化，类中心也会稳定，说明K-Means已经达到收敛条件。"
+  },
+  {
+    "id": "MPR034",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 34,
+    "type": "single",
+    "question": "聚类准则设定的核心作用是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "决定原始数据的特征如何提取"
+      },
+      {
+        "key": "B",
+        "text": "定义什么是“相似”，从而决定聚类结果的走向与停止条件"
+      },
+      {
+        "key": "C",
+        "text": "自动为每个样本分配唯一的文本标签"
+      },
+      {
+        "key": "D",
+        "text": "降低原始数据的维度"
+      }
+    ],
+    "answer": "B",
+    "explanation": "聚类准则定义了什么叫“好聚类”：类内多近、类间多远，以及何时停止迭代。"
+  },
+  {
+    "id": "MPR035",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 35,
+    "type": "single",
+    "question": "在没有先验类别知识的前提下，客户细分（价值分群）应当采用哪类算法？",
+    "options": [
+      {
+        "key": "A",
+        "text": "支持向量机"
+      },
+      {
+        "key": "B",
+        "text": "贝叶斯分类器"
+      },
+      {
+        "key": "C",
+        "text": "聚类算法"
+      },
+      {
+        "key": "D",
+        "text": "线性判别分析"
+      }
+    ],
+    "answer": "C",
+    "explanation": "客户细分事先没有类别标签，目标是自动发现人群结构，所以属于无监督聚类问题。"
+  },
+  {
+    "id": "MPR036",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 36,
+    "type": "single",
+    "question": "贝叶斯决策理论的核心是用概率语言回答：",
+    "options": [
+      {
+        "key": "A",
+        "text": "给定观测数据 $x$，它属于某一类的后验概率是多少"
+      },
+      {
+        "key": "B",
+        "text": "样本在物理空间中的几何距离是多少"
+      },
+      {
+        "key": "C",
+        "text": "弱分类器在第 $t$ 轮的错误率是多少"
+      },
+      {
+        "key": "D",
+        "text": "投影矩阵的最优特征向量是什么"
+      }
+    ],
+    "answer": "A",
+    "explanation": "贝叶斯决策的核心就是观测到 x 以后，比较它属于各类别的后验概率，再按概率或风险决策。"
+  },
+  {
+    "id": "MPR037",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 37,
+    "type": "single",
+    "question": "在贝叶斯公式 $P(\\omega_i|x) = \\frac{p(x|\\omega_i)P(\\omega_i)}{p(x)}$ 中，符合 $p(x|\\omega_i)$ 表达的含义是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "先验概率（未观测样本前，某类别占总人群的比例）"
+      },
+      {
+        "key": "B",
+        "text": "后验概率（观测到样本 $x$ 后，它属于 $\\omega_i$ 类的概率）"
+      },
+      {
+        "key": "C",
+        "text": "类条件概率密度（已知类别为 $\\omega_i$ 的前提下，观测到特征 $x$ 的概率密度）"
+      },
+      {
+        "key": "D",
+        "text": "特征全概率（特征空间中产生 $x$ 的总概率）"
+      }
+    ],
+    "answer": "C",
+    "explanation": "p(x|ωi) 是在类别已知为 ωi 的条件下出现观测 x 的概率密度，也叫类条件概率密度。"
+  },
+  {
+    "id": "MPR038",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 38,
+    "type": "single",
+    "question": "若已知人群中正常人和某种疾病患者的先验比例为 $P(\\omega_1) = 0.9, P(\\omega_2) = 0.1$，某项检测的类条件概率为 $p(x|\\omega_1) = 0.2, p(x|\\omega_2) = 0.4$，则根据最小错误率贝叶斯决策，观测到特征 $x$ 的样本应分类为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "异常（$\\omega_2$）"
+      },
+      {
+        "key": "B",
+        "text": "正常（$\\omega_1$）"
+      },
+      {
+        "key": "C",
+        "text": "无法判断"
+      },
+      {
+        "key": "D",
+        "text": "同时属于两类"
+      }
+    ],
+    "answer": "B",
+    "explanation": "比较 p(x|ω)P(ω)：正常为0.2×0.9=0.18，异常为0.4×0.1=0.04，正常后验更大。"
+  },
+  {
+    "id": "MPR039",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 39,
+    "type": "single",
+    "question": "最大后验概率（MAP）决策等价于哪一个贝叶斯决策准则？",
+    "options": [
+      {
+        "key": "A",
+        "text": "最小风险贝叶斯决策（当损失函数为0-1损失时）"
+      },
+      {
+        "key": "B",
+        "text": "最小方差估计"
+      },
+      {
+        "key": "C",
+        "text": "最大似然估计"
+      },
+      {
+        "key": "D",
+        "text": "最小类内散布准则"
+      }
+    ],
+    "answer": "A",
+    "explanation": "0-1损失下，风险最小等价于错误率最小，也等价于选择后验概率最大的类别。"
+  },
+  {
+    "id": "MPR040",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 40,
+    "type": "single",
+    "question": "设计二分类贝叶斯分类器时，若定义判别函数 $g(x) = P(\\omega_1|x) - P(\\omega_2|x)$，则决策规则为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "若 $g(x) < 0$，则 $x \\in \\omega_1$"
+      },
+      {
+        "key": "B",
+        "text": "若 $g(x) > 0$，则 $x \\in \\omega_1$"
+      },
+      {
+        "key": "C",
+        "text": "若 $g(x) = 0$，则 $x \\in \\omega_1$"
+      },
+      {
+        "key": "D",
+        "text": "无论 $g(x)$ 为何值均判定为 $\\omega_2$"
+      }
+    ],
+    "answer": "B",
+    "explanation": "g(x)=P(ω1|x)-P(ω2|x)。若 g(x)>0，说明 ω1 的后验概率更大，应判为 ω1。"
+  },
+  {
+    "id": "MPR041",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 41,
+    "type": "single",
+    "question": "极大似然估计（MLE）的核心思想是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "寻找一组参数，使得已发生的训练样本观测数据的联合概率（似然函数）最大"
+      },
+      {
+        "key": "B",
+        "text": "最小化所有类别的后验风险"
+      },
+      {
+        "key": "C",
+        "text": "寻找方差最大的方向进行投影降维"
+      },
+      {
+        "key": "D",
+        "text": "引入松弛变量来处理线性不可分数据"
+      }
+    ],
+    "answer": "A",
+    "explanation": "MLE不是先猜参数，而是找一组参数，让已经观察到的训练样本出现概率最大。"
+  },
+  {
+    "id": "MPR042",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 42,
+    "type": "single",
+    "question": "多元正态分布参数化模型中，描述各个维度之间相关性的参数是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "均值向量 $\\mu_i$"
+      },
+      {
+        "key": "B",
+        "text": "权重系数 $P_j$"
+      },
+      {
+        "key": "C",
+        "text": "协方差矩阵 $\\Sigma_i$"
+      },
+      {
+        "key": "D",
+        "text": "判别函数 $g(x)$"
+      }
+    ],
+    "answer": "C",
+    "explanation": "协方差矩阵不仅记录每个维度方差，也记录不同维度之间的相关性。"
+  },
+  {
+    "id": "MPR043",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 43,
+    "type": "single",
+    "question": "高斯混合模型（GMM）的基本出发点是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "抛弃一切概率模型，改用超平面分割"
+      },
+      {
+        "key": "B",
+        "text": "用多个高斯分布的加权线性组合来逼近并拟合任意复杂的连续概率密度分布"
+      },
+      {
+        "key": "C",
+        "text": "假定所有特征变量之间都严格独立"
+      },
+      {
+        "key": "D",
+        "text": "串行组合多个弱分类器"
+      }
+    ],
+    "answer": "B",
+    "explanation": "GMM用多个高斯分布按权重叠加，能逼近单个高斯无法表达的复杂连续分布。"
+  },
+  {
+    "id": "MPR044",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 44,
+    "type": "single",
+    "question": "在朴素贝叶斯分类器（Naive Bayes）中，“朴素”一词的根本含义是指：",
+    "options": [
+      {
+        "key": "A",
+        "text": "假设所有类别的先验概率完全相等"
+      },
+      {
+        "key": "B",
+        "text": "假设数据集没有任何噪声"
+      },
+      {
+        "key": "C",
+        "text": "强行假设样本的各个属性/特征之间在给定类别时是条件独立的"
+      },
+      {
+        "key": "D",
+        "text": "分类器结构非常简单，不需要进行任何参数学习"
+      }
+    ],
+    "answer": "C",
+    "explanation": "“朴素”不是说模型幼稚，而是做了很强的条件独立假设：给定类别后，各特征互不影响。"
+  },
+  {
+    "id": "MPR045",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 45,
+    "type": "single",
+    "question": "朴素贝叶斯分类器引入“属性条件独立性假设”带来的直接技术优势是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "极大地提高了模型的非线性表达能力"
+      },
+      {
+        "key": "B",
+        "text": "将高维联合概率密度的估计拆解为多个一维单概率密度的乘积，彻底简化了计算"
+      },
+      {
+        "key": "C",
+        "text": "能够自动完成特征提取工作"
+      },
+      {
+        "key": "D",
+        "text": "保证分类错误率绝对为零"
+      }
+    ],
+    "answer": "B",
+    "explanation": "独立假设把高维联合概率拆成多个一维概率相乘，极大降低了参数估计和计算难度。"
+  },
+  {
+    "id": "MPR046",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 46,
+    "type": "single",
+    "question": "贝叶斯决策理论中，引入“损失函数（Loss Function）”的目的是为了处理：",
+    "options": [
+      {
+        "key": "A",
+        "text": "最小错误率决策"
+      },
+      {
+        "key": "B",
+        "text": "最小风险决策（考虑不同错误分类带来的代价差异）"
+      },
+      {
+        "key": "C",
+        "text": "特征提取中的维数灾难"
+      },
+      {
+        "key": "D",
+        "text": "过拟合问题"
+      }
+    ],
+    "answer": "B",
+    "explanation": "不同错误的代价可能不同，比如漏诊比误报严重；损失函数就是把这种代价写进决策。"
+  },
+  {
+    "id": "MPR047",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 47,
+    "type": "single",
+    "question": "全概率公式在贝叶斯决策中主要用于计算分母，即特征全概率 $p(x)$，其公式形式为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "$p(x) = \\sum_{j=1}^c p(x|\\omega_j)$"
+      },
+      {
+        "key": "B",
+        "text": "$p(x) = \\sum_{j=1}^c P(\\omega_j)$"
+      },
+      {
+        "key": "C",
+        "text": "$p(x) = \\sum_{j=1}^c p(x|\\omega_j)P(\\omega_j)$"
+      },
+      {
+        "key": "D",
+        "text": "$p(x) = \\prod_{j=1}^c p(x|\\omega_j)P(\\omega_j)$"
+      }
+    ],
+    "answer": "C",
+    "explanation": "全概率 p(x) 要把所有类别产生 x 的可能性加起来，即每类似然乘先验后求和。"
+  },
+  {
+    "id": "MPR048",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 48,
+    "type": "single",
+    "question": "当各类别的先验概率 $P(\\omega_i)$ 完全相等，且各类的类条件概率密度均呈方差相同的正态分布时，最小错误率贝叶斯边界是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "复杂的超球面"
+      },
+      {
+        "key": "B",
+        "text": "线性判定面（超平面）"
+      },
+      {
+        "key": "C",
+        "text": "抛物面"
+      },
+      {
+        "key": "D",
+        "text": "阶跃函数"
+      }
+    ],
+    "answer": "B",
+    "explanation": "先验相等且方差相同的正态类会抵消二次项，判别函数只剩线性项，所以边界是超平面。"
+  },
+  {
+    "id": "MPR049",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 49,
+    "type": "single",
+    "question": "在手算朴素贝叶斯分类器时，如果某个离散特征值在训练集中未曾出现过，导致条件概率为0，通常采用什么技术进行平滑修正？",
+    "options": [
+      {
+        "key": "A",
+        "text": "极大似然估计"
+      },
+      {
+        "key": "B",
+        "text": "拉普拉斯修正（Laplace Correction / 加1平滑）"
+      },
+      {
+        "key": "C",
+        "text": "主成分分析"
+      },
+      {
+        "key": "D",
+        "text": "伪逆法"
+      }
+    ],
+    "answer": "B",
+    "explanation": "离散特征某取值没出现会让概率为0，乘积直接归零；拉普拉斯加1平滑可避免零概率。"
+  },
+  {
+    "id": "MPR050",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 50,
+    "type": "single",
+    "question": "最大后验概率（MAP）与最大似然估计（MLE）的主要区别在于，MAP考虑了：",
+    "options": [
+      {
+        "key": "A",
+        "text": "样本的几何特征"
+      },
+      {
+        "key": "B",
+        "text": "类别的先验概率分布"
+      },
+      {
+        "key": "C",
+        "text": "错分样本的动态权重"
+      },
+      {
+        "key": "D",
+        "text": "核函数的映射"
+      }
+    ],
+    "answer": "B",
+    "explanation": "MLE只看样本似然，MAP在似然之外还乘上先验，因此会把类别或参数的先验信息考虑进去。"
+  },
+  {
+    "id": "MPR051",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 51,
+    "type": "single",
+    "question": "多元正态分布特征密度函数的指数项中，计算样本点到均值向量的距离被称为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "欧氏距离"
+      },
+      {
+        "key": "B",
+        "text": "马氏距离"
+      },
+      {
+        "key": "C",
+        "text": "切比雪夫距离"
+      },
+      {
+        "key": "D",
+        "text": "闵可夫斯基距离"
+      }
+    ],
+    "answer": "B",
+    "explanation": "多元高斯指数项中的距离考虑协方差结构和尺度差异，这就是马氏距离。"
+  },
+  {
+    "id": "MPR052",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 52,
+    "type": "single",
+    "question": "贝叶斯分类器的根本技术弱点在于：",
+    "options": [
+      {
+        "key": "A",
+        "text": "缺乏坚实的数学理论支持"
+      },
+      {
+        "key": "B",
+        "text": "无法处理二分类问题"
+      },
+      {
+        "key": "C",
+        "text": "极度依赖并假定已知或能准确估计数据的概率分布"
+      },
+      {
+        "key": "D",
+        "text": "计算速度在所有分类算法中是最慢的"
+      }
+    ],
+    "answer": "C",
+    "explanation": "贝叶斯方法强依赖先验和类条件概率密度估计；分布估不准，分类器就容易失真。"
+  },
+  {
+    "id": "MPR053",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 53,
+    "type": "single",
+    "question": "在贝叶斯风险决策中，若把正确分类的损失设为0，错误分类的损失设为相同正值，则最小风险决策退化为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "最小方差决策"
+      },
+      {
+        "key": "B",
+        "text": "最小错误率决策"
+      },
+      {
+        "key": "C",
+        "text": "最大似然决策"
+      },
+      {
+        "key": "D",
+        "text": "判别函数平方和最小决策"
+      }
+    ],
+    "answer": "B",
+    "explanation": "正确损失为0、所有错误损失相同，此时最小风险只是在减少犯错概率，即最小错误率。"
+  },
+  {
+    "id": "MPR054",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 54,
+    "type": "single",
+    "question": "在正态分布假设下，若各类的协方差矩阵不相等（$\\Sigma_i \\ne \\Sigma_j$），则贝叶斯判定边界一般是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "直线或超平面"
+      },
+      {
+        "key": "B",
+        "text": "二次或高次判定曲面"
+      },
+      {
+        "key": "C",
+        "text": "离散点集"
+      },
+      {
+        "key": "D",
+        "text": "平行于坐标轴的矩形"
+      }
+    ],
+    "answer": "B",
+    "explanation": "协方差矩阵不相等时，判别函数中的二次项不能抵消，边界一般变成二次曲面。"
+  },
+  {
+    "id": "MPR055",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 55,
+    "type": "single",
+    "question": "贝叶斯公式中，起到将“已有先验知识”和“新观测到的证据”有机结合起来的纽带是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "后验概率"
+      },
+      {
+        "key": "B",
+        "text": "散布矩阵"
+      },
+      {
+        "key": "C",
+        "text": "松弛变量"
+      },
+      {
+        "key": "D",
+        "text": "准则函数"
+      }
+    ],
+    "answer": "A",
+    "explanation": "后验概率把先验 P(ω) 和新证据 p(x|ω) 结合起来，是贝叶斯更新后的最终判断依据。"
+  },
+  {
+    "id": "MPR056",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 56,
+    "type": "single",
+    "question": "支持向量机（SVM）的核心思想与贝叶斯完全不同，它在特征空间中追求的是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "拟合出精确的特征条件概率密度分布"
+      },
+      {
+        "key": "B",
+        "text": "寻找一条离两边数据几何边缘都尽可能远的“最优分割面”（最大化间隔）"
+      },
+      {
+        "key": "C",
+        "text": "通过串行学习逐步修正错分样本的权重"
+      },
+      {
+        "key": "D",
+        "text": "使得类内散布矩阵和类间散布矩阵的比值最大"
+      }
+    ],
+    "answer": "B",
+    "explanation": "SVM不先估计概率分布，而是在几何上找最大间隔超平面，让边界离两类样本都尽量远。"
+  },
+  {
+    "id": "MPR057",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 57,
+    "type": "single",
+    "question": "在硬间隔支持向量机的标准数学优化问题中，其最终的优化目标可以量化转化为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "$\\max \\|w\\|$"
+      },
+      {
+        "key": "B",
+        "text": "$\\min \\frac{1}{2}\\|w\\|^2$"
+      },
+      {
+        "key": "C",
+        "text": "$\\min \\sum \\xi_i$"
+      },
+      {
+        "key": "D",
+        "text": "$\\max w^T x + b$"
+      }
+    ],
+    "answer": "B",
+    "explanation": "最大化间隔等价于最小化权重范数，标准形式写成 min 1/2||w||²，便于凸优化求解。"
+  },
+  {
+    "id": "MPR058",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 58,
+    "type": "single",
+    "question": "硬间隔支持向量机要求所有训练样本必须严格满足的约束条件是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "$y_i(w^T x_i + b) \\ge 1$"
+      },
+      {
+        "key": "B",
+        "text": "$y_i(w^T x_i + b) \\le 0$"
+      },
+      {
+        "key": "C",
+        "text": "$\\sum \\alpha_i = 0$"
+      },
+      {
+        "key": "D",
+        "text": "$w^T x_i + b = 0$"
+      }
+    ],
+    "answer": "A",
+    "explanation": "硬间隔要求每个样本都被正确分到间隔之外，所以约束为 y_i(w^T x_i+b)≥1。"
+  },
+  {
+    "id": "MPR059",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 59,
+    "type": "single",
+    "question": "现实中当训练数据线性不可分或者存在噪声时，支持向量机引入了什么机制来构建“软间隔（Soft Margin）”？",
+    "options": [
+      {
+        "key": "A",
+        "text": "类条件独立性假设"
+      },
+      {
+        "key": "B",
+        "text": "松弛变量 $\\xi_i$ 与惩罚因子 $C$（Hinge Loss）"
+      },
+      {
+        "key": "C",
+        "text": "串行弱分类器投票"
+      },
+      {
+        "key": "D",
+        "text": "协方差矩阵特征值分解"
+      }
+    ],
+    "answer": "B",
+    "explanation": "软间隔允许少量样本违反约束，用松弛变量 ξi 表示违反程度，用 C 控制惩罚强度。"
+  },
+  {
+    "id": "MPR060",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 60,
+    "type": "single",
+    "question": "软间隔支持向量机优化目标中，参数 $C$（惩罚因子）的作用是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "控制投影后特征空间的实际维度"
+      },
+      {
+        "key": "B",
+        "text": "调节“最大化几何间隔”与“减少错分样本（违反约束的程度）”之间的折中平衡"
+      },
+      {
+        "key": "C",
+        "text": "设定核函数的最高阶数"
+      },
+      {
+        "key": "D",
+        "text": "决定最近邻搜索的半径圆大小"
+      }
+    ],
+    "answer": "B",
+    "explanation": "C 大更重视训练错误，C 小更重视大间隔和泛化，它控制“拟合训练集”和“容忍错误”的平衡。"
+  },
+  {
+    "id": "MPR061",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 61,
+    "type": "single",
+    "question": "支持向量机中，决定最终分类超平面边界的样本是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "所有的训练集样本"
+      },
+      {
+        "key": "B",
+        "text": "远离判定边界的极值样本"
+      },
+      {
+        "key": "C",
+        "text": "落在间隔边界上或之内的“支持向量（Support Vectors）”"
+      },
+      {
+        "key": "D",
+        "text": "被噪声严重污染的离群点"
+      }
+    ],
+    "answer": "C",
+    "explanation": "最终超平面主要由离边界最近的支持向量决定，远离边界的普通样本通常不起决定作用。"
+  },
+  {
+    "id": "MPR062",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 62,
+    "type": "single",
+    "question": "当面对非线性分类问题时，Kernel SVM（核支持向量机）利用核技巧实现了：",
+    "options": [
+      {
+        "key": "A",
+        "text": "自动抛弃非线性特征，只保留线性特征"
+      },
+      {
+        "key": "B",
+        "text": "将弱分类器串行集成起来提升性能"
+      },
+      {
+        "key": "C",
+        "text": "在低维空间中直接计算高维映射后的内积，从而高效解决非线性可分问题"
+      },
+      {
+        "key": "D",
+        "text": "动态更新训练样本的概率密度函数"
+      }
+    ],
+    "answer": "C",
+    "explanation": "核技巧不显式计算高维坐标，而是直接算映射后的内积，从而高效处理非线性分类。"
+  },
+  {
+    "id": "MPR063",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 63,
+    "type": "single",
+    "question": "感知器算法（Perceptron）的核心优化路线是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "利用广义特征值分解求解逆矩阵"
+      },
+      {
+        "key": "B",
+        "text": "直接定义判别函数 $g(x) = w^T x + b$，利用梯度下降迭代修正错分样本的权重向量"
+      },
+      {
+        "key": "C",
+        "text": "自顶向下构建复杂的规则树"
+      },
+      {
+        "key": "D",
+        "text": "计算样本到中心的平方和准则"
+      }
+    ],
+    "answer": "B",
+    "explanation": "感知器用线性判别函数，对错分样本按梯度方向更新 w 和 b，直到尽量把样本分开。"
+  },
+  {
+    "id": "MPR064",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 64,
+    "type": "single",
+    "question": "关于感知器算法的收敛性，下列结论绝对正确的是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "无论数据分布如何，感知器算法均能在有限步内完美收敛"
+      },
+      {
+        "key": "B",
+        "text": "当且仅当训练样本数据是线性可分时，感知器算法保证收敛"
+      },
+      {
+        "key": "C",
+        "text": "数据线性不可分时，感知器依然能收敛到全局最优解"
+      },
+      {
+        "key": "D",
+        "text": "感知器的收敛速度完全取决于类别先验概率"
+      }
+    ],
+    "answer": "B",
+    "explanation": "感知器收敛定理只在线性可分数据上成立；线性不可分时会反复震荡，无法保证收敛。"
+  },
+  {
+    "id": "MPR065",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 65,
+    "type": "single",
+    "question": "当数据被证实为线性不可分、导致感知器无法收敛时，通常可以改用什么方法来求解线性判别函数？",
+    "options": [
+      {
+        "key": "A",
+        "text": "最小平方误差判别（MSE，利用伪逆法或梯度下降求解）"
+      },
+      {
+        "key": "B",
+        "text": "肘部法则"
+      },
+      {
+        "key": "C",
+        "text": "极大似然估计"
+      },
+      {
+        "key": "D",
+        "text": "层次分解算法"
+      }
+    ],
+    "answer": "A",
+    "explanation": "MSE把分类问题改写成最小化平方误差，可用伪逆或梯度下降，即便不可分也能给出近似解。"
+  },
+  {
+    "id": "MPR066",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 66,
+    "type": "single",
+    "question": "在线性判别函数中，若样本被正确分类，则感知器准则函数 $J_p(w)$ 的值应当：",
+    "options": [
+      {
+        "key": "A",
+        "text": "趋于无穷大"
+      },
+      {
+        "key": "B",
+        "text": "等于零（因为错分样本集为空）"
+      },
+      {
+        "key": "C",
+        "text": "持续线性增长"
+      },
+      {
+        "key": "D",
+        "text": "变为负数"
+      }
+    ],
+    "answer": "B",
+    "explanation": "感知器准则只对错分样本计入损失。若没有错分样本，错分集为空，准则值为0。"
+  },
+  {
+    "id": "MPR067",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 67,
+    "type": "single",
+    "question": "为了解决多分类问题，将所有类别两两配对训练 $\\frac{c(c-1)}{2}$ 个分类器的SVM扩展策略被称为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "OVR（一对多，One-vs-Rest）"
+      },
+      {
+        "key": "B",
+        "text": "OVO（一对一，One-vs-One）"
+      },
+      {
+        "key": "C",
+        "text": "直接多分类策略"
+      },
+      {
+        "key": "D",
+        "text": "层次树状分类"
+      }
+    ],
+    "answer": "B",
+    "explanation": "一对一策略把 c 个类别两两组合，每对训练一个分类器，所以数量是 c(c-1)/2。"
+  },
+  {
+    "id": "MPR068",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 68,
+    "type": "single",
+    "question": "支持向量机（SVM）中，若选用高斯核函数（RBF），其潜在的作用是将特征映射到：",
+    "options": [
+      {
+        "key": "A",
+        "text": "零维空间"
+      },
+      {
+        "key": "B",
+        "text": "保持原始低维空间不变"
+      },
+      {
+        "key": "C",
+        "text": "无穷维空间"
+      },
+      {
+        "key": "D",
+        "text": "二维平面"
+      }
+    ],
+    "answer": "C",
+    "explanation": "RBF高斯核对应一种无限维特征映射，使原空间非线性问题可能在高维空间线性可分。"
+  },
+  {
+    "id": "MPR069",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 69,
+    "type": "single",
+    "question": "感知器算法是一种什么样的学习方法？",
+    "options": [
+      {
+        "key": "A",
+        "text": "增量式/在线学习算法（每次用错分样本更新）"
+      },
+      {
+        "key": "B",
+        "text": "批量全局矩阵分解算法"
+      },
+      {
+        "key": "C",
+        "text": "无监督聚类算法"
+      },
+      {
+        "key": "D",
+        "text": "非参数化密度估计算法"
+      }
+    ],
+    "answer": "A",
+    "explanation": "感知器每次发现错分样本就更新一次权重，符合增量式/在线学习的特点。"
+  },
+  {
+    "id": "MPR070",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 70,
+    "type": "single",
+    "question": "线性判别函数 $g(x) = w^T x + b = 0$ 几何上代表特征空间中的：",
+    "options": [
+      {
+        "key": "A",
+        "text": "一个弯曲的超曲面"
+      },
+      {
+        "key": "B",
+        "text": "超平面（Decision Hyperplane）"
+      },
+      {
+        "key": "C",
+        "text": "一个闭合的超球面"
+      },
+      {
+        "key": "D",
+        "text": "散点集合"
+      }
+    ],
+    "answer": "B",
+    "explanation": "w^T x+b=0 是线性方程，在二维中是直线，在高维中就是超平面。"
+  },
+  {
+    "id": "MPR071",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 71,
+    "type": "single",
+    "question": "在最小平方误差判别（MSE）中，利用伪逆法求解权重向量 $w$ 的核心公式涉及到：",
+    "options": [
+      {
+        "key": "A",
+        "text": "广义特征值分解"
+      },
+      {
+        "key": "B",
+        "text": "伪逆矩阵 $X^{\\dagger} = (X^T X)^{-1} X^T$ 的计算"
+      },
+      {
+        "key": "C",
+        "text": "核函数的内积映射"
+      },
+      {
+        "key": "D",
+        "text": "概率密度的乘积"
+      }
+    ],
+    "answer": "B",
+    "explanation": "MSE闭式解依赖伪逆矩阵，常见形式是 X†=(X^T X)^(-1)X^T。"
+  },
+  {
+    "id": "MPR072",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 72,
+    "type": "single",
+    "question": "SVM中的“硬间隔”和“软间隔”最本质的区别在于：",
+    "options": [
+      {
+        "key": "A",
+        "text": "是否允许训练样本在一定程度上违反边际约束"
+      },
+      {
+        "key": "B",
+        "text": "是否使用了高维非线性核函数"
+      },
+      {
+        "key": "C",
+        "text": "优化目标是最小化方差还是最大化方差"
+      },
+      {
+        "key": "D",
+        "text": "分类器属于有监督还是无监督学习"
+      }
+    ],
+    "answer": "A",
+    "explanation": "硬间隔不允许任何训练点违反边界约束；软间隔允许一定违反，并用惩罚项控制。"
+  },
+  {
+    "id": "MPR073",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 73,
+    "type": "single",
+    "question": "如果SVM模型在训练集上达到了100%的准确率，但在测试集上表现极差，应当如何调整惩罚参数 $C$？",
+    "options": [
+      {
+        "key": "A",
+        "text": "继续无限增大 $C$"
+      },
+      {
+        "key": "B",
+        "text": "适当减小 $C$，允许一定的训练误差以增强泛化能力"
+      },
+      {
+        "key": "C",
+        "text": "将 $C$ 设为0"
+      },
+      {
+        "key": "D",
+        "text": "变换为硬间隔模型"
+      }
+    ],
+    "answer": "B",
+    "explanation": "训练集100%但测试差通常是过拟合。减小 C 可以降低对训练错误的执着，增强泛化。"
+  },
+  {
+    "id": "MPR074",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 74,
+    "type": "single",
+    "question": "支持向量机（SVM）的数学基础来源于：",
+    "options": [
+      {
+        "key": "A",
+        "text": "统计学习理论与凸优化理论"
+      },
+      {
+        "key": "B",
+        "text": "全概率公式与马尔可夫链"
+      },
+      {
+        "key": "C",
+        "text": "模糊数学与图论"
+      },
+      {
+        "key": "D",
+        "text": "仿生学与集成进化理论"
+      }
+    ],
+    "answer": "A",
+    "explanation": "SVM建立在统计学习理论、最大间隔思想和凸优化/对偶问题求解基础上。"
+  },
+  {
+    "id": "MPR075",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别函数与支持向量机",
+    "number": 75,
+    "type": "single",
+    "question": "感知器算法中，权重更新的方向是沿着准则函数的：",
+    "options": [
+      {
+        "key": "A",
+        "text": "梯度正方向"
+      },
+      {
+        "key": "B",
+        "text": "负梯度方向（即梯度下降法）"
+      },
+      {
+        "key": "C",
+        "text": "正交切线方向"
+      },
+      {
+        "key": "D",
+        "text": "随机扰动方向"
+      }
+    ],
+    "answer": "B",
+    "explanation": "感知器用梯度下降最小化准则函数，因此权重沿负梯度方向更新。"
+  },
+  {
+    "id": "MPR076",
+    "chapter": "模块5｜集成学习与提升方法",
+    "originalChapter": "模块5：集成学习与提升方法",
+    "number": 76,
+    "type": "single",
+    "question": "提升学习（Boosting）方法的核心内在逻辑是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "让多个完全独立的分类器同时并行计算，最后取平均"
+      },
+      {
+        "key": "B",
+        "text": "串行组合多个弱分类器，每轮重点关注并加大前一轮被错分样本的权重"
+      },
+      {
+        "key": "C",
+        "text": "自动抛弃表现不好的特征，实现特征选择"
+      },
+      {
+        "key": "D",
+        "text": "自底向上将样本逐步合并成一棵大的聚类树"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Boosting是串行训练弱分类器，后面的分类器重点处理前面错分的样本。"
+  },
+  {
+    "id": "MPR077",
+    "chapter": "模块5｜集成学习与提升方法",
+    "originalChapter": "模块5：集成学习与提升方法",
+    "number": 77,
+    "type": "single",
+    "question": "下列关于Boosting方法特点的说法中，错误的是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "个体学习器之间存在强依赖关系，必须串行学习"
+      },
+      {
+        "key": "B",
+        "text": "每一轮集成后的强分类器性能通常都比前一轮更好"
+      },
+      {
+        "key": "C",
+        "text": "新增加的个体学习器重点关注被正确分类的样本"
+      },
+      {
+        "key": "D",
+        "text": "个体学习器之间是非独立的"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Boosting会提高错分样本权重，而不是重点关注已正确分类的样本；C把方向说反了。"
+  },
+  {
+    "id": "MPR078",
+    "chapter": "模块5｜集成学习与提升方法",
+    "originalChapter": "模块5：集成学习与提升方法",
+    "number": 78,
+    "type": "single",
+    "question": "在经典的AdaBoost算法中，第 $t$ 轮基分类器的投票权重 $\\alpha_t$ 的计算公式为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "$\\alpha_t = \\frac{1}{2} \\ln \\frac{1 - \\varepsilon_t}{\\varepsilon_t}$"
+      },
+      {
+        "key": "B",
+        "text": "$\\alpha_t = \\ln \\frac{\\varepsilon_t}{1 - \\varepsilon_t}$"
+      },
+      {
+        "key": "C",
+        "text": "$\\alpha_t = \\sqrt{1 - \\varepsilon_t}$"
+      },
+      {
+        "key": "D",
+        "text": "$\\alpha_t = \\frac{1}{\\varepsilon_t}$"
+      }
+    ],
+    "answer": "A",
+    "explanation": "AdaBoost弱分类器权重由错误率决定，错误率越低权重越大，公式为 1/2 ln((1-ε)/ε)。"
+  },
+  {
+    "id": "MPR079",
+    "chapter": "模块5｜集成学习与提升方法",
+    "originalChapter": "模块5：集成学习与提升方法",
+    "number": 79,
+    "type": "single",
+    "question": "在AdaBoost权重计算实例中，若第3轮分类器的错误率 $\\varepsilon_3 = 0.17$，则其计算出的投票权重 $\\alpha_3$ 约为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "0.17"
+      },
+      {
+        "key": "B",
+        "text": "0.50"
+      },
+      {
+        "key": "C",
+        "text": "0.793"
+      },
+      {
+        "key": "D",
+        "text": "1.25"
+      }
+    ],
+    "answer": "C",
+    "explanation": "代入公式：α=0.5×ln((1-0.17)/0.17)=0.5×ln(4.882)≈0.793。"
+  },
+  {
+    "id": "MPR080",
+    "chapter": "模块5｜集成学习与提升方法",
+    "originalChapter": "模块5：集成学习与提升方法",
+    "number": 80,
+    "type": "single",
+    "question": "根据AdaBoost算法，如果一个弱分类器的分类错误率 $\\varepsilon_t > 0.5$，通常意味着：",
+    "options": [
+      {
+        "key": "A",
+        "text": "该分类器极其优秀，应该赋予极高权重"
+      },
+      {
+        "key": "B",
+        "text": "它的表现甚至不如随机猜测，需要进行取反或重新训练"
+      },
+      {
+        "key": "C",
+        "text": "算法直接完美收敛停止"
+      },
+      {
+        "key": "D",
+        "text": "样本权重需要重置为均匀分布"
+      }
+    ],
+    "answer": "B",
+    "explanation": "二分类中随机猜测错误率约0.5，若弱分类器大于0.5，说明比乱猜还差，应取反或重训。"
+  },
+  {
+    "id": "MPR081",
+    "chapter": "模块5｜集成学习与提升方法",
+    "originalChapter": "模块5：集成学习与提升方法",
+    "number": 81,
+    "type": "single",
+    "question": "AdaBoost最终强分类器的输出形式是通过以下哪种方式产生的？",
+    "options": [
+      {
+        "key": "A",
+        "text": "所有弱分类器输出结果的简单不加权算术平均"
+      },
+      {
+        "key": "B",
+        "text": "剔除所有错误率高的分类器，只保留最后训练的那一个"
+      },
+      {
+        "key": "C",
+        "text": "各弱分类器基于其投票权重 $\\alpha_t$ 进行加权多数表决"
+      },
+      {
+        "key": "D",
+        "text": "随机抽取一个弱分类器的输出作为最终结果"
+      }
+    ],
+    "answer": "C",
+    "explanation": "最终强分类器不是简单平均，而是按每个弱分类器的 α 权重进行加权投票。"
+  },
+  {
+    "id": "MPR082",
+    "chapter": "模块5｜集成学习与提升方法",
+    "originalChapter": "模块5：集成学习与提升方法",
+    "number": 82,
+    "type": "single",
+    "question": "Bagging方法与Boosting方法在个体学习器生成机制上的根本区别是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "Bagging是有监督学习，Boosting是无监督学习"
+      },
+      {
+        "key": "B",
+        "text": "Bagging是个体学习器独立并行生成，Boosting是个体学习器串行强依赖生成"
+      },
+      {
+        "key": "C",
+        "text": "Bagging基于概率分布，Boosting基于几何超平面"
+      },
+      {
+        "key": "D",
+        "text": "Bagging会改变样本空间维度，Boosting不会"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Bagging的基学习器可并行、相对独立；Boosting前后轮依赖强，必须串行迭代。"
+  },
+  {
+    "id": "MPR083",
+    "chapter": "模块5｜集成学习与提升方法",
+    "originalChapter": "模块5：集成学习与提升方法",
+    "number": 83,
+    "type": "single",
+    "question": "在AdaBoost算法的样本权重更新步骤中，若样本 $x_i$ 在第 $t$ 轮被正确分类，则其在下一轮的权重 $D_{t+1}(i)$ 将：",
+    "options": [
+      {
+        "key": "A",
+        "text": "保持绝对不变"
+      },
+      {
+        "key": "B",
+        "text": "被成倍放大"
+      },
+      {
+        "key": "C",
+        "text": "被相应缩小，使其在后续训练中受关注度降低"
+      },
+      {
+        "key": "D",
+        "text": "直接归零"
+      }
+    ],
+    "answer": "C",
+    "explanation": "AdaBoost会降低正确样本权重，让下一轮少关注它们，把注意力转移给错分样本。"
+  },
+  {
+    "id": "MPR084",
+    "chapter": "模块5｜集成学习与提升方法",
+    "originalChapter": "模块5：集成学习与提升方法",
+    "number": 84,
+    "type": "single",
+    "question": "随着训练轮数 $T$ 的不断增加，AdaBoost强分类器在训练集上的训练误差通常会：",
+    "options": [
+      {
+        "key": "A",
+        "text": "呈指数级快速下降直至趋近于0"
+      },
+      {
+        "key": "B",
+        "text": "线性稳步上升"
+      },
+      {
+        "key": "C",
+        "text": "保持完全不变"
+      },
+      {
+        "key": "D",
+        "text": "呈现出剧烈的随机上下震荡"
+      }
+    ],
+    "answer": "A",
+    "explanation": "AdaBoost每轮都集中修正错误样本，训练误差通常会随轮数快速下降，甚至接近0。"
+  },
+  {
+    "id": "MPR085",
+    "chapter": "模块5｜集成学习与提升方法",
+    "originalChapter": "模块5：集成学习与提升方法",
+    "number": 85,
+    "type": "single",
+    "question": "集成学习之所以能够提升分类性能，其底层的哲学思想是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "降低数据的采样频率"
+      },
+      {
+        "key": "B",
+        "text": "结合多个“三个臭皮匠”式的弱分类器，互补不足，构造出一个“诸葛亮”式的强分类器"
+      },
+      {
+        "key": "C",
+        "text": "完全消除特征之间的相关性"
+      },
+      {
+        "key": "D",
+        "text": "将非线性分类问题转化为无监督的聚类问题"
+      }
+    ],
+    "answer": "B",
+    "explanation": "集成学习靠多个弱学习器互补，单个可能一般，但组合后能形成更强的整体判断。"
+  },
+  {
+    "id": "MPR086",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 86,
+    "type": "single",
+    "question": "特征选择与特征提取的根本区别在于：",
+    "options": [
+      {
+        "key": "A",
+        "text": "特征选择需要先验知识，特征提取完全不需要"
+      },
+      {
+        "key": "B",
+        "text": "特征选择是筛选原始特征的子集（保留原貌），特征提取是通过数学变换生成全新的新特征"
+      },
+      {
+        "key": "C",
+        "text": "特征选择是生成新的特征组合，特征提取是单纯剔除噪声"
+      },
+      {
+        "key": "D",
+        "text": "特征选择适用于线性数据，特征提取适用于非线性数据"
+      }
+    ],
+    "answer": "B",
+    "explanation": "特征选择是“挑原特征”，特征提取是“变换出新特征”，这是二者最根本区别。"
+  },
+  {
+    "id": "MPR087",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 87,
+    "type": "single",
+    "question": "进行特征选择/提取降维的最直接驱动技术动因是为了克服：",
+    "options": [
+      {
+        "key": "A",
+        "text": "局部最优解"
+      },
+      {
+        "key": "B",
+        "text": "维数灾难（Curse of Dimensionality，维度高导致样本稀疏、计算困难及过拟合）"
+      },
+      {
+        "key": "C",
+        "text": "感知器不收敛"
+      },
+      {
+        "key": "D",
+        "text": "随机权重的初始化震荡"
+      }
+    ],
+    "answer": "B",
+    "explanation": "维度过高会让样本稀疏、计算困难、容易过拟合，降维的直接动因就是缓解维数灾难。"
+  },
+  {
+    "id": "MPR088",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 88,
+    "type": "single",
+    "question": "特征选择三大判据中，基于类内类间散布距离的代表性判据是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "类间平均距离判据 $J_d(x)$"
+      },
+      {
+        "key": "B",
+        "text": "基于后验概率推导的熵判据"
+      },
+      {
+        "key": "C",
+        "text": "交叉熵损失函数"
+      },
+      {
+        "key": "D",
+        "text": "贝叶斯最小风险值"
+      }
+    ],
+    "answer": "A",
+    "explanation": "类间平均距离判据直接用类别之间的距离/散布衡量可分性，属于基于类内类间距离的判据。"
+  },
+  {
+    "id": "MPR089",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 89,
+    "type": "single",
+    "question": "可分性准则 $J_d(x)$ 必须具备的四条优良性质中，包括加特征时判据值“不降”的性质，这被称为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "可加性"
+      },
+      {
+        "key": "B",
+        "text": "单调性"
+      },
+      {
+        "key": "C",
+        "text": "唯一性"
+      },
+      {
+        "key": "D",
+        "text": "齐次性"
+      }
+    ],
+    "answer": "B",
+    "explanation": "加入新特征后判据值不下降，说明信息不应变差，这种性质叫单调性。"
+  },
+  {
+    "id": "MPR090",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 90,
+    "type": "single",
+    "question": "特征提取算法PCA（主成分分析）的核心技术目标是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "寻找让不同类别之间离得最远的投影轴"
+      },
+      {
+        "key": "B",
+        "text": "寻找数据中方差最大的方向做投影，从而在降维同时尽可能保留原始信息"
+      },
+      {
+        "key": "C",
+        "text": "利用非线性核函数将数据映射到无穷维空间"
+      },
+      {
+        "key": "D",
+        "text": "极大化多类别的后验风险"
+      }
+    ],
+    "answer": "B",
+    "explanation": "PCA不看类别标签，而是找总体方差最大的方向投影，尽量保留原始数据主要信息。"
+  },
+  {
+    "id": "MPR091",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 91,
+    "type": "single",
+    "question": "主成分分析（PCA）计算流程的第一步、也是绝对不可或缺的一步是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "求解特征值与特征向量"
+      },
+      {
+        "key": "B",
+        "text": "对原始数据进行去中心化（每个样本减去全体均值向量 $\\mu$）"
+      },
+      {
+        "key": "C",
+        "text": "计算类间散布矩阵 $S_b$"
+      },
+      {
+        "key": "D",
+        "text": "设定软间隔松弛变量"
+      }
+    ],
+    "answer": "B",
+    "explanation": "PCA先去中心化，把数据移到以均值为原点，否则协方差和主方向会被整体位置影响。"
+  },
+  {
+    "id": "MPR092",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 92,
+    "type": "single",
+    "question": "在PCA中，样本去中心化后算得的矩阵 $C_X = \\frac{1}{N}\\sum \\tilde{x}_i \\tilde{x}_i^T$ 被称为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "类内散布矩阵"
+      },
+      {
+        "key": "B",
+        "text": "协方差矩阵（Covariance Matrix）"
+      },
+      {
+        "key": "C",
+        "text": "恒等矩阵"
+      },
+      {
+        "key": "D",
+        "text": "转换矩阵"
+      }
+    ],
+    "answer": "B",
+    "explanation": "去中心化样本外积求平均得到的就是协方差矩阵，用来描述数据在各方向上的散布。"
+  },
+  {
+    "id": "MPR093",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 93,
+    "type": "single",
+    "question": "PCA降维时，所获得的“第一主成分”在数学上对应于：",
+    "options": [
+      {
+        "key": "A",
+        "text": "协方差矩阵最小特征值对应的特征向量"
+      },
+      {
+        "key": "B",
+        "text": "协方差矩阵最大特征值对应的特征向量"
+      },
+      {
+        "key": "C",
+        "text": "类内散布矩阵的逆矩阵"
+      },
+      {
+        "key": "D",
+        "text": "随机抽取的特征向量"
+      }
+    ],
+    "answer": "B",
+    "explanation": "最大特征值方向方差最大，保留信息最多，所以对应第一主成分。"
+  },
+  {
+    "id": "MPR094",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 94,
+    "type": "single",
+    "question": "在PCA应用中，特征值 $\\lambda_j$ 的物理意义对应于：",
+    "options": [
+      {
+        "key": "A",
+        "text": "样本分类的错误率"
+      },
+      {
+        "key": "B",
+        "text": "数据在新主成分投影轴方向上的方差（$\\lambda$ 越大保留信息越多）"
+      },
+      {
+        "key": "C",
+        "text": "类别中心之间的距离"
+      },
+      {
+        "key": "D",
+        "text": "核函数的平滑参数"
+      }
+    ],
+    "answer": "B",
+    "explanation": "PCA中特征值就是数据投影到对应主成分方向后的方差，越大说明该方向信息量越大。"
+  },
+  {
+    "id": "MPR095",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 95,
+    "type": "single",
+    "question": "线性判别分析（LDA / Fisher线性判别）的最核心技术特色是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "它是完全无监督的降维方法，不依赖任何类别标签"
+      },
+      {
+        "key": "B",
+        "text": "它是强监督的降维方法，利用类别标签寻找让不同类别“分离最好”的投影方向"
+      },
+      {
+        "key": "C",
+        "text": "它的目标是最大化投影后的总样本方差"
+      },
+      {
+        "key": "D",
+        "text": "它通过计算熵来过滤多余特征"
+      }
+    ],
+    "answer": "B",
+    "explanation": "LDA利用类别标签，目标不是保留最大方差，而是让不同类别投影后更容易分开。"
+  },
+  {
+    "id": "MPR096",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 96,
+    "type": "single",
+    "question": "Fisher线性判别（LDA）量化投影质量的优化目标准则是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "让类间离散度 $S_b$ 尽可能小，类内离散度 $S_w$ 尽可能大"
+      },
+      {
+        "key": "B",
+        "text": "让类间离散度 $S_b$ 尽可能大，类内离散度 $S_w$ 尽可能小（极大化比值 $\\frac{w^T S_b w}{w^T S_w w}$）"
+      },
+      {
+        "key": "C",
+        "text": "最小化样本到类中心的平方和"
+      },
+      {
+        "key": "D",
+        "text": "最小化错分样本的加权和"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Fisher准则要类间距离大、类内散布小，所以最大化 w^T S_b w / w^T S_w w。"
+  },
+  {
+    "id": "MPR097",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 97,
+    "type": "single",
+    "question": "LDA（线性判别分析）在数学上最终被转化为求解什么问题？",
+    "options": [
+      {
+        "key": "A",
+        "text": "拉格朗日对偶问题"
+      },
+      {
+        "key": "B",
+        "text": "广义特征值分解问题（矩阵 $S_w^{-1}S_b$ 的最大特征值对应特征向量）"
+      },
+      {
+        "key": "C",
+        "text": "伪逆矩阵的代数乘积"
+      },
+      {
+        "key": "D",
+        "text": "肘部拐点的定性分析"
+      }
+    ],
+    "answer": "B",
+    "explanation": "LDA优化最终可转化为求 S_w^{-1}S_b 的广义特征值/特征向量问题。"
+  },
+  {
+    "id": "MPR098",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 98,
+    "type": "single",
+    "question": "关于PCA与LDA的核心区别，下列说法中正确的是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "PCA是有监督的，LDA是无监督的"
+      },
+      {
+        "key": "B",
+        "text": "PCA关注于数据的“最大方差保持”，LDA关注于类别的“最大可分性投影”"
+      },
+      {
+        "key": "C",
+        "text": "PCA只能处理二分类，LDA可以处理任意多分类"
+      },
+      {
+        "key": "D",
+        "text": "PCA计算复杂度显著高于LDA"
+      }
+    ],
+    "answer": "B",
+    "explanation": "PCA是无监督保方差；LDA是有监督保可分性。一个看总体信息，一个看类别分离。"
+  },
+  {
+    "id": "MPR099",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 99,
+    "type": "single",
+    "question": "PCA在人脸识别领域的经典实战应用被称为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "稀疏人脸"
+      },
+      {
+        "key": "B",
+        "text": "特征人脸（Eigenfaces）"
+      },
+      {
+        "key": "C",
+        "text": "判别人脸"
+      },
+      {
+        "key": "D",
+        "text": "线性人脸"
+      }
+    ],
+    "answer": "B",
+    "explanation": "PCA做人脸识别的经典方法叫特征人脸，核心是用主成分表示人脸图像空间。"
+  },
+  {
+    "id": "MPR100",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块6：特征选择与特征提取",
+    "number": 100,
+    "type": "single",
+    "question": "在特征选择搜索策略中，从空集开始、每次引入一个使得可分性判据最优的特征的方法称为：",
+    "options": [
+      {
+        "key": "A",
+        "text": "序列向前选择（SFS）"
+      },
+      {
+        "key": "B",
+        "text": "序列向后选择（SBS）"
+      },
+      {
+        "key": "C",
+        "text": "穷举搜索"
+      },
+      {
+        "key": "D",
+        "text": "随机森林筛选"
+      }
+    ],
+    "answer": "A",
+    "explanation": "SFS从空特征集开始，每一步加入一个最能提升判据的特征，所以是序列向前选择。"
+  },
+  {
+    "id": "MPR101",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别与基础",
+    "number": 101,
+    "type": "multiple",
+    "question": "一个完整的模式识别系统通常包含下列哪些关键的组成部分？",
+    "options": [
+      {
+        "key": "A",
+        "text": "模式采集与数据获取"
+      },
+      {
+        "key": "B",
+        "text": "数据预处理"
+      },
+      {
+        "key": "C",
+        "text": "特征选择与特征提取"
+      },
+      {
+        "key": "D",
+        "text": "分类器设计/聚类判定"
       }
     ],
     "answer": "ABCD",
-    "explanation": "螺旋模型的本质是“目标—方案—风险—开发—计划”的循环，尤其适合不确定性和风险较高的大型项目。"
+    "explanation": "模式识别系统的四大通用串行基本骨架模块。"
   },
   {
-    "id": "Q034",
-    "chapter": "第3章｜快速软件开发 / 敏捷",
-    "originalChapter": "Chapter 3 –Rapid software development",
-    "number": 1,
-    "type": "single",
-    "question": "哪一个不是敏捷过程模型？",
-    "options": [
-      {
-        "key": "A",
-        "text": "XP"
-      },
-      {
-        "key": "B",
-        "text": "Scrum"
-      },
-      {
-        "key": "C",
-        "text": "ASD"
-      },
-      {
-        "key": "D",
-        "text": "RSD"
-      }
-    ],
-    "answer": "D",
-    "explanation": "XP、Scrum、ASD 都是敏捷相关方法；RSD 不是常见敏捷过程模型。"
-  },
-  {
-    "id": "Q035",
-    "chapter": "第3章｜快速软件开发 / 敏捷",
-    "originalChapter": "Chapter 3 –Rapid software development",
-    "number": 2,
-    "type": "single",
-    "question": "哪种敏捷过程模式鼓励\"结对编程\"？",
-    "options": [
-      {
-        "key": "A",
-        "text": "XP"
-      },
-      {
-        "key": "B",
-        "text": "Scrum"
-      },
-      {
-        "key": "C",
-        "text": "ASD"
-      },
-      {
-        "key": "D",
-        "text": "RSD"
-      }
-    ],
-    "answer": "A",
-    "explanation": "结对编程是 XP 的典型实践，两个人共同写代码、即时评审。"
-  },
-  {
-    "id": "Q036",
-    "chapter": "第3章｜快速软件开发 / 敏捷",
-    "originalChapter": "Chapter 3 –Rapid software development",
-    "number": 3,
-    "type": "single",
-    "question": "下列哪项描述不属于XP？",
-    "options": [
-      {
-        "key": "A",
-        "text": "每天可以构建几个新版本；"
-      },
-      {
-        "key": "B",
-        "text": "增量每2 周向客户交付一次；"
-      },
-      {
-        "key": "C",
-        "text": "每个构建都必须完成测试，并且只有在测试成功时才接受构建。"
-      },
-      {
-        "key": "D",
-        "text": "强调协作以收集需求。"
-      }
-    ],
-    "answer": "D",
-    "explanation": "XP 更强调编码实践、持续测试、小版本交付；“协作收集需求”更像通用需求工程，不是 XP 的特征点。"
-  },
-  {
-    "id": "Q037",
-    "chapter": "第3章｜快速软件开发 / 敏捷",
-    "originalChapter": "Chapter 3 –Rapid software development",
-    "number": 4,
-    "type": "single",
-    "question": "关于",
-    "options": [
-      {
-        "key": "A",
-        "text": "专注于代码多于设计；"
-      },
-      {
-        "key": "B",
-        "text": "软件开发多采用迭代的方法；"
-      },
-      {
-        "key": "C",
-        "text": "旨在快速交付工作软件，并迅速演变，以满足不断变化的要求。"
-      },
-      {
-        "key": "D",
-        "text": "Agile 方法可能最适合大中型业务系统或PC 产品。"
-      }
-    ],
-    "answer": "D",
-    "explanation": "敏捷通常更适合需求变化快、规模较小到中等、可迭代交付的项目；说它最适合大中型业务系统或 PC 产品过于绝对。"
-  },
-  {
-    "id": "Q038",
-    "chapter": "第3章｜快速软件开发 / 敏捷",
-    "originalChapter": "Chapter 3 –Rapid software development",
-    "number": 5,
-    "type": "single",
-    "question": "应用了帕累托最优原则的是下列哪一个模型：",
-    "options": [
-      {
-        "key": "A",
-        "text": "XP"
-      },
-      {
-        "key": "B",
-        "text": "Scrum"
-      },
-      {
-        "key": "C",
-        "text": "Crystal"
-      },
-      {
-        "key": "D",
-        "text": "DSDM"
-      }
-    ],
-    "answer": "D",
-    "explanation": "DSDM 强调时间盒和优先级，常用 80/20 的帕累托思想：先抓最有价值的功能。"
-  },
-  {
-    "id": "Q039",
-    "chapter": "第3章｜快速软件开发 / 敏捷",
-    "originalChapter": "Chapter 3 –Rapid software development",
-    "number": 6,
-    "type": "single",
-    "question": "强调“沟通最大化”，“每天一个圆桌会议”，“使用的一系列过程模式被证实在时间紧张、 需求变化和业务关键的项目是有效的”是哪个模型？",
-    "options": [
-      {
-        "key": "A",
-        "text": "XP"
-      },
-      {
-        "key": "B",
-        "text": "Scrum"
-      },
-      {
-        "key": "C",
-        "text": "Crystal"
-      },
-      {
-        "key": "D",
-        "text": "DSDM"
-      }
-    ],
-    "answer": "B",
-    "explanation": "每天站会、沟通最大化、时间紧张下快速迭代，是 Scrum 的典型特征。"
-  },
-  {
-    "id": "Q040",
-    "chapter": "第3章｜快速软件开发 / 敏捷",
-    "originalChapter": "Chapter 3 –Rapid software development",
-    "number": 7,
-    "type": "single",
-    "question": "强调自我组织、自我学习和反思的是哪个模型？",
-    "options": [
-      {
-        "key": "A",
-        "text": "XP"
-      },
-      {
-        "key": "B",
-        "text": "Scrum"
-      },
-      {
-        "key": "C",
-        "text": "ASD"
-      },
-      {
-        "key": "D",
-        "text": "DSDM"
-      }
-    ],
-    "answer": "C",
-    "explanation": "ASD 即自适应软件开发，强调协作、自组织、学习和反思。"
-  },
-  {
-    "id": "Q041",
-    "chapter": "第3章｜快速软件开发 / 敏捷",
-    "originalChapter": "Chapter 3 –Rapid software development",
-    "number": 8,
-    "type": "single",
-    "question": "使用多个模型进行有目的地建模，保留前进灯的是",
-    "options": [
-      {
-        "key": "A",
-        "text": "XP"
-      },
-      {
-        "key": "B",
-        "text": "Scrum"
-      },
-      {
-        "key": "C",
-        "text": "ASD"
-      },
-      {
-        "key": "D",
-        "text": "敏捷建模"
-      }
-    ],
-    "answer": "D",
-    "explanation": "敏捷建模强调“够用就好”的多模型建模，不追求一次性建完整大模型。"
-  },
-  {
-    "id": "Q042",
-    "chapter": "第3章｜快速软件开发 / 敏捷",
-    "originalChapter": "Chapter 3 –Rapid software development",
-    "number": 9,
-    "type": "single",
-    "question": "下面模型中不属于轻量级软件开发方法：",
-    "options": [
-      {
-        "key": "A",
-        "text": "Crystal"
-      },
-      {
-        "key": "B",
-        "text": "原型模型"
-      },
-      {
-        "key": "C",
-        "text": "增量模型"
-      },
-      {
-        "key": "D",
-        "text": "瀑布模型"
-      }
-    ],
-    "answer": "A",
-    "explanation": "按题库口径，本题把 Crystal 作为不属于轻量级方法的选项处理；考试时以题库答案为准。"
-  },
-  {
-    "id": "Q043",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 1,
-    "type": "single",
-    "question": "在项目启动期间，其任务是确定",
-    "options": [
-      {
-        "key": "A",
-        "text": "对基本问题的理解"
-      },
-      {
-        "key": "B",
-        "text": "所需解决方案的性质"
-      },
-      {
-        "key": "C",
-        "text": "项目共利益者"
-      },
-      {
-        "key": "D",
-        "text": "以上都不是"
-      },
-      {
-        "key": "E",
-        "text": "A、B 和C"
-      }
-    ],
-    "answer": "E",
-    "explanation": "项目启动要搞清楚基本问题、解决方案性质和利益相关者，不是直接开始写代码。"
-  },
-  {
-    "id": "Q044",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 2,
-    "type": "single",
-    "question": "使需求获取变得困难的三个问题是",
-    "options": [
-      {
-        "key": "A",
-        "text": "项目预算问题"
-      },
-      {
-        "key": "B",
-        "text": "项目范围问题"
-      },
-      {
-        "key": "C",
-        "text": "项目理解问题"
-      },
-      {
-        "key": "D",
-        "text": "项目波动性问题"
-      },
-      {
-        "key": "E",
-        "text": "B,C 和D"
-      }
-    ],
-    "answer": "E",
-    "explanation": "需求获取难在范围不清、理解不一致、需求会变化；预算问题重要，但不是这里的三个经典障碍。"
-  },
-  {
-    "id": "Q045",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 3,
-    "type": "single",
-    "question": "需求工程精化的结果是一个分析模型，该模型定义了以下哪个问题领域",
-    "options": [
-      {
-        "key": "A",
-        "text": "信息"
-      },
-      {
-        "key": "B",
-        "text": "功能"
-      },
-      {
-        "key": "C",
-        "text": "行为"
-      },
-      {
-        "key": "D",
-        "text": "所有上述问题"
-      }
-    ],
-    "answer": "D",
-    "explanation": "需求精化后的分析模型要描述信息、功能和行为三个方面。"
-  },
-  {
-    "id": "Q046",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 4,
-    "type": "single",
-    "question": "系统需求规格说明描述了",
-    "options": [
-      {
-        "key": "A",
-        "text": "基于计算机的系统的功能、性能和约束"
-      },
-      {
-        "key": "B",
-        "text": "每一个系统功能的实现方案"
-      },
-      {
-        "key": "C",
-        "text": "软件构成元素及其架构"
-      },
-      {
-        "key": "D",
-        "text": "系统仿真所需的时间"
-      }
-    ],
-    "answer": "A",
-    "explanation": "SRS 描述系统要做什么、性能如何、受什么约束，而不是说明每个功能怎么实现。"
-  },
-  {
-    "id": "Q047",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 5,
-    "type": "single",
-    "question": "需求评审的最佳方法是",
-    "options": [
-      {
-        "key": "A",
-        "text": "检查系统模型是否存在错误"
-      },
-      {
-        "key": "B",
-        "text": "让客户检查所有需求"
-      },
-      {
-        "key": "C",
-        "text": "将需求发送给设计团队，看看他们是否有问题"
-      },
-      {
-        "key": "D",
-        "text": "通过问题清单逐个检查每个需求"
-      }
-    ],
-    "answer": "D",
-    "explanation": "需求评审不能凭感觉扫一眼，最好按检查清单逐条检查完整性、一致性、可验证性等。"
-  },
-  {
-    "id": "Q048",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 6,
-    "type": "single",
-    "question": "需求追溯表的使用有助于",
-    "options": [
-      {
-        "key": "A",
-        "text": "根据运行时检测到的错误调试程序"
-      },
-      {
-        "key": "B",
-        "text": "确定实现算法的性能"
-      },
-      {
-        "key": "C",
-        "text": "识别、控制和跟踪需求更改"
-      },
-      {
-        "key": "D",
-        "text": "以上都不对"
-      }
-    ],
-    "answer": "C",
-    "explanation": "需求追溯表把需求和设计、代码、测试关联起来，方便跟踪需求变更影响。"
-  },
-  {
-    "id": "Q049",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 7,
-    "type": "single",
-    "question": "以下哪一项不是在项目启动期间使用的上下文无关问题？",
-    "options": [
-      {
-        "key": "A",
-        "text": "好的解决方案会带来哪些经济效益？"
-      },
-      {
-        "key": "B",
-        "text": "谁反对这个项目？"
-      },
-      {
-        "key": "C",
-        "text": "谁来支付这个项目的费用？"
-      },
-      {
-        "key": "D",
-        "text": "谁将使用该解决方案？"
-      }
-    ],
-    "answer": "B",
-    "explanation": "上下文无关问题是为了理解业务目标、付款者、使用者等，“谁反对项目”不是典型启动问题。"
-  },
-  {
-    "id": "Q050",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 8,
-    "type": "single",
-    "question": "在协作需求收集中，主持人",
-    "options": [
-      {
-        "key": "A",
-        "text": "不能是软件团队的成员"
-      },
-      {
-        "key": "B",
-        "text": "不能是客户"
-      },
-      {
-        "key": "C",
-        "text": "控制和协调整体流程"
-      },
-      {
-        "key": "D",
-        "text": "必须是外部人员"
-      }
-    ],
-    "answer": "C",
-    "explanation": "协作需求收集中的主持人负责控制节奏、协调讨论、防止会议跑偏。"
-  },
-  {
-    "id": "Q051",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 9,
-    "type": "single",
-    "question": "以下哪项不是质量功能部署（QFD）中使用的需求分类？",
-    "options": [
-      {
-        "key": "A",
-        "text": "令人兴奋的需求"
-      },
-      {
-        "key": "B",
-        "text": "期望需求"
-      },
-      {
-        "key": "C",
-        "text": "强制需求"
-      },
-      {
-        "key": "D",
-        "text": "正常需求"
-      }
-    ],
-    "answer": "C",
-    "explanation": "QFD 常见分类是正常需求、期望需求、令人兴奋的需求；“强制需求”不是这个分类中的标准名称。"
-  },
-  {
-    "id": "Q052",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 10,
-    "type": "single",
-    "question": "需求获取过程中产生的工作产品将根据下列哪项而有所不同",
-    "options": [
-      {
-        "key": "A",
-        "text": "预算规模"
-      },
-      {
-        "key": "B",
-        "text": "正在构建的产品规模"
-      },
-      {
-        "key": "C",
-        "text": "正在使用的软件过程"
-      },
-      {
-        "key": "D",
-        "text": "项目共利益者的需求"
-      }
-    ],
-    "answer": "B",
-    "explanation": "需求获取产物会随产品规模变化，小系统可能很轻量，大系统需要更正式的文档和模型。"
-  },
-  {
-    "id": "Q053",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 11,
-    "type": "single",
-    "question": "以下哪项不属于创建系统分析模型的UML 图？",
-    "options": [
-      {
-        "key": "A",
-        "text": "活动图"
-      },
-      {
-        "key": "B",
-        "text": "类图"
-      },
-      {
-        "key": "C",
-        "text": "数据流图"
-      },
-      {
-        "key": "D",
-        "text": "状态图"
-      }
-    ],
-    "answer": "C",
-    "explanation": "活动图、类图、状态图属于 UML；数据流图不是 UML 图。"
-  },
-  {
-    "id": "Q054",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 12,
-    "type": "single",
-    "question": "软件的系统需求不包括：",
-    "options": [
-      {
-        "key": "A",
-        "text": "功能需求"
-      },
-      {
-        "key": "B",
-        "text": "非功能需求"
-      },
-      {
-        "key": "C",
-        "text": "用户需求"
-      },
-      {
-        "key": "D",
-        "text": "领域需求"
-      }
-    ],
-    "answer": "C",
-    "explanation": "系统需求包括功能、非功能和领域需求；用户需求是另一层次的需求描述，不属于系统需求内部分类。"
-  },
-  {
-    "id": "Q055",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 13,
+    "id": "MPR102",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别与基础",
+    "number": 102,
     "type": "multiple",
-    "question": "软件需求可分为以下三类：",
+    "question": "下列考点属于模式识别有监督分类（Supervised Classification）范畴的有：",
     "options": [
       {
         "key": "A",
-        "text": "系统需求"
+        "text": "贝叶斯决策方法"
       },
       {
         "key": "B",
-        "text": "业务需求"
+        "text": "支持向量机（SVM）"
       },
       {
         "key": "C",
-        "text": "用户需求"
+        "text": "K-Means算法"
       },
       {
         "key": "D",
-        "text": "功能需求"
+        "text": "AdaBoost集成学习"
+      }
+    ],
+    "answer": "ABD",
+    "explanation": "有监督分类包含标签已知的所有决策方法；C项K-Means为无监督聚类。"
+  },
+  {
+    "id": "MPR103",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别与基础",
+    "number": 103,
+    "type": "multiple",
+    "question": "在模式识别中，引发过拟合（Overfitting）现象的主要原因包括：",
+    "options": [
+      {
+        "key": "A",
+        "text": "训练样本数量过少、缺乏代表性"
+      },
+      {
+        "key": "B",
+        "text": "分类器模型过于复杂，参数过多"
+      },
+      {
+        "key": "C",
+        "text": "训练过程中过度拟合了数据中的噪声"
+      },
+      {
+        "key": "D",
+        "text": "进行了数据的去中心化操作"
       }
     ],
     "answer": "ABC",
-    "explanation": "软件需求可按层次理解为业务需求、用户需求和系统需求；功能需求只是系统需求中的一种。"
+    "explanation": "过拟合由样本过少、模型过繁、强记噪声引起；D项去中心化无影响。"
   },
   {
-    "id": "Q056",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 1,
-    "type": "truefalse",
-    "question": "需求工程是一个通用的工程，在不同的软件项目之间没有变化。",
+    "id": "MPR104",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别与基础",
+    "number": 104,
+    "type": "multiple",
+    "question": "下列应用领域中，深度融合了模式识别核心算法的有：",
     "options": [
       {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "需求工程要按项目规模、领域、风险和团队裁剪，不同项目不可能完全一样。"
-  },
-  {
-    "id": "Q057",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 2,
-    "type": "truefalse",
-    "question": "不同的客户提出相互冲突的需求是常见的事情，每个客户都认为自己的版本是正确的",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "T",
-    "explanation": "不同利益相关者目标不同，需求冲突很正常，需求工程要做协调和取舍。"
-  },
-  {
-    "id": "Q058",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 3,
-    "type": "truefalse",
-    "question": "协作的本质是，所有系统需求都是由客户和开发人员组成的委员会一致确定的。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "协作不是“大家必须一致投票通过”，而是共同发现、澄清、协商需求。"
-  },
-  {
-    "id": "Q059",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 4,
-    "type": "truefalse",
-    "question": "需求工程师的工作是以一种允许决策者选择一组内部一致的需求的方式对所有项目共利 益者信息进行分类。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "需求工程师不只是分类信息，还要促进沟通、建模、验证、管理变更。"
-  },
-  {
-    "id": "Q060",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 5,
-    "type": "truefalse",
-    "question": "项目共利益者是指购买正在开发的完整软件系统的任何人。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "利益相关者不只包括购买者，还包括用户、客户、开发者、维护者、管理者和受系统影响的人。"
-  },
-  {
-    "id": "Q061",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 6,
-    "type": "truefalse",
-    "question": "开发人员和客户创建用例，以帮助软件团队了解不同类别的最终用户将如何使用功能。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "用例通常由开发人员和用户/客户共同创建，但目的不只是“了解功能”，还要描述参与者和系统的交互场景；题库按原句处理为错。"
-  },
-  {
-    "id": "Q062",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 7,
-    "type": "truefalse",
-    "question": "用例参与者总是人，而不是系统设备。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "用例参与者可以是人，也可以是外部系统、设备或其他组织。"
-  },
-  {
-    "id": "Q063",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 8,
-    "type": "truefalse",
-    "question": "分析模型通过对常见问题提出可靠的解决方案，有助于将分析模型转换为设计模型。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "分析模型描述问题，不负责给常见问题提供设计解决方案；解决方案模式属于设计阶段。"
-  },
-  {
-    "id": "Q064",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 9,
-    "type": "truefalse",
-    "question": "在双赢谈判中，可能开发者的需求没有得到满足，客户的需求得到了满足。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "双赢谈判要求双方关键利益都被照顾，不能只满足客户而牺牲开发者。"
-  },
-  {
-    "id": "Q065",
-    "chapter": "第4章｜需求工程",
-    "originalChapter": "Chapter 4 – Requirements Engineering Test",
-    "number": 10,
-    "type": "truefalse",
-    "question": "在需求评审中，需求模型被评审以确保其技术可行性。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "需求评审不仅看技术可行性，还要看需求是否清晰、完整、一致、可验证、可追踪。"
-  },
-  {
-    "id": "Q066",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 1,
-    "type": "single",
-    "question": "以下哪一个不是构建分析模型的目标?",
-    "options": [
-      {
         "key": "A",
-        "text": "建立可以验证的精细的软件需求集"
+        "text": "自动驾驶多传感器融合环境感知"
       },
       {
         "key": "B",
-        "text": "描述客户需求"
+        "text": "大语言模型（LLM）的文本理解与推理"
       },
       {
         "key": "C",
-        "text": "为问题构建简洁的解决方案"
+        "text": "生物特征识别（指纹、人脸、虹膜）"
       },
       {
         "key": "D",
-        "text": "为软件设计建立基础"
+        "text": "计算机网络硬件拓扑路由物理架设"
       }
     ],
-    "answer": "C",
-    "explanation": "分析模型的目标是描述需求和问题域、为设计打基础，不是直接构建解决方案。"
+    "answer": "ABC",
+    "explanation": "计算机视觉识别、大语言模型和知识图谱均属于典型应用；D项属于网络纯硬件布线。"
   },
   {
-    "id": "Q067",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 2,
-    "type": "single",
-    "question": "数据字典中包含了对每个软件的描述。",
+    "id": "MPR105",
+    "chapter": "模块1｜模式识别概述与基础概念",
+    "originalChapter": "模块1：模式识别与基础",
+    "number": 105,
+    "type": "multiple",
+    "question": "关于特征空间（Feature Space），下列说法正确的有：",
     "options": [
       {
         "key": "A",
-        "text": "控制项"
+        "text": "特征空间的每一个维度对应对象的一个测量属性"
       },
       {
         "key": "B",
-        "text": "数据对象"
+        "text": "空间中的每一个点代表一个具体的对象样本"
       },
       {
         "key": "C",
-        "text": "图"
+        "text": "维度越高，样本分布越紧密，越有利于贝叶斯估计"
       },
       {
         "key": "D",
-        "text": "符号"
-      },
-      {
-        "key": "E",
-        "text": "A 和B"
+        "text": "判定边界的几何形状直接受到特征空间分布的影响"
       }
     ],
-    "answer": "E",
-    "explanation": "数据字典记录数据对象、控制项等定义，相当于模型中术语和数据的说明书。"
+    "answer": "ABD",
+    "explanation": "特征空间的概念定义与边界几何原理。高维可能引发样本稀疏（维数灾难）。"
   },
   {
-    "id": "Q068",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 3,
-    "type": "single",
-    "question": "其中哪一个不是面向对象分析模型的元素?",
+    "id": "MPR106",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 106,
+    "type": "multiple",
+    "question": "聚类分析中，影响最终聚类结果走向的根本决定性因素有：",
     "options": [
       {
         "key": "A",
-        "text": "行为元素"
+        "text": "特征的选取与定义"
       },
       {
         "key": "B",
-        "text": "基于类的元素"
+        "text": "相似度（距离度量）的定义"
       },
       {
         "key": "C",
-        "text": "数据要素"
+        "text": "聚类准则的设定"
       },
       {
         "key": "D",
-        "text": "基于场景的元素"
+        "text": "运行算法时使用的计算机内存大小"
       }
     ],
-    "answer": "C",
-    "explanation": "面向对象分析模型常见元素包括场景、类、行为等；“数据要素”不是其标准元素名。"
+    "answer": "ABC",
+    "explanation": "聚类的三大核心依赖驱动。计算机内存不改变聚类算法本身的数学走向。"
   },
   {
-    "id": "Q069",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 4,
-    "type": "single",
-    "question": "数据模型中需要显示的关系有",
+    "id": "MPR107",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 107,
+    "type": "multiple",
+    "question": "现代模式识别中，常用的四大类基础聚类方法包括：",
     "options": [
       {
         "key": "A",
-        "text": "基数"
+        "text": "试探法（如最近邻规则）"
       },
       {
         "key": "B",
-        "text": "方向性"
+        "text": "层次法（包括融合与分解）"
       },
       {
         "key": "C",
-        "text": "形态"
+        "text": "动态法（如K-Means、ISODATA）"
       },
       {
         "key": "D",
-        "text": "概率"
-      },
-      {
-        "key": "E",
-        "text": "A 和C"
+        "text": "密度法（如DBSCAN）"
       }
     ],
-    "answer": "E",
-    "explanation": "数据模型关系重点看基数和形态，例如一对一、一对多、多对多。"
+    "answer": "ABCD",
+    "explanation": "期末核心复习大纲强调的聚类分析四大基本分类方法。"
   },
   {
-    "id": "Q070",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 5,
-    "type": "single",
-    "question": "ER 图",
+    "id": "MPR108",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 108,
+    "type": "multiple",
+    "question": "下列关于最近邻规则试探法聚类的叙述，正确的有：",
     "options": [
       {
         "key": "A",
-        "text": "描述数据对象之间的关系"
+        "text": "算法极其简单直观，具备在线增量学习能力"
       },
       {
         "key": "B",
-        "text": "描述数据流转换函数"
+        "text": "聚类结果严重受到样本输入先后顺序的影响"
       },
       {
         "key": "C",
-        "text": "表示系统如何进行数据转换"
-      },
-      {
-        "key": "D",
-        "text": "表示系统对外部事件的反应"
-      }
-    ],
-    "answer": "A",
-    "explanation": "ER 图就是实体—关系图，用来描述数据对象之间的关系。"
-  },
-  {
-    "id": "Q071",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 6,
-    "type": "single",
-    "question": "对具有相似特征的事物统称为",
-    "options": [
-      {
-        "key": "A",
-        "text": "类"
-      },
-      {
-        "key": "B",
-        "text": "实例 E. 子类"
+        "text": "对聚类圆半径阈值 $T$ 的选择极其敏感"
       },
       {
         "key": "D",
-        "text": "超类"
+        "text": "能够完美识别具有极其复杂几何形状的簇"
       }
     ],
-    "answer": "A",
-    "explanation": "类就是对一组具有相似属性和行为的对象的抽象。"
+    "answer": "ABC",
+    "explanation": "最近邻试探法的基本属性。它使用单一标准，不适合复杂形状。"
   },
   {
-    "id": "Q072",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 7,
-    "type": "single",
-    "question": "UML 活动图对于表示分析模型哪些元素很有用?",
+    "id": "MPR109",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 109,
+    "type": "multiple",
+    "question": "关于层次聚类中的“融合算法”，下列步骤正确的有：",
     "options": [
       {
         "key": "A",
-        "text": "行为元素"
+        "text": "初始状态将 $n$ 个样本各自独立看作一个类"
       },
       {
         "key": "B",
-        "text": "基于类的元素"
+        "text": "计算各两类之间的类间距离，合并最相似的两个类"
       },
       {
         "key": "C",
-        "text": "基于流的元素"
+        "text": "类别数由 $n$ 逐步递减至满足要求的 $K$"
       },
       {
         "key": "D",
-        "text": "基于场景的元素"
+        "text": "具有不可逆性，一旦合并无法在后续步骤中无损拆分"
       }
     ],
-    "answer": "D",
-    "explanation": "活动图能描述某个场景或用例中的活动流程，所以常用于基于场景的分析。"
+    "answer": "ABCD",
+    "explanation": "层次聚类自底向上融合算法的标准流程与重要不可逆性质。"
   },
   {
-    "id": "Q073",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 8,
-    "type": "single",
-    "question": "数据流图",
+    "id": "MPR110",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 110,
+    "type": "multiple",
+    "question": "K-Means算法在实际运行中，常见的技术痛点或局限性包括：",
     "options": [
       {
         "key": "A",
-        "text": "描述数据对象之间的关系"
+        "text": "需要预先人为指定类别数 $K$"
       },
       {
         "key": "B",
-        "text": "描述了数据流转换的函数"
+        "text": "结果容易受到随机选取的初始聚类中心的影响"
       },
       {
         "key": "C",
-        "text": "表示系统如何进行数据转换"
+        "text": "准则函数 $E$ 容易陷入局部最优解"
       },
       {
         "key": "D",
-        "text": "表示系统对外部事件的反应"
-      },
-      {
-        "key": "E",
-        "text": "B 和C"
+        "text": "无法处理具有非球形、复杂几何形状的数据分布"
       }
     ],
-    "answer": "E",
-    "explanation": "数据流图描述数据如何流动，以及数据经过哪些加工/转换。"
+    "answer": "ABCD",
+    "explanation": "K-Means的全部典型缺陷。对初始点敏感、易入局部最优、K值难定、倾向球形簇。"
   },
   {
-    "id": "Q074",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 9,
-    "type": "single",
-    "question": "控制流程图为",
+    "id": "MPR111",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 111,
+    "type": "multiple",
+    "question": "ISODATA算法在K-Means的基础上进行了大幅升级，它能够动态执行的操作有：",
     "options": [
       {
         "key": "A",
-        "text": "需要对事件驱动系统建模"
+        "text": "当两个中心距离过近时，自动执行“合并”"
       },
       {
         "key": "B",
-        "text": "所有系统都需要"
+        "text": "当某一类内标准差过大时，自动执行“分裂”"
       },
       {
         "key": "C",
-        "text": "用于代替数据流图"
+        "text": "自动调整类别数 $K$，无需指定任何初始控制参数"
       },
       {
         "key": "D",
-        "text": "用于实时系统建模"
-      },
-      {
-        "key": "E",
-        "text": "A 和D"
+        "text": "在迭代过程中动态剔除包含样本数过少的“噪声类”"
       }
     ],
-    "answer": "E",
-    "explanation": "控制流图适合事件驱动、实时系统，强调控制事件而不是普通数据。"
+    "answer": "ABD",
+    "explanation": "ISODATA根据动态阈值指标自动执行合并、分裂和清除噪声小类的机制。"
   },
   {
-    "id": "Q075",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 10,
-    "type": "single",
-    "question": "下列哪一项应该被视为问题空间中的候选对象？",
+    "id": "MPR112",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 112,
+    "type": "multiple",
+    "question": "DBSCAN基于密度的聚类算法中，涉及到的核心技术参数与概念有：",
     "options": [
       {
         "key": "A",
-        "text": "事件"
+        "text": "邻域半径参数 $\\varepsilon$"
       },
       {
         "key": "B",
-        "text": "人"
+        "text": "最小邻居数阈值 $MinPts$"
       },
       {
         "key": "C",
-        "text": "结构"
+        "text": "核心点与噪声点"
       },
       {
         "key": "D",
-        "text": "以上所有"
+        "text": "肘部弯曲拐点"
       }
     ],
-    "answer": "D",
-    "explanation": "候选对象可以来自人、地点、事件、结构、设备等问题空间名词。"
+    "answer": "ABC",
+    "explanation": "DBSCAN密度聚类的两大输入控制参数以及三个核心点定义类别。"
   },
   {
-    "id": "Q076",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 11,
-    "type": "single",
-    "question": "下列哪一项不是操作的分类之一？",
+    "id": "MPR113",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 113,
+    "type": "multiple",
+    "question": "关于DBSCAN算法的优缺点，下列说法正确的有：",
     "options": [
       {
         "key": "A",
-        "text": "计算"
+        "text": "优点是不需要预先指定聚类的簇数 $K$"
       },
       {
         "key": "B",
-        "text": "数据操作"
+        "text": "优点是能够极其敏锐地发现任意形状的簇并隔离噪声"
       },
       {
         "key": "C",
-        "text": "事件监控"
+        "text": "缺点是当数据密度极不均匀时，单一的 $\\varepsilon$ 和 $MinPts$ 难以获得理想效果"
       },
       {
         "key": "D",
-        "text": "数据转换"
-      },
-      {
-        "key": "E",
-        "text": "请求对象状态"
+        "text": "缺点是计算量在任何场景下都显著高于分解层次聚类"
       }
     ],
-    "answer": "D",
-    "explanation": "对象操作常见类别包括计算、数据操作、事件监控、状态请求等；数据转换不属于该分类口径。"
+    "answer": "ABC",
+    "explanation": "DBSCAN的优缺点辨析。它计算量前期通常小于自顶向下层次分解。"
   },
   {
-    "id": "Q077",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 12,
-    "type": "single",
-    "question": "以下哪项不会出现在CRC 卡上？",
+    "id": "MPR114",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 114,
+    "type": "multiple",
+    "question": "下列哪些公式或方法可以用于聚类分析中的样本相似度/距离度量？",
     "options": [
       {
         "key": "A",
-        "text": "类合作者"
+        "text": "欧氏距离（L2距离）"
       },
       {
         "key": "B",
-        "text": "类名称"
+        "text": "曼哈顿距离（L1距离）"
       },
       {
         "key": "C",
-        "text": "类可靠性"
+        "text": "夹角余弦相似度"
       },
       {
         "key": "D",
-        "text": "类职责"
+        "text": "判别函数偏导数"
       }
     ],
-    "answer": "C",
-    "explanation": "CRC 卡写类名、职责和协作者，不写“类可靠性”。"
+    "answer": "ABC",
+    "explanation": "相似度度量涵盖欧氏、曼哈顿、余弦等。D项偏导数用于梯度更新。"
   },
   {
-    "id": "Q078",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 13,
-    "type": "single",
-    "question": "类职责有",
+    "id": "MPR115",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 115,
+    "type": "multiple",
+    "question": "在ISODATA算法的合并步骤中，必须同时满足哪些条件或流程？",
     "options": [
       {
         "key": "A",
-        "text": "只有属性"
+        "text": "两个中心的几何距离必须小于合并阈值 $\\theta_c$"
       },
       {
         "key": "B",
-        "text": "其合作者"
+        "text": "满足条件的配对按距离从小到大严格排列，依次执行合并"
       },
       {
         "key": "C",
-        "text": "只有操作"
+        "text": "合并后的新中心必须通过两个旧中心的样本数加权平均算出"
       },
       {
         "key": "D",
-        "text": "它的属性和操作"
+        "text": "必须保证合并后的总类别数大于初始设定的Nc"
       }
     ],
-    "answer": "D",
-    "explanation": "类的职责体现为它知道什么和能做什么，也就是属性和操作。"
+    "answer": "ABC",
+    "explanation": "ISODATA合并的两大指标限制（距离和样本数加权更新）。"
   },
   {
-    "id": "Q079",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 14,
-    "type": "single",
-    "question": "事件发生在",
+    "id": "MPR116",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 116,
+    "type": "multiple",
+    "question": "导致聚类分析被定义为“不可逆”操作的原因包括：",
     "options": [
       {
         "key": "A",
-        "text": "参与者和OO 系统交换信息"
+        "text": "层次融合后，原始样本之间的个体特殊独立关系被类统一标签取代"
       },
       {
         "key": "B",
-        "text": "类操作被调用"
+        "text": "层次分解后，子类之间失去了再次直接融合成完全原貌的关联信息"
       },
       {
         "key": "C",
-        "text": "消息在对象之间传递"
+        "text": "聚类准则函数的逼近过程通常是多对一的映射降维"
       },
       {
         "key": "D",
-        "text": "以上所有"
+        "text": "聚类算法完全无法在计算机中运行反向迭代"
       }
     ],
-    "answer": "D",
-    "explanation": "参与者交互、操作调用、对象消息传递都可能触发事件。"
+    "answer": "ABC",
+    "explanation": "聚类不可逆性的底层数学成因：合并后不可分，分解后不可合。"
   },
   {
-    "id": "Q080",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 15,
-    "type": "single",
-    "question": "状态图",
+    "id": "MPR117",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 117,
+    "type": "multiple",
+    "question": "在K-Means中，判定算法已经成功收敛的科学依据有：",
     "options": [
       {
         "key": "A",
-        "text": "描述数据对象之间的关系"
+        "text": "准则函数 $E$ 的数值变化量连续低于预设的极小误差限"
       },
       {
         "key": "B",
-        "text": "描述了数据流的转换函数"
+        "text": "所有的类中心在前后两轮迭代中完全不再移动"
       },
       {
         "key": "C",
-        "text": "表示系统如何转换数据"
+        "text": "每个样本所属的类别标签完全固化，不再发生切换"
       },
       {
         "key": "D",
-        "text": "表示系统对外部事件的反应"
+        "text": "迭代次数直接触发了人为设定的最大上限"
       }
     ],
-    "answer": "D",
-    "explanation": "状态图描述对象或系统面对事件时状态如何变化。"
+    "answer": "ABC",
+    "explanation": "K-Means算法收敛的标准判定指标（中心不移动、标签不切换、误差稳定）。"
   },
   {
-    "id": "Q081",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 16,
-    "type": "single",
-    "question": "为了进行行为建模，状态是任何",
+    "id": "MPR118",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 118,
+    "type": "multiple",
+    "question": "下列应用场景中，属于聚类算法典型落地领域的有：",
     "options": [
       {
         "key": "A",
-        "text": "数据的消费者或生产者"
+        "text": "电子商务系统对用户购买行为进行自动价值分群"
       },
       {
         "key": "B",
-        "text": "数据对象层次结构"
+        "text": "搜索引擎根据检索内容的相似性对搜索结果进行自动聚类成组"
       },
       {
         "key": "C",
-        "text": "定义良好的过程"
+        "text": "垃圾邮件基于标注库的二分类拦截"
       },
       {
         "key": "D",
-        "text": "可观察的行为模式"
-      }
-    ],
-    "answer": "D",
-    "explanation": "行为建模里的状态是可观察的行为模式，例如“待审核”“已发布”。"
-  },
-  {
-    "id": "Q082",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 17,
-    "type": "single",
-    "question": "面向对象的域分析是指具体域内发现可重用类的过程 解析：域分析是指发现和定义可复用的分析模式、分析类和相关的信息。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "域分析不只是“发现可重用类”，还包括发现可复用分析模式、信息和领域概念。"
-  },
-  {
-    "id": "Q083",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 18,
-    "type": "single",
-    "question": "在分析模型中，唯一需要描述的数据对象是那些将会使用软件类实现的实体数据对象",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "分析模型要描述问题域中的重要数据对象，不只限于最后会被类实现的实体。"
-  },
-  {
-    "id": "Q084",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 19,
-    "type": "single",
-    "question": "分配给对象属性的值使该对象唯一 解析：每个对象都有自身唯一的标识，通过这种标识，可找到相应的对象。在对象的整个生 命期中，它的标识都不改变，不同的对象不能有相同的标识。其在产生时就被赋予了唯一性， 不是通过赋值给定的。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "对象唯一性来自对象标识，不是靠属性值；两个对象可能属性值一样但仍是不同对象。"
-  },
-  {
-    "id": "Q085",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 20,
-    "type": "single",
-    "question": "操作是当对象接收到消息时被调用的对象过程",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "严格说，操作是对象提供的服务规约，真正被调用执行的是方法/过程实现；题库按此区分为错。"
-  },
-  {
-    "id": "Q086",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 21,
-    "type": "single",
-    "question": "在许多情况下，不需要创建使用场景的图形表示",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
+        "text": "遥感图像中对未标明地物的区域进行自动光谱谱系分组"
       }
     ],
-    "answer": "A",
-    "explanation": "使用场景有时用文字就够，不一定每次都画图。"
+    "answer": "ABD",
+    "explanation": "客户分群、检索结果聚类、未知地物分组均无标签，属于聚类；C项属于有监督分类。"
   },
   {
-    "id": "Q087",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 22,
-    "type": "single",
-    "question": "为了描述软件产品的功能需求，数据流图必须通过描述性文本进行补充说明。",
+    "id": "MPR119",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 119,
+    "type": "multiple",
+    "question": "关于DBSCAN算法中的点分类，下列说法正确的有：",
     "options": [
       {
         "key": "A",
-        "text": "正确"
+        "text": "核心点的 $\\varepsilon$ 邻域内包含的样本数 $\\ge MinPts$"
       },
       {
         "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "DFD 只画流和加工不够，功能需求还需要文字补充说明细节和约束。"
-  },
-  {
-    "id": "Q088",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 23,
-    "type": "single",
-    "question": "在设计完成之前，不能为类定义属性。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
+        "text": "边界点的邻域样本数 $< MinPts$，但它落在某个核心点的 $\\varepsilon$ 邻域内"
       },
       {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "类的属性可以在分析阶段初步识别，不必等到设计完全结束。"
-  },
-  {
-    "id": "Q089",
-    "chapter": "第5-6章｜建立分析模型",
-    "originalChapter": "第5-6 章– 建立分析模型测试",
-    "number": 24,
-    "type": "single",
-    "question": "分析包将分析模型元素分类进行有用的分组",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
+        "key": "C",
+        "text": "噪声点的邻域样本数 $< MinPts$，且不属于任何核心点的邻域"
       },
       {
-        "key": "B",
-        "text": "错误"
+        "key": "D",
+        "text": "所有未被分配给核心点的点都属于聚类中心"
       }
     ],
-    "answer": "A",
-    "explanation": "分析包用于把相关分析元素分组，方便组织和理解大模型。"
+    "answer": "ABC",
+    "explanation": "DBSCAN基于邻域密度对空间数据点的三大精准定义。"
   },
   {
-    "id": "Q090",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 1,
-    "type": "single",
-    "question": "以下哪一个是设计模型所关注的领域?",
+    "id": "MPR120",
+    "chapter": "模块2｜模式聚类分析",
+    "originalChapter": "模块2：模式聚类分析",
+    "number": 120,
+    "type": "multiple",
+    "question": "在定义类间距离时，层次聚类常用的度量准则包括：",
     "options": [
       {
         "key": "A",
-        "text": "架构"
+        "text": "最短距离法（Single Linkage）"
       },
       {
         "key": "B",
-        "text": "数据"
+        "text": "最长距离法（Complete Linkage）"
       },
       {
         "key": "C",
-        "text": "接口"
+        "text": "平均距离法（Average Linkage）"
       },
       {
         "key": "D",
-        "text": "项目范围"
-      },
-      {
-        "key": "E",
-        "text": "A, B, C"
+        "text": "随机距离法"
       }
     ],
-    "answer": "E",
-    "explanation": "设计模型关注架构、数据、接口和构件等，项目范围主要属于需求/管理层面。"
+    "answer": "ABC",
+    "explanation": "层次聚类在计算两簇之间距离时最常用的三种统计经典准则。"
   },
   {
-    "id": "Q091",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 2,
-    "type": "single",
-    "question": "软件设计的重要性可以用一个词来概括",
+    "id": "MPR121",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 121,
+    "type": "multiple",
+    "question": "贝叶斯决策理论三大支柱准则包括：",
     "options": [
       {
         "key": "A",
-        "text": "准确性"
+        "text": "最小错误率准则"
       },
       {
         "key": "B",
-        "text": "复杂性"
+        "text": "最小风险准则"
       },
       {
         "key": "C",
-        "text": "效率"
+        "text": "最大后验概率准则"
       },
       {
         "key": "D",
-        "text": "质量"
+        "text": "最大似然估计准则"
       }
     ],
-    "answer": "D",
-    "explanation": "软件设计直接决定系统是否可维护、可测试、可扩展，所以关键词是质量。"
+    "answer": "ABC",
+    "explanation": "贝叶斯统计决策方法的三大经典核心准则（最大似然估计属于参数估计范畴）。"
   },
   {
-    "id": "Q092",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 3,
-    "type": "single",
-    "question": "以下哪些是优秀设计的特征?",
+    "id": "MPR122",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 122,
+    "type": "multiple",
+    "question": "利用贝叶斯公式进行分类器设计时，为了完整计算后验概率 $P(\\omega_i|x)$，必须已知或估计出的概率参数有：",
     "options": [
       {
         "key": "A",
-        "text": "显示其模块之间的强耦合"
+        "text": "各类别的先验概率 $P(\\omega_i)$"
       },
       {
         "key": "B",
-        "text": "实现分析模型中所有的需求"
+        "text": "对应类别的类条件概率密度 $p(x|\\omega_i)$"
       },
       {
         "key": "C",
-        "text": "包括所有组件的测试用例"
+        "text": "特征全概率（特征空间的总概率密度） $p(x)$"
       },
       {
         "key": "D",
-        "text": "提供软件的全貌"
-      },
-      {
-        "key": "E",
-        "text": "B 和D"
-      }
-    ],
-    "answer": "E",
-    "explanation": "好设计要覆盖需求，并能呈现软件整体结构；强耦合不是好设计。"
-  },
-  {
-    "id": "Q093",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 4,
-    "type": "single",
-    "question": "软件设计是一个迭代的通用过程，可以不加修改地应用于任何软件项目。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
+        "text": "弱分类器的错误率权重 $\\alpha_t$"
       }
     ],
-    "answer": "B",
-    "explanation": "设计过程必须根据项目特点裁剪，不能不加修改地套到任何项目。"
+    "answer": "ABC",
+    "explanation": "贝叶斯公式的标准代数组成元素（后验 = 似然 × 先验 / 全概率）。"
   },
   {
-    "id": "Q094",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 5,
-    "type": "single",
-    "question": "在软件设计中哪一种类型的抽象被使用到?",
+    "id": "MPR123",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 123,
+    "type": "multiple",
+    "question": "关于贝叶斯决策中的“先验概率”与“后验概率”，下列辨析正确的有：",
     "options": [
       {
         "key": "A",
-        "text": "控制"
+        "text": "先验概率是在未看观测样本特征前，基于历史经验或统计得到的类别比例"
       },
       {
         "key": "B",
-        "text": "数据"
+        "text": "后验概率是在观测到具体样本特征 $x$ 后，更新得到的该样本属于各类的概率"
       },
       {
         "key": "C",
-        "text": "环境"
+        "text": "先验概率通过后验概率乘以似然函数直接求得"
       },
       {
         "key": "D",
-        "text": "程序性"
-      },
-      {
-        "key": "E",
-        "text": "A、B、D"
+        "text": "后验概率是贝叶斯分类进行最终决策划分的直接依据"
       }
     ],
-    "answer": "E",
-    "explanation": "设计常用控制抽象、数据抽象和过程抽象来降低复杂度。"
+    "answer": "ABD",
+    "explanation": "先验与后验概率的核心时间节点与逻辑辨析。"
   },
   {
-    "id": "Q095",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 6,
-    "type": "single",
-    "question": "下列哪个模型可以用来表示软件的架构设计。",
+    "id": "MPR124",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 124,
+    "type": "multiple",
+    "question": "朴素贝叶斯分类器（Naive Bayes）之所以被称为“朴素”，其核心假设条件包括：",
     "options": [
       {
         "key": "A",
-        "text": "动态模型"
+        "text": "特征与特征之间在给定类别下是条件独立的，没有任何协同关联"
       },
       {
         "key": "B",
-        "text": "功能模型"
+        "text": "数据的联合概率密度等于各个特征边缘概率密度的乘积"
       },
       {
         "key": "C",
-        "text": "体系结构模型"
+        "text": "各类别的协方差矩阵必须完全等同于单位矩阵"
       },
       {
         "key": "D",
-        "text": "以上皆是"
+        "text": "所有的先验概率必须完全相等"
       }
     ],
-    "answer": "C",
-    "explanation": "体系结构模型表示系统高层结构、组件及其关系。"
+    "answer": "AB",
+    "explanation": "朴素贝叶斯的“朴素”完全体现在特征条件独立性假设和全概率拆解上。"
   },
   {
-    "id": "Q096",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 7,
-    "type": "single",
-    "question": "设计模式不适用于面向对象的软件设计",
+    "id": "MPR125",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 125,
+    "type": "multiple",
+    "question": "高斯混合模型（GMM）的组成要素包括：",
     "options": [
       {
         "key": "A",
-        "text": "正确"
+        "text": "多个独立的高斯（正态）分布成分"
       },
       {
         "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "设计模式正是面向对象设计中常用的可复用解决方案。"
-  },
-  {
-    "id": "Q097",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 8,
-    "type": "single",
-    "question": "模块化是一个重要的设计目标，所以在一个提出的设计方案中不可能有太多的模块。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
+        "text": "各个高斯成分对应的权重系数（先验混合比例 $P_j$）"
       },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "题库强调模块化的重要性：合理分解模块可以降低复杂度；实际工程中仍要避免过度碎片化。"
-  },
-  {
-    "id": "Q098",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 9,
-    "type": "single",
-    "question": "信息隐藏通过对不相关的程序隐藏数据和过程，使程序维护更容易。",
-    "options": [
       {
-        "key": "A",
-        "text": "正确"
+        "key": "C",
+        "text": "每个高斯成分自身的均值向量 $\\mu_j$ 和协方差矩阵 $\\Sigma_j$"
       },
       {
-        "key": "B",
-        "text": "错误"
+        "key": "D",
+        "text": "错分样本的指数级加权系数"
       }
     ],
-    "answer": "A",
-    "explanation": "信息隐藏把模块内部数据和过程细节封装起来，外部只通过接口使用，维护时影响更小。"
+    "answer": "ABC",
+    "explanation": "高斯混合模型（GMM）作为非参数/混合密度估计的三个核心数学参数。"
   },
   {
-    "id": "Q099",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 10,
-    "type": "single",
-    "question": "内聚性是对模块的定性指示。",
+    "id": "MPR126",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 126,
+    "type": "multiple",
+    "question": "关于极大似然估计（MLE）与最大后验概率估计（MAP）的叙述，正确的有：",
     "options": [
       {
         "key": "A",
-        "text": "可以写得更紧凑。"
+        "text": "MLE不考虑参数自身的先验分布，视参数为未知但固定的常数"
       },
       {
         "key": "B",
-        "text": "只专注于一件事。"
+        "text": "MAP将参数视为具有某种先验分布的随机变量，结合了先验与似然"
       },
       {
         "key": "C",
-        "text": "能够及时完成其功能。"
+        "text": "当参数的先验分布表现为均匀分布时，MAP的求解结果与MLE完全等价"
       },
       {
         "key": "D",
-        "text": "连接其他模块和外部世界。"
-      }
-    ],
-    "answer": "B",
-    "explanation": "内聚性看一个模块内部是否围绕单一目标工作；越专注，内聚越高。"
-  },
-  {
-    "id": "Q100",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 11,
-    "type": "single",
-    "question": "在使用结构化设计方法时，逐步求精的过程是不必要的",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
+        "text": "MLE和MAP都不需要使用任何训练样本数据"
       }
     ],
-    "answer": "B",
-    "explanation": "结构化设计需要逐步求精，把大功能逐层细化成可实现模块。"
+    "answer": "ABC",
+    "explanation": "MLE（点估计）与MAP（结合先验的随机估计）在参数估计中的本质关联与差异。"
   },
   {
-    "id": "Q101",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 12,
-    "type": "single",
-    "question": "耦合是模块的定性指示。",
+    "id": "MPR127",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 127,
+    "type": "multiple",
+    "question": "多元正态分布参数化模型中，若假定所有类别共享完全相同的协方差矩阵（$\\Sigma_i = \\Sigma$），则：",
     "options": [
       {
         "key": "A",
-        "text": "可以写得更紧凑。"
+        "text": "贝叶斯决策边界会呈现为线性超平面"
       },
       {
         "key": "B",
-        "text": "只专注于一件事。"
+        "text": "二次项判定边界将彻底退化、消除"
       },
       {
         "key": "C",
-        "text": "能够及时完成其功能。"
+        "text": "判别函数变为关于特征 $x$ 的线性函数"
       },
       {
         "key": "D",
-        "text": "连接其它模块和外部世界。"
-      }
-    ],
-    "answer": "D",
-    "explanation": "耦合描述模块与其他模块或外部环境的连接程度；连接越多，耦合越高。"
-  },
-  {
-    "id": "Q102",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 13,
-    "type": "single",
-    "question": "软件设计被重构有助于创建更容易集成、更容易测试和更容易维护的软件",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
+        "text": "必须改用支持向量机才能进行分类"
       }
     ],
-    "answer": "A",
-    "explanation": "重构在不改变外部行为的前提下改善内部结构，能提升集成、测试和维护性。"
+    "answer": "ABC",
+    "explanation": "多元正态分布下，共享协方差矩阵将直接导致判定边界中的二次项抵消，退化为线性超平面。"
   },
   {
-    "id": "Q103",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 14,
-    "type": "single",
-    "question": "多态减少了扩展对象系统所需的工作，因为",
+    "id": "MPR128",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 128,
+    "type": "multiple",
+    "question": "在二分类最小错误率贝叶斯决策中，下列哪些表达式等价于“判定样本 $x$ 属于 $\\omega_1$”？",
     "options": [
       {
         "key": "A",
-        "text": "将对象更紧密地耦合在一起。"
+        "text": "$P(\\omega_1|x) > P(\\omega_2|x)$"
       },
       {
         "key": "B",
-        "text": "允许许多不同的操作共享相同的名称。"
+        "text": "$p(x|\\omega_1)P(\\omega_1) > p(x|\\omega_2)P(\\omega_2)$"
       },
       {
         "key": "C",
-        "text": "使对象彼此更加依赖。"
+        "text": "$\\frac{p(x|\\omega_1)}{p(x|\\omega_2)} > \\frac{P(\\omega_2)}{P(\\omega_1)}$"
       },
       {
         "key": "D",
-        "text": "消除封装带来的障碍。"
+        "text": "$P(\\omega_1|x) < P(\\omega_2|x)$"
       }
     ],
-    "answer": "B",
-    "explanation": "多态允许不同对象响应同名操作，扩展新类型时不必大量改调用方代码。"
+    "answer": "ABC",
+    "explanation": "最小错误率贝叶斯决策规则的三种等价数学代数变换形式。"
   },
   {
-    "id": "Q104",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 15,
-    "type": "single",
-    "question": "下列哪一个不是五种设计类类型之一",
+    "id": "MPR129",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 129,
+    "type": "multiple",
+    "question": "统计决策方法中，设计最小风险贝叶斯分类器时必不可少的要素有：",
     "options": [
       {
         "key": "A",
-        "text": "业务领域类"
+        "text": "完整的类条件概率密度分布"
       },
       {
         "key": "B",
-        "text": "实体类"
+        "text": "明确给定的先验概率"
       },
       {
         "key": "C",
-        "text": "过程类"
+        "text": "量化每种错分后果代价的损失矩阵（Loss Matrix $\\lambda_{ij}$）"
       },
       {
         "key": "D",
-        "text": "用户接口类"
+        "text": "核函数的内积映射矩阵"
       }
     ],
-    "answer": "B",
-    "explanation": "教材中的设计类类型通常包括用户接口类、业务领域类、过程类、持久类、系统类等；“实体类”不在这套五类名称里。"
+    "answer": "ABC",
+    "explanation": "最小风险决策必须引入损失矩阵 $\\lambda$ 来量化错分类别的实际代价成本。"
   },
   {
-    "id": "Q105",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 16,
-    "type": "single",
-    "question": "哪些设计模型元素被用来描述信息模型?",
+    "id": "MPR130",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 130,
+    "type": "multiple",
+    "question": "朴素贝叶斯分类器在实际工程落地中的核心优势包括：",
     "options": [
       {
         "key": "A",
-        "text": "体系结构设计元素"
+        "text": "算法结构极其简单，计算速度极快，易于大规模并行扩展"
       },
       {
         "key": "B",
-        "text": "构件级设计元素"
+        "text": "在小规模或高维稀疏数据集（如文本垃圾邮件分类）上表现出惊人的健壮性"
       },
       {
         "key": "C",
-        "text": "数据设计元素"
+        "text": "参数估计极其简单，只需分别统计一维特征的概率分布即可"
       },
       {
         "key": "D",
-        "text": "界面设计元素"
+        "text": "能够完美拟合特征之间存在强相互依赖的复杂非线性系统"
       }
     ],
-    "answer": "C",
-    "explanation": "信息模型主要描述数据结构和数据关系，所以对应数据设计元素。"
+    "answer": "ABC",
+    "explanation": "朴素贝叶斯由于假设独立而带来的高速计算和对高维稀疏特征的极强鲁棒性。"
   },
   {
-    "id": "Q106",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 17,
-    "type": "single",
-    "question": "哪一种设计可以类比于房屋的平面图?",
+    "id": "MPR131",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 131,
+    "type": "multiple",
+    "question": "在概率密度函数估计中，参数化估计与非参数化估计的核心区别在于：",
     "options": [
       {
         "key": "A",
-        "text": "体系结构设计"
+        "text": "参数化估计预先假设数据服从某种特定形式的已知分布（如多元正态分布）"
       },
       {
         "key": "B",
-        "text": "构件级设计"
+        "text": "非参数化估计不强制约束分布的形式，直接从数据样本出发逼近密度函数"
       },
       {
         "key": "C",
-        "text": "数据设计"
+        "text": "参数化估计只需要估计少量的参数（如 $\\mu, \\Sigma$）"
       },
       {
         "key": "D",
-        "text": "界面设计"
+        "text": "非参数化估计绝对无法用于贝叶斯分类器的构建"
       }
     ],
-    "answer": "A",
-    "explanation": "体系结构设计像房屋平面图，描述整体布局和主要组成部分。"
+    "answer": "ABC",
+    "explanation": "参数化估计与非参数化估计的本质理论区别。非参数估计依然是为了计算贝叶斯类条件概率。"
   },
   {
-    "id": "Q107",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 18,
-    "type": "single",
-    "question": "哪一种设计模型可以类比于房屋的内部接入点或与外部公用设施连接的详细图纸?",
+    "id": "MPR132",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 132,
+    "type": "multiple",
+    "question": "由于拉普拉斯修正（Laplace Correction）在朴素贝叶斯中的应用，它可以：",
     "options": [
       {
         "key": "A",
-        "text": "体系结构设计"
+        "text": "防止分子或分母由于样本未出现而出现0概率，导致整个乘积公式失效"
       },
       {
         "key": "B",
-        "text": "构件级设计"
+        "text": "为每个特征项的频数计数加上一个微小的正数平滑项"
       },
       {
         "key": "C",
-        "text": "数据设计"
+        "text": "消除模型的过拟合，提高泛化能力"
       },
       {
         "key": "D",
-        "text": "接口设计"
+        "text": "将有监督模型直接自动转换为无监督模型"
       }
     ],
-    "answer": "D",
-    "explanation": "接口设计像房屋与外部公用设施/内部接入点的连接图，关注系统之间、组件之间如何交互。"
+    "answer": "AB",
+    "explanation": "拉普拉斯修正（加1平滑）的核心作用是防止频数为0导致整条概率相乘链条坍塌。"
   },
   {
-    "id": "Q108",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 19,
-    "type": "single",
-    "question": "哪一种设计模型可以类比于一套房子里每个房间的详细图纸?",
+    "id": "MPR133",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 133,
+    "type": "multiple",
+    "question": "多元正态分布特征概率密度函数中，协方差矩阵 $\\Sigma$ 的性质必须满足：",
     "options": [
       {
         "key": "A",
-        "text": "体系结构设计"
+        "text": "它必须是一个实对称矩阵"
       },
       {
         "key": "B",
-        "text": "构件级设计"
+        "text": "它必须满足正定性（或半正定），行列式 $|\\Sigma| > 0$"
       },
       {
         "key": "C",
-        "text": "数据设计"
+        "text": "矩阵的对角线元素代表各个独立维度的自身方差"
       },
       {
         "key": "D",
-        "text": "界面设计"
+        "text": "矩阵的所有元素必须全部为正数"
       }
     ],
-    "answer": "B",
-    "explanation": "构件级设计像每个房间的详细图纸，关注模块内部细节。"
+    "answer": "ABC",
+    "explanation": "协方差矩阵的严格数学性质（实对称、正定、对角线为各自方差）。相关系数可正可负。"
   },
   {
-    "id": "Q109",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 20,
-    "type": "single",
-    "question": "软件重用的关键问题之一是，当存在数百个候选设计模式时，无法找到现有的可重用设 计模式。",
+    "id": "MPR134",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 134,
+    "type": "multiple",
+    "question": "关于贝叶斯公式 $P(\\omega_i|x) = \\frac{p(x|\\omega_i)P(\\omega_i)}{p(x)}$ 的内涵理解，正确的有：",
     "options": [
       {
         "key": "A",
-        "text": "正确"
+        "text": "分母 $p(x)$ 是全概率，在比较不同类别后验大小时起到相同的归一化常数作用"
       },
       {
         "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "可重用模式太多时，真正困难的是检索和选择合适模式，而不是模式不存在。"
-  },
-  {
-    "id": "Q110",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 21,
-    "type": "single",
-    "question": "设计模式被认为是编码模式。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
+        "text": "分子是该类别的似然度与先验概率的乘积"
       },
       {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "设计模式是设计层面的经验方案，不是具体代码模板或编码模式。"
-  },
-  {
-    "id": "Q111",
-    "chapter": "第7章｜设计工程",
-    "originalChapter": "第七章设计工程",
-    "number": 22,
-    "type": "single",
-    "question": "对于设计人员来说，框架和设计模式是一回事。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
+        "key": "C",
+        "text": "它完美地将客观观测（似然）与主观先验知识融合在一起"
       },
       {
-        "key": "B",
-        "text": "错误"
+        "key": "D",
+        "text": "它能够直接消除训练集中的所有噪声干扰"
       }
     ],
-    "answer": "B",
-    "explanation": "框架是半成品结构和可复用代码，设计模式是解决设计问题的思想模板，二者不是一回事。"
+    "answer": "ABC",
+    "explanation": "贝叶斯公式在模式分类应用中的底层哲学内涵与各乘项作用。"
   },
   {
-    "id": "Q112",
-    "chapter": "第8章｜体系结构设计",
-    "originalChapter": "Chapter 8 – 体系结构设计",
-    "number": 7,
-    "type": "single",
-    "question": "体系结构风格包含以下哪些元素？",
+    "id": "MPR135",
+    "chapter": "模块3｜统计决策方法与贝叶斯分类",
+    "originalChapter": "模块3：统计决策方法与贝叶斯分类",
+    "number": 135,
+    "type": "multiple",
+    "question": "在最小风险贝叶斯决策中，决策条件是选择使期望损失（风险）最小的类别，其数学表达涉及到：",
     "options": [
       {
         "key": "A",
-        "text": "约束"
+        "text": "条件风险 $R(\\alpha_i|x) = \\sum_{j=1}^c \\lambda_{ij} P(\\omega_j|x)$"
       },
       {
         "key": "B",
-        "text": "组件集"
+        "text": "比较各个可行动作的条件风险值，选择风险最小者"
       },
       {
         "key": "C",
-        "text": "语义模型"
+        "text": "必须使用 Hinge Loss 作为唯一的损失函数"
       },
       {
         "key": "D",
-        "text": "连接器"
-      },
-      {
-        "key": "E",
-        "text": "A,B,C 和D"
+        "text": "风险大小直接受到损失矩阵 $\\lambda$ 具体赋值的影响"
       }
     ],
-    "answer": "E",
-    "explanation": "体系结构风格包含组件、连接器、约束和语义模型等元素。"
+    "answer": "ABD",
+    "explanation": "条件风险公式的精确代数定义与计算流程。损失函数不限于Hinge Loss。"
   },
   {
-    "id": "Q113",
-    "chapter": "第8章｜体系结构设计",
-    "originalChapter": "Chapter 8 – 体系结构设计",
-    "number": 8,
-    "type": "single",
-    "question": "为了确定最适合系统的体系结构风格或风格组合，需求工程师通常需要给出",
+    "id": "MPR136",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别与支持向量机",
+    "number": 136,
+    "type": "multiple",
+    "question": "支持向量机（SVM）在处理分类优化问题时，其核心技术路径包括：",
     "options": [
       {
         "key": "A",
-        "text": "算法的复杂度"
+        "text": "最大化分类几何间隔（Max Margin）"
       },
       {
         "key": "B",
-        "text": "特征和约束条件"
+        "text": "建立拉格朗日函数，将其转化为对偶问题（Dual Problem）进行求解"
       },
       {
         "key": "C",
-        "text": "控制和数据"
+        "text": "引入KKT条件（Karush-Kuhn-Tucker）以保证全局最优化"
       },
       {
         "key": "D",
-        "text": "设计模式"
+        "text": "强行假设特征之间满足条件独立性"
       }
     ],
-    "answer": "B",
-    "explanation": "选择架构风格要依据系统特征和约束，例如性能、安全、可靠性、部署环境等。"
+    "answer": "ABC",
+    "explanation": "支持向量机（SVM）硬间隔/软间隔标准二次凸规划问题的核心求解路径。"
   },
   {
-    "id": "Q114",
-    "chapter": "第8章｜体系结构设计",
-    "originalChapter": "Chapter 8 – 体系结构设计",
-    "number": 9,
-    "type": "single",
-    "question": "在系统环境建模过程中，与目标系统交互的系统可以表示为",
+    "id": "MPR137",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别与支持向量机",
+    "number": 137,
+    "type": "multiple",
+    "question": "关于支持向量（Support Vectors），下列说法正确的有：",
     "options": [
       {
         "key": "A",
-        "text": "同级系统"
+        "text": "它们是距离分类判定超平面最近的那些关键边界训练样本"
       },
       {
         "key": "B",
-        "text": "下级系统"
+        "text": "它们的拉格朗日乘子 $\\alpha_i > 0$"
       },
       {
         "key": "C",
-        "text": "上级系统"
+        "text": "若从数据集中剔除所有非支持向量样本、重新训练，最终获得的超平面完全不变"
       },
       {
         "key": "D",
-        "text": "工作系统"
-      },
-      {
-        "key": "E",
-        "text": "A、B 和C"
+        "text": "支持向量只存在于硬间隔SVM中，软间隔模型不包含支持向量"
       }
     ],
-    "answer": "E",
-    "explanation": "系统环境中与目标系统交互的系统可分为上级、下级、同级等。"
+    "answer": "ABC",
+    "explanation": "支持向量的标志性物理意义（边界决定性、拉格朗日乘子非零性）。软间隔中同样存在。"
   },
   {
-    "id": "Q115",
-    "chapter": "第8章｜体系结构设计",
-    "originalChapter": "Chapter 8 – 体系结构设计",
-    "number": 10,
-    "type": "single",
-    "question": "在系统环境建模过程中，与目标系统在对等的基础上相互作用的是",
+    "id": "MPR138",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别与支持向量机",
+    "number": 138,
+    "type": "multiple",
+    "question": "软间隔支持向量机引入松弛变量 $\\xi_i$ 的核心技术动因包括：",
     "options": [
       {
         "key": "A",
-        "text": "同级系统"
+        "text": "现实中训练样本数据几乎不可能绝对线性可分"
       },
       {
         "key": "B",
-        "text": "下级系统"
+        "text": "容忍数据中存在一定程度的离群噪声，避免模型产生严重的过拟合"
       },
       {
         "key": "C",
-        "text": "上级系统"
+        "text": "能够使SVM分类超平面的求解问题始终保持良态的凸优化性质"
       },
       {
         "key": "D",
-        "text": "工作系统"
-      },
-      {
-        "key": "E",
-        "text": "A、B 和C"
+        "text": "能够自动降低原始特征空间的物理维度"
       }
     ],
-    "answer": "A",
-    "explanation": "同级系统就是和目标系统在对等基础上交互的系统。"
+    "answer": "ABC",
+    "explanation": "软间隔SVM中引入松弛变量以增强对线性不可分数据和离群噪声的泛化容忍度。"
   },
   {
-    "id": "Q116",
-    "chapter": "第8章｜体系结构设计",
-    "originalChapter": "Chapter 8 – 体系结构设计",
-    "number": 11,
-    "type": "single",
-    "question": "在体系结构权衡分析方法中，体系结构风格应该使用来描述。",
+    "id": "MPR139",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别与支持向量机",
+    "number": 139,
+    "type": "multiple",
+    "question": "下列哪些属于支持向量机（SVM）中常用的经典核函数（Kernel Functions）？",
     "options": [
       {
         "key": "A",
-        "text": "数据流视图"
+        "text": "线性核函数（Linear Kernel）"
       },
       {
         "key": "B",
-        "text": "模块视图"
+        "text": "多项式核函数（Polynomial Kernel）"
       },
       {
         "key": "C",
-        "text": "过程视图"
+        "text": "高斯径向基核函数（RBF / Gaussian Kernel）"
       },
       {
         "key": "D",
-        "text": "用户视图"
-      },
-      {
-        "key": "E",
-        "text": "A、B 和C"
+        "text": "贝叶斯全概率核函数"
       }
     ],
-    "answer": "D",
-    "explanation": "按题库口径，体系结构权衡分析中这里要求从用户视图描述风格；核心是让质量属性影响能被评估。"
+    "answer": "ABC",
+    "explanation": "SVM在低维直接计算高维内积的三大最经典的标准化核函数。"
   },
   {
-    "id": "Q117",
-    "chapter": "第8章｜体系结构设计",
-    "originalChapter": "Chapter 8 – 体系结构设计",
-    "number": 12,
-    "type": "single",
-    "question": "评估所提议的体系结构的整体复杂性的一种有用的技术是查看该组件的",
+    "id": "MPR140",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别与支持向量机",
+    "number": 140,
+    "type": "multiple",
+    "question": "关于感知器算法（Perceptron），下列说法正确的有：",
     "options": [
       {
         "key": "A",
-        "text": "内聚流"
+        "text": "其目标是寻找一个权重向量 $w$ 和偏置 $b$，建立判别函数 $g(x) = w^T x + b$"
       },
       {
         "key": "B",
-        "text": "依赖关系"
+        "text": "优化准则函数基于错分样本到超平面的加权距离之和"
       },
       {
         "key": "C",
-        "text": "共享依赖关系"
+        "text": "采用负梯度方向进行迭代权重更新（梯度下降）"
       },
       {
         "key": "D",
-        "text": "大小"
-      },
-      {
-        "key": "E",
-        "text": "B 和C"
+        "text": "如果数据是线性不可分的，算法将永远处于震荡状态、无法收敛"
       }
     ],
-    "answer": "B",
-    "explanation": "依赖关系越复杂，架构整体复杂度越高，后续维护和变更风险也越大。"
+    "answer": "ABCD",
+    "explanation": "感知器算法的目标、准则函数构建、负梯度下降更新法则以及不可分时不收敛的本质缺陷。"
   },
   {
-    "id": "Q118",
-    "chapter": "第8章｜体系结构设计",
-    "originalChapter": "Chapter 8 – 体系结构设计",
-    "number": 13,
-    "type": "single",
-    "question": "当数据流图中整个的数据流动以一种顺序的方式沿着一条或仅仅很少的几条直线路径进 行，（）就出现了。",
+    "id": "MPR141",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别与支持向量机",
+    "number": 141,
+    "type": "multiple",
+    "question": "为了解决线性不可分导致感知器不收敛的缺陷，最小平方误差（MSE）判别函数：",
     "options": [
       {
         "key": "A",
-        "text": "低耦合"
+        "text": "引入了错误分类的残差平方和作为全新准则函数"
       },
       {
         "key": "B",
-        "text": "良好的模块化"
+        "text": "可以直接通过求导并利用伪逆法（广义逆）进行闭式解的一步求解"
       },
       {
         "key": "C",
-        "text": "事务流"
+        "text": "也可以采用梯度下降法进行渐进式迭代求解"
       },
       {
         "key": "D",
-        "text": "变换流"
+        "text": "要求各类别的协方差矩阵必须严格相等"
       }
     ],
-    "answer": "D",
-    "explanation": "数据沿少数直线路径顺序流动，典型就是变换流。"
+    "answer": "ABC",
+    "explanation": "最小平方误差判别（MSE）通过伪逆矩阵 $X^{\\dagger}$ 实现一步闭式直接求解的工程方案。"
   },
   {
-    "id": "Q119",
-    "chapter": "第8章｜体系结构设计",
-    "originalChapter": "Chapter 8 – 体系结构设计",
-    "number": 14,
-    "type": "single",
-    "question": "当单个项目沿着数据流图的多个路径之一触发其他数据流时，可标志该信息流的特征。",
+    "id": "MPR142",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别与支持向量机",
+    "number": 142,
+    "type": "multiple",
+    "question": "在SVM多分类扩展中，“一对多（OVR）”策略与“一对一（OVO）”策略的区别包括：",
     "options": [
       {
         "key": "A",
-        "text": "高耦合"
+        "text": "OVR需要训练 $c$ 个分类器，OVO需要训练 $\\frac{c(c-1)}{2}$ 个分类器"
       },
       {
         "key": "B",
-        "text": "模块化较差"
+        "text": "OVR的每个基分类器都使用全体训练样本，OVO的每个基分类器仅使用对应的两类样本"
       },
       {
         "key": "C",
-        "text": "事务流"
+        "text": "OVO容易受到样本类别不平衡的严重干扰，OVR则完全不存在该缺陷"
       },
       {
         "key": "D",
-        "text": "转换流"
+        "text": "OVO在类别数 $c$ 极大时，需要训练的基分类器数量会发生爆发式增长"
       }
     ],
-    "answer": "C",
-    "explanation": "一个输入触发多条可能路径，像事务分发一样选择处理分支，就是事务流。"
+    "answer": "ABD",
+    "explanation": "多分类SVM的一对多与一对一机制在分类器数、样本使用量及不平衡性上的对比。"
   },
   {
-    "id": "Q120",
-    "chapter": "第8章｜体系结构设计",
-    "originalChapter": "Chapter 8 – 体系结构设计",
-    "number": 15,
-    "type": "single",
-    "question": "在事务映射中，第一级分解的结果是",
+    "id": "MPR143",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别与支持向量机",
+    "number": 143,
+    "type": "multiple",
+    "question": "支持向量机优化目标中的惩罚因子 $C$，其取值对模型性能的影响表现为：",
     "options": [
       {
         "key": "A",
-        "text": "创建一个CFD"
+        "text": "$C$ 趋于无穷大时，模型逼近硬间隔SVM，极易过拟合"
       },
       {
         "key": "B",
-        "text": "控制层次结构的导出"
+        "text": "$C$ 取值过小时，模型对错分样本惩罚极弱，间隔可能很大但会导致欠拟合"
       },
       {
         "key": "C",
-        "text": "工作模块的分布"
+        "text": "调整 $C$ 能够精细调节模型在“训练集误差”与“测试集泛化能力”之间的折中"
       },
       {
         "key": "D",
-        "text": "细化模块视图"
+        "text": "$C$ 的取值直接决定了高斯核函数的映射维度"
       }
     ],
-    "answer": "B",
-    "explanation": "事务映射首先要从 DFD 推导出控制层次结构，再分配处理模块。"
+    "answer": "ABC",
+    "explanation": "惩罚因子 $C$ 对SVM模型复杂度和泛化性的决定性控制作用。"
   },
   {
-    "id": "Q121",
-    "chapter": "第8章｜体系结构设计",
-    "originalChapter": "Chapter 8 – 体系结构设计",
-    "number": 16,
-    "type": "single",
-    "question": "通过变换或事务映射得到体系结构设计的应用程序可以由进一步补充说明。",
+    "id": "MPR144",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别与支持向量机",
+    "number": 144,
+    "type": "multiple",
+    "question": "关于线性判别函数中的判定超平面 $w^T x + b = 0$，其几何性质表现为：",
     "options": [
       {
         "key": "A",
-        "text": "实体关系图"
+        "text": "权重向量 $w$ 垂直于判定超平面，决定了超平面的法线方向"
       },
       {
         "key": "B",
-        "text": "模块接口描述"
+        "text": "偏置 $b$ 决定了超平面相对于坐标原点的位移距离"
       },
       {
         "key": "C",
-        "text": "每个模块的过程详述"
+        "text": "任意样本点 $x$ 到该超平面的代数距离正比于 $|w^T x + b|$"
       },
       {
         "key": "D",
-        "text": "每个模块的测试用例"
-      },
-      {
-        "key": "E",
-        "text": "B 和C"
+        "text": "超平面将整个特征空间完美切分为正类区域（$g(x)>0$）和负类区域（$g(x)<0$）"
       }
     ],
-    "answer": "E",
-    "explanation": "映射得到的架构还需要用模块接口描述和模块过程详述补充，否则只是骨架。"
+    "answer": "ABCD",
+    "explanation": "线性判别超平面的法线方向、位移、代数距离以及对特征空间的切分布置。"
   },
   {
-    "id": "Q122",
-    "chapter": "第8章｜体系结构设计",
-    "originalChapter": "Chapter 8 – 体系结构设计",
-    "number": 17,
-    "type": "single",
-    "question": "用于描述系统中业务逻辑处理。",
+    "id": "MPR145",
+    "chapter": "模块4｜线性判别函数与支持向量机",
+    "originalChapter": "模块4：线性判别与支持向量机",
+    "number": 145,
+    "type": "multiple",
+    "question": "感知器算法准则函数 $J_p(w)$ 具有哪些数学特点？",
     "options": [
       {
         "key": "A",
-        "text": "界面类"
+        "text": "它是一个非负的连续函数"
       },
       {
         "key": "B",
-        "text": "分析类"
+        "text": "在错分样本点处是分段线性的"
       },
       {
         "key": "C",
-        "text": "实体类"
+        "text": "它是一个严格的凸函数，因此局部极小值即为全局最小值"
       },
       {
         "key": "D",
-        "text": "控制类"
+        "text": "它的最小值在所有样本分类完全正确时达到，此时函数值严格等于0"
       }
     ],
-    "answer": "D",
-    "explanation": "控制类负责协调流程和业务逻辑，界面类负责显示交互，实体类保存数据。"
+    "answer": "ABCD",
+    "explanation": "感知器准则函数的关键数学性质（连续、分段线性、凸函数、收敛时值为0）。"
   },
   {
-    "id": "Q123",
-    "chapter": "第8章｜体系结构设计",
-    "originalChapter": "Chapter 8 – 体系结构设计",
-    "number": 18,
-    "type": "single",
-    "question": "从管理角度看，软件设计包括： ①数据设计②体系结构设计③概要设计④接口设计⑤详细设计⑥构件设计",
+    "id": "MPR146",
+    "chapter": "模块5｜集成学习与提升方法",
+    "originalChapter": "模块5：集成学习与特征选择/提取",
+    "number": 146,
+    "type": "multiple",
+    "question": "提升学习中经典的AdaBoost算法，其每轮迭代完整涉及到的核心步骤包括：",
     "options": [
       {
         "key": "A",
-        "text": "①②③⑤"
+        "text": "初始化训练样本的均匀概率权重分布 $D_1$"
       },
       {
         "key": "B",
-        "text": "①②④⑥"
+        "text": "在当前权重分布下训练基弱分类器，并计算其分类错误率 $\\varepsilon_t$"
       },
       {
         "key": "C",
-        "text": "③⑤"
+        "text": "依据错误率计算当前弱分类器的投票权重 $\\alpha_t$"
       },
       {
         "key": "D",
-        "text": "②③⑤⑥"
+        "text": "更新样本权重分布，大幅提高错分样本权重，缩小正确分类样本权重，并进行归一化"
       }
     ],
-    "answer": "C",
-    "explanation": "从管理角度，常把软件设计分成概要设计和详细设计两大层次。"
+    "answer": "ABCD",
+    "explanation": "提升学习算法AdaBoost在单轮串行迭代中的完整核心流程。"
   },
   {
-    "id": "Q124",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 1,
-    "type": "single",
-    "question": "在面向对象的软件工程环境中，构件包含",
+    "id": "MPR147",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块5：集成学习与特征选择/提取",
+    "number": 147,
+    "type": "multiple",
+    "question": "关于特征选择与特征提取的底层考点辨析，正确的有：",
     "options": [
       {
         "key": "A",
-        "text": "属性和操作"
+        "text": "特征选择不改变特征的原始物理意义，仅仅挑出最优子集"
       },
       {
         "key": "B",
-        "text": "每个类的实例"
+        "text": "特征提取通过空间映射/变换，产生全新物理意义的组合特征"
       },
       {
         "key": "C",
-        "text": "每个参与者（设备或用户）的角色"
+        "text": "两者的共同目标都是降低特征维度，克服维数灾难，提升分类性能"
       },
       {
         "key": "D",
-        "text": "一组协作类"
+        "text": "特征选择最适合非线性结构，特征提取绝对无法处理非线性结构"
       }
     ],
-    "answer": "D",
-    "explanation": "面向对象中的构件通常是一组协作类，而不是单个属性或单个对象实例。"
+    "answer": "ABC",
+    "explanation": "特征选择（挑子集、保原貌）与特征提取（造新特征、失原貌）的根本原理区别。"
   },
   {
-    "id": "Q125",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 2,
-    "type": "single",
-    "question": "在传统的软件工程中，模块必须扮演以下哪一个角色？",
+    "id": "MPR148",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块5：集成学习与特征选择/提取",
+    "number": 148,
+    "type": "multiple",
+    "question": "主成分分析（PCA）算法之所以能够广泛用于降维与信息保持，其数学保障在于：",
     "options": [
       {
         "key": "A",
-        "text": "控制构件"
+        "text": "投影后的第一主成分具有数据重构误差最小的优良性质"
       },
       {
         "key": "B",
-        "text": "基础设施构件"
+        "text": "投影轴方向成功对应了数据样本投影后方差最大的方向"
       },
       {
         "key": "C",
-        "text": "问题域构件"
+        "text": "各个主成分之间彼此正交，完全消除了原始特征中的冗余相关性"
       },
       {
         "key": "D",
-        "text": "以上所有内容"
+        "text": "它是一种强监督的分类边界查找算法"
       }
     ],
-    "answer": "D",
-    "explanation": "传统模块既可能承担控制、基础设施，也可能承担问题域功能。"
+    "answer": "ABC",
+    "explanation": "PCA通过协方差矩阵特征值分解实现最大方差保持与最小重构误差的数学内涵。"
   },
   {
-    "id": "Q126",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 3,
-    "type": "single",
-    "question": "以下哪项不是用于指导构件级设计的四项原则之一？",
+    "id": "MPR149",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块5：集成学习与特征选择/提取",
+    "number": 149,
+    "type": "multiple",
+    "question": "Fisher线性判别（LDA）与主成分分析（PCA）的同异点辨析包括：",
     "options": [
       {
         "key": "A",
-        "text": "依赖倒置原则"
+        "text": "相同点：两者都属于线性降维技术，都通过投影矩阵将高维空间变换到低维空间"
       },
       {
         "key": "B",
-        "text": "接口分离原则"
+        "text": "不同点：PCA是无监督的、关注全局最大方差；LDA是有监督的、关注类别间的最大分离"
       },
       {
         "key": "C",
-        "text": "开闭原则"
+        "text": "不同点：PCA降维后的维度受原始特征限制，LDA降维后的维度最多为 $c-1$"
       },
       {
         "key": "D",
-        "text": "简约复杂性原理"
+        "text": "相同点：两者都强制要求属性之间满足朴素贝叶斯的条件独立性假设"
       }
     ],
-    "answer": "D",
-    "explanation": "构件级设计原则常见有开闭、依赖倒置、接口分离等；“简约复杂性原理”不是标准四原则之一。"
+    "answer": "ABC",
+    "explanation": "PCA（无监督保持全局最大方差）与LDA（有监督极大化类间/类内比值）的深度对比。"
   },
   {
-    "id": "Q127",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 4,
-    "type": "single",
-    "question": "在构件设计中，精化需要详细描述以下哪些元素？",
+    "id": "MPR150",
+    "chapter": "模块6｜特征选择与特征提取",
+    "originalChapter": "模块5：集成学习与特征选择/提取",
+    "number": 150,
+    "type": "multiple",
+    "question": "特征选择搜索策略中，属于启发式/次优搜索策略的有：",
     "options": [
       {
         "key": "A",
-        "text": "源代码"
+        "text": "序列向前选择（SFS，一前向加特征）"
       },
       {
         "key": "B",
-        "text": "属性"
+        "text": "序列向后选择（SBS，一后向剔特征）"
       },
       {
         "key": "C",
-        "text": "接口"
+        "text": "穷举搜索（Exhaustive Search，彻底遍历所有组合）"
       },
       {
         "key": "D",
-        "text": "操作"
-      },
-      {
-        "key": "E",
-        "text": "B、C 和D"
+        "text": "双向搜索（Bidirectional Search）"
       }
     ],
-    "answer": "E",
-    "explanation": "构件精化要把属性、接口、操作等细节说明清楚，源代码属于后续实现。"
-  },
-  {
-    "id": "Q128",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 5,
-    "type": "single",
-    "question": "在构件级设计中，“持久数据源”指",
-    "options": [
-      {
-        "key": "A",
-        "text": "构件库"
-      },
-      {
-        "key": "B",
-        "text": "数据库"
-      },
-      {
-        "key": "C",
-        "text": "文件"
-      },
-      {
-        "key": "D",
-        "text": "以上所有"
-      },
-      {
-        "key": "E",
-        "text": "B 和C"
-      }
-    ],
-    "answer": "E",
-    "explanation": "持久数据源指程序结束后仍保存的数据来源，典型是数据库和文件。"
-  },
-  {
-    "id": "Q129",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 6,
-    "type": "single",
-    "question": "下列哪些结构经常被用于结构化编程？",
-    "options": [
-      {
-        "key": "A",
-        "text": "分支"
-      },
-      {
-        "key": "B",
-        "text": "条件"
-      },
-      {
-        "key": "C",
-        "text": "循环"
-      },
-      {
-        "key": "D",
-        "text": "顺序"
-      },
-      {
-        "key": "E",
-        "text": "B、C 和D"
-      }
-    ],
-    "answer": "E",
-    "explanation": "结构化编程的三种基本控制结构是顺序、选择/条件、循环。"
-  },
-  {
-    "id": "Q130",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 7,
-    "type": "single",
-    "question": "以下哪项是过程细节描述的图形符号化表示？",
-    "options": [
-      {
-        "key": "A",
-        "text": "流图"
-      },
-      {
-        "key": "B",
-        "text": "决策表"
-      },
-      {
-        "key": "C",
-        "text": "ER 图"
-      },
-      {
-        "key": "D",
-        "text": "流程图"
-      }
-    ],
-    "answer": "D",
-    "explanation": "流程图是用图形符号表达过程细节的常见方式。"
-  },
-  {
-    "id": "Q131",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 8,
-    "type": "single",
-    "question": "决策表",
-    "options": [
-      {
-        "key": "A",
-        "text": "记录所有条件语句的步骤"
-      },
-      {
-        "key": "B",
-        "text": "指导项目管理计划的制定"
-      },
-      {
-        "key": "C",
-        "text": "只有在构建专家系统时使用"
-      },
-      {
-        "key": "D",
-        "text": "当一组复杂的条件和动作出现在构件中时使用"
-      }
-    ],
-    "answer": "D",
-    "explanation": "条件和动作组合很复杂时，决策表比一堆 if-else 更清楚。"
-  },
-  {
-    "id": "Q132",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 9,
-    "type": "single",
-    "question": "程序设计语言（PDL）通常是",
-    "options": [
-      {
-        "key": "A",
-        "text": "程序结构与描述文本的组合"
-      },
-      {
-        "key": "B",
-        "text": "合法的编程语言本身"
-      },
-      {
-        "key": "C",
-        "text": "机器可读软件开发语言"
-      },
-      {
-        "key": "D",
-        "text": "表示软件体系结构的有用方法"
-      }
-    ],
-    "answer": "A",
-    "explanation": "PDL 是介于自然语言和程序语言之间的过程设计描述，既有结构又有文字。"
-  },
-  {
-    "id": "Q133",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 10,
-    "type": "single",
-    "question": "在评估特定设计符号的有效性时，以下哪项标准是有用的？",
-    "options": [
-      {
-        "key": "A",
-        "text": "可维护性"
-      },
-      {
-        "key": "B",
-        "text": "模块化"
-      },
-      {
-        "key": "C",
-        "text": "简洁"
-      },
-      {
-        "key": "D",
-        "text": "规模"
-      },
-      {
-        "key": "E",
-        "text": "A、B 和C"
-      }
-    ],
-    "answer": "E",
-    "explanation": "好的设计符号应易维护、模块化、简洁，不能只追求形式。"
-  },
-  {
-    "id": "Q134",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 1,
-    "type": "truefalse",
-    "question": "通常来讲，构件是计算机软件的模块化构建块。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "T",
-    "explanation": "构件就是软件的模块化构建块，用来组织和复用系统功能。"
-  },
-  {
-    "id": "Q135",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 2,
-    "type": "truefalse",
-    "question": "软件工程师有时需要从头开始创建构件，以完全满足客户的期望。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "T",
-    "explanation": "复用不是万能的，如果没有合适构件，工程师仍需从头设计实现。"
-  },
-  {
-    "id": "Q136",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 3,
-    "type": "truefalse",
-    "question": "在构件级设计期间，通常忽略组织问题，如子系统成员资格或打包。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "构件级设计仍要考虑子系统归属、打包和组织结构，否则后期集成会混乱。"
-  },
-  {
-    "id": "Q137",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 4,
-    "type": "truefalse",
-    "question": "原型的使用有助于在详细设计级别识别构件的本质。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "T",
-    "explanation": "原型能帮助在详细设计阶段看清构件职责、接口和交互。"
-  },
-  {
-    "id": "Q138",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 5,
-    "type": "truefalse",
-    "question": "呈现出功能、层级或通信内聚的类和构件相对容易实现、测试和维护。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "T",
-    "explanation": "功能、层级或通信内聚较好的构件职责清楚，因此更容易实现、测试和维护。"
-  },
-  {
-    "id": "Q139",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 6,
-    "type": "truefalse",
-    "question": "软件耦合是体系结构设计不佳的标志，在每个系统中都可以避免。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "耦合不可能在所有系统中完全避免，关键是控制在合理范围并降低不必要耦合。"
-  },
-  {
-    "id": "Q140",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 7,
-    "type": "truefalse",
-    "question": "对象约束语言（OCL）通过允许软件工程师使用形式化语法来构造关于设计模型元素的 明确语句，从而补充了UML。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "T",
-    "explanation": "OCL 用形式化语句补充 UML，可表达约束，使模型更精确。"
-  },
-  {
-    "id": "Q141",
-    "chapter": "第9章｜构件级设计",
-    "originalChapter": "Chapter 9 – Modeling Component-level Design Test",
-    "number": 8,
-    "type": "truefalse",
-    "question": "OCL 还没有强大到可以描述设计行为的前后条件。",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "F",
-    "explanation": "OCL 可以描述前置条件、后置条件和不变式等约束，所以说它不能描述前后条件是错的。"
-  },
-  {
-    "id": "Q142",
-    "chapter": "第10章｜用户界面设计",
-    "originalChapter": "Chapter 10 –User Interface Design Test",
-    "number": 1,
-    "type": "single",
-    "question": "下列哪一种界面设计原则不允许用户保留与计算机的交互控制?",
-    "options": [
-      {
-        "key": "A",
-        "text": "允许交互中断"
-      },
-      {
-        "key": "B",
-        "text": "允许交互撤销"
-      },
-      {
-        "key": "C",
-        "text": "对普通用户隐藏内部技术细节"
-      },
-      {
-        "key": "D",
-        "text": "为完成任务仅提供一种定义的方法"
-      }
-    ],
-    "answer": "D",
-    "explanation": "只提供一种固定完成方法会限制用户控制，违背“用户掌控交互”的原则。"
-  },
-  {
-    "id": "Q143",
-    "chapter": "第10章｜用户界面设计",
-    "originalChapter": "Chapter 10 –User Interface Design Test",
-    "number": 2,
-    "type": "single",
-    "question": "以下哪个界面设计原则可以减少用户的记忆负担?",
-    "options": [
-      {
-        "key": "A",
-        "text": "定义直观快捷键"
-      },
-      {
-        "key": "B",
-        "text": "以渐进的方式披露信息"
-      },
-      {
-        "key": "C",
-        "text": "建立有意义的缺省值"
-      },
-      {
-        "key": "D",
-        "text": "提供在线帮助"
-      },
-      {
-        "key": "E",
-        "text": "ABC 都选"
-      }
-    ],
-    "answer": "E",
-    "explanation": "直观快捷键、渐进披露、合理默认值都能减少用户需要记住的东西。"
-  },
-  {
-    "id": "Q144",
-    "chapter": "第10章｜用户界面设计",
-    "originalChapter": "Chapter 10 –User Interface Design Test",
-    "number": 3,
-    "type": "single",
-    "question": "界面一致性是指？",
-    "options": [
-      {
-        "key": "A",
-        "text": "每个应用程序都应该有自己独特的外观和感觉"
-      },
-      {
-        "key": "B",
-        "text": "输入机制在整个应用系统家族中保持一致"
-      },
-      {
-        "key": "C",
-        "text": "导航方法是环境敏感的"
-      },
-      {
-        "key": "D",
-        "text": "根据设计标准组织视觉信息"
-      },
-      {
-        "key": "E",
-        "text": "B 和D"
-      }
-    ],
-    "answer": "E",
-    "explanation": "一致性主要体现在输入机制、导航和视觉组织遵循统一规则。"
-  },
-  {
-    "id": "Q145",
-    "chapter": "第10章｜用户界面设计",
-    "originalChapter": "Chapter 10 –User Interface Design Test",
-    "number": 4,
-    "type": "single",
-    "question": "哪个模型描述了计算机系统的最终用户的轮廓？",
-    "options": [
-      {
-        "key": "A",
-        "text": "设计模型"
-      },
-      {
-        "key": "B",
-        "text": "实施模型"
-      },
-      {
-        "key": "C",
-        "text": "用户模型"
-      },
-      {
-        "key": "D",
-        "text": "系统模型"
-      }
-    ],
-    "answer": "C",
-    "explanation": "用户模型描述最终用户的特征、经验、能力和需求。"
-  },
-  {
-    "id": "Q146",
-    "chapter": "第10章｜用户界面设计",
-    "originalChapter": "Chapter 10 –User Interface Design Test",
-    "number": 5,
-    "type": "single",
-    "question": "哪个模型描述了终端用户在他或她的头脑中创建的系统的形象？",
-    "options": [
-      {
-        "key": "A",
-        "text": "设计模型"
-      },
-      {
-        "key": "B",
-        "text": "用户模型"
-      },
-      {
-        "key": "C",
-        "text": "系统模型"
-      },
-      {
-        "key": "D",
-        "text": "心理模型或系统感知"
-      }
-    ],
-    "answer": "D",
-    "explanation": "心理模型是用户脑子里对系统如何工作的理解。"
-  },
-  {
-    "id": "Q147",
-    "chapter": "第10章｜用户界面设计",
-    "originalChapter": "Chapter 10 –User Interface Design Test",
-    "number": 6,
-    "type": "single",
-    "question": "哪个模型描述了用户界面的外观和感觉以及所有支持信息？",
-    "options": [
-      {
-        "key": "A",
-        "text": "实现模型"
-      },
-      {
-        "key": "B",
-        "text": "用户模型"
-      },
-      {
-        "key": "C",
-        "text": "设计模型"
-      },
-      {
-        "key": "D",
-        "text": "心理模型系统感知"
-      }
-    ],
-    "answer": "A",
-    "explanation": "实现模型呈现给用户的是界面的外观、感觉和帮助信息。"
-  },
-  {
-    "id": "Q148",
-    "chapter": "第10章｜用户界面设计",
-    "originalChapter": "Chapter 10 –User Interface Design Test",
-    "number": 7,
-    "type": "single",
-    "question": "以下哪些框架活动通常与用户界面设计过程无关？",
-    "options": [
-      {
-        "key": "A",
-        "text": "成本估算"
-      },
-      {
-        "key": "B",
-        "text": "界面结构"
-      },
-      {
-        "key": "C",
-        "text": "界面验证"
-      },
-      {
-        "key": "D",
-        "text": "用户和任务分析"
-      }
-    ],
-    "answer": "A",
-    "explanation": "界面设计通常关注用户任务分析、界面结构和验证；成本估算属于项目管理。"
-  },
-  {
-    "id": "Q149",
-    "chapter": "第10章｜用户界面设计",
-    "originalChapter": "Chapter 10 –User Interface Design Test",
-    "number": 8,
-    "type": "single",
-    "question": "用户任务分析的哪些方法在用户界面设计中是有用的？",
-    "options": [
-      {
-        "key": "A",
-        "text": "用户在问卷中表明他们的偏好"
-      },
-      {
-        "key": "B",
-        "text": "依靠经验丰富的程序员的判断"
-      },
-      {
-        "key": "C",
-        "text": "研究现有的基于计算机的解决方案"
-      },
-      {
-        "key": "D",
-        "text": "观察用户手动执行任务的情况"
-      },
-      {
-        "key": "E",
-        "text": "C 和D"
-      }
-    ],
-    "answer": "E",
-    "explanation": "观察用户做任务、研究现有解决方案最能帮助理解真实任务流程。"
-  },
-  {
-    "id": "Q150",
-    "chapter": "第10章｜用户界面设计",
-    "originalChapter": "Chapter 10 –User Interface Design Test",
-    "number": 1,
-    "type": "truefalse",
-    "question": "减少用户的记忆负担的原因是使他或她与计算机的交互更快地完成",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "T",
-    "explanation": "记忆负担低，用户就不必反复想“下一步怎么做”，交互自然更快。"
-  },
-  {
-    "id": "Q151",
-    "chapter": "第10章｜用户界面设计",
-    "originalChapter": "Chapter 10 –User Interface Design Test",
-    "number": 2,
-    "type": "truefalse",
-    "question": "如果过去的交互模型产生了特定的用户期望，那么对模型进行更改通常是不好的",
-    "options": [
-      {
-        "key": "T",
-        "text": "正确 / True"
-      },
-      {
-        "key": "F",
-        "text": "错误 / False"
-      }
-    ],
-    "answer": "T",
-    "explanation": "用户已经形成习惯时，随意改变交互模型会造成困惑和错误。"
-  },
-  {
-    "id": "Q152",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 1,
-    "type": "single",
-    "question": "使用独立软件测试团队的最佳原因是",
-    "options": [
-      {
-        "key": "A",
-        "text": "软件开发人员无需进行任何测试"
-      },
-      {
-        "key": "B",
-        "text": "测试团队将更彻底地测试软件"
-      },
-      {
-        "key": "C",
-        "text": "测试人员在测试开始前不会参与该项目"
-      },
-      {
-        "key": "D",
-        "text": "开发人员和测试人员之间的参数减少"
-      }
-    ],
-    "answer": "B",
-    "explanation": "独立测试团队更容易站在破坏性角度找问题，也不容易被开发者思维限制。"
-  },
-  {
-    "id": "Q153",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 2,
-    "type": "single",
-    "question": "组织传统软件测试的正常活动顺序是什么？ a. 集成测试 b. 系统测试 c. 单元测试 d. 验证测试",
-    "options": [
-      {
-        "key": "A",
-        "text": "集成测试"
-      },
-      {
-        "key": "B",
-        "text": "系统测试"
-      },
-      {
-        "key": "C",
-        "text": "单元测试"
-      },
-      {
-        "key": "D",
-        "text": "验证测试 A. a，d，c，b B. b，d，a，c C. c，a，d，b D. d，b，c，a"
-      }
-    ],
-    "answer": "C",
-    "explanation": "传统测试通常从小到大：先单元测试，再集成测试，再确认/验证测试，最后系统测试。"
-  },
-  {
-    "id": "Q154",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 3,
-    "type": "single",
-    "question": "在成功的软件测试过程中需要强调以下哪些战略问题？",
-    "options": [
-      {
-        "key": "A",
-        "text": "在测试前进行正式的技术审查"
-      },
-      {
-        "key": "B",
-        "text": "以可量化的方式具体化需求"
-      },
-      {
-        "key": "C",
-        "text": "使用独立的测试团队"
-      },
-      {
-        "key": "D",
-        "text": "代码编写完成后再编写测试计划"
-      },
-      {
-        "key": "E",
-        "text": "A 和B"
-      }
-    ],
-    "answer": "E",
-    "explanation": "测试成功的前提是需求可量化、早期技术评审充分；测试计划不能等代码写完才开始。"
-  },
-  {
-    "id": "Q155",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 4,
-    "type": "single",
-    "question": "在单元测试期间需要评估以下哪一项？",
-    "options": [
-      {
-        "key": "A",
-        "text": "算法性能"
-      },
-      {
-        "key": "B",
-        "text": "代码稳定性"
-      },
-      {
-        "key": "C",
-        "text": "错误处理"
-      },
-      {
-        "key": "D",
-        "text": "执行路径"
-      },
-      {
-        "key": "E",
-        "text": "C 和D"
-      }
-    ],
-    "answer": "E",
-    "explanation": "单元测试重点看模块内部路径、边界、错误处理等，尤其是执行路径和错误处理。"
-  },
-  {
-    "id": "Q156",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 5,
-    "type": "single",
-    "question": "自上而下的集成测试具有的主要优势",
-    "options": [
-      {
-        "key": "A",
-        "text": "底层模块永远不需要测试"
-      },
-      {
-        "key": "B",
-        "text": "重大决策点及早测试"
-      },
-      {
-        "key": "C",
-        "text": "无需编写驱动模块程序"
-      },
-      {
-        "key": "D",
-        "text": "无需编写桩模块程序"
-      },
-      {
-        "key": "E",
-        "text": "B 和C"
-      }
-    ],
-    "answer": "E",
-    "explanation": "自上而下先测高层控制和关键决策点，且不需要驱动程序，但通常需要桩模块。"
-  },
-  {
-    "id": "Q157",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 6,
-    "type": "single",
-    "question": "自下而上集成测试具有的主要优势",
-    "options": [
-      {
-        "key": "A",
-        "text": "重大决策点及早测试"
-      },
-      {
-        "key": "B",
-        "text": "无需编写驱动程序"
-      },
-      {
-        "key": "C",
-        "text": "无需编写桩模块程序"
-      },
-      {
-        "key": "D",
-        "text": "不需要回归测试"
-      }
-    ],
-    "answer": "C",
-    "explanation": "自下而上从底层模块开始测，已经有真实下层模块，所以不需要桩模块，但常需要驱动程序。"
-  },
-  {
-    "id": "Q158",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 7,
-    "type": "single",
-    "question": "回归测试应是集成测试的正常部分，因为当新模块添加到系统中，",
-    "options": [
-      {
-        "key": "A",
-        "text": "会调用新的控制逻辑"
-      },
-      {
-        "key": "B",
-        "text": "会产生新的数据流路径"
-      },
-      {
-        "key": "C",
-        "text": "驱动模块需要测试"
-      },
-      {
-        "key": "D",
-        "text": "以上所有内容"
-      },
-      {
-        "key": "E",
-        "text": "A 和B"
-      }
-    ],
-    "answer": "E",
-    "explanation": "新模块加入会引入新的控制逻辑和数据流路径，旧功能可能被破坏，所以要回归测试。"
-  },
-  {
-    "id": "Q159",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 8,
-    "type": "single",
-    "question": "冒烟测试最好的描述为",
-    "options": [
-      {
-        "key": "A",
-        "text": "防弹收缩包装软件"
-      },
-      {
-        "key": "B",
-        "text": "滚动式集成测试"
-      },
-      {
-        "key": "C",
-        "text": "隐藏实现错误的测试"
-      },
-      {
-        "key": "D",
-        "text": "小型程序的单元测试"
-      }
-    ],
-    "answer": "B",
-    "explanation": "冒烟测试是滚动式集成中的快速基本检查，先确认构建没有明显大故障。"
-  },
-  {
-    "id": "Q160",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 9,
-    "type": "single",
-    "question": "面向对象测试集成策略指测试",
-    "options": [
-      {
-        "key": "A",
-        "text": "以某种方式协作或沟通的类组"
-      },
-      {
-        "key": "B",
-        "text": "单个操作，因为它们被添加到了演化类的实现中"
-      },
-      {
-        "key": "C",
-        "text": "从用例场景中提取的操作程序"
-      },
-      {
-        "key": "D",
-        "text": "以上都不对"
-      }
-    ],
-    "answer": "A",
-    "explanation": "面向对象集成测试关注一组会协作或通信的类，而不只是单独函数。"
-  },
-  {
-    "id": "Q161",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 10,
-    "type": "single",
-    "question": "验收测试通常由进行",
-    "options": [
-      {
-        "key": "A",
-        "text": "开发人员"
-      },
-      {
-        "key": "B",
-        "text": "最终用户"
-      },
-      {
-        "key": "C",
-        "text": "测试团队"
-      },
-      {
-        "key": "D",
-        "text": "系统工程师"
-      }
-    ],
-    "answer": "B",
-    "explanation": "验收测试由最终用户或客户确认系统是否满足真实需求。"
-  },
-  {
-    "id": "Q162",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 11,
-    "type": "single",
-    "question": "下列哪一项属于调试方法？",
-    "options": [
-      {
-        "key": "A",
-        "text": "回溯法"
-      },
-      {
-        "key": "B",
-        "text": "蛮力法"
-      },
-      {
-        "key": "C",
-        "text": "原因排除法"
-      },
-      {
-        "key": "D",
-        "text": "代码重组"
-      },
-      {
-        "key": "E",
-        "text": "A、B 和C"
-      }
-    ],
-    "answer": "E",
-    "explanation": "常见调试方法包括回溯、蛮力和原因排除；代码重组不是典型调试方法分类。"
-  },
-  {
-    "id": "Q163",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 12,
-    "type": "single",
-    "question": "在软件质量保证工作中，软件验证和软件确认没有区别。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "验证问“产品是否按规格正确构建”，确认问“构建出来的是不是用户真正要的”，二者不同。"
-  },
-  {
-    "id": "Q164",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 13,
-    "type": "single",
-    "question": "面向对象软件的类测试相当于传统软件的单元测试。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "面向对象中类是基本测试单元，所以类测试相当于传统模块的单元测试。"
-  },
-  {
-    "id": "Q165",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 14,
-    "type": "single",
-    "question": "通过收集软件指标并利用现有的软件可靠性模型，可以制定有意义的准则，以确定软件 测试何时完成。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "软件可靠性模型能辅助判断测试充分性，但不能给出绝对有意义、完全可靠的完成准则。"
-  },
-  {
-    "id": "Q166",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 15,
-    "type": "single",
-    "question": "单元测试不需要驱动程序和桩程序，因为模块是独立测试的。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "按题库答案处理为正确：单元测试强调模块独立测试；但实际工程里常需要驱动程序和桩程序辅助隔离模块。"
-  },
-  {
-    "id": "Q167",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 16,
-    "type": "single",
-    "question": "在测试面向对象软件时，作为单元测试过程的一部分，必须单独测试每个类操作。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "类测试不只是单独测试每个操作，还要测试状态、属性变化和操作之间的交互。"
-  },
-  {
-    "id": "Q168",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 17,
-    "type": "single",
-    "question": "确认测试的重点是让用户发现软件不符合其需求的地方。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "确认测试就是看软件是否满足需求，用户发现“不符合需求”的地方是重点。"
-  },
-  {
-    "id": "Q169",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 18,
-    "type": "single",
-    "question": "软件确认是通过在工作环境中部署软件后用户进行一系列测试实现的。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "软件确认常通过用户在实际或近似实际环境中的测试来完成。"
-  },
-  {
-    "id": "Q170",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 19,
-    "type": "single",
-    "question": "如果在软件集成期间严格应用了回归测试，则不需要配置审查。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "回归测试不能替代配置审查；配置审查要确保版本、文档、变更项一致。"
-  },
-  {
-    "id": "Q171",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 20,
-    "type": "single",
-    "question": "恢复测试是一种系统测试，它迫使软件以各种方式失败，并验证软件是否能够不间断地 继续执行。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "恢复测试故意制造故障，检查系统能否恢复、不中断或尽快恢复服务。"
-  },
-  {
-    "id": "Q172",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 21,
-    "type": "single",
-    "question": "安全测试试图验证系统中内置的保护机制是否保护它免受不正当入侵。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "安全测试验证访问控制、防护机制是否能抵抗不正当入侵。"
-  },
-  {
-    "id": "Q173",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 22,
-    "type": "single",
-    "question": "压力测试检查在极端环境中使用系统期间对用户施加的压力。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "压力测试不是测用户心理压力，而是测系统在高负载、资源紧张等极端条件下表现。"
-  },
-  {
-    "id": "Q174",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 23,
-    "type": "single",
-    "question": "性能测试仅对实时或嵌入式系统重要。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "性能测试不仅实时/嵌入式系统需要，普通 Web、业务系统也需要响应时间和吞吐量。"
-  },
-  {
-    "id": "Q175",
-    "chapter": "第14章｜测试策略",
-    "originalChapter": "第14 章 - 测试策略测试",
-    "number": 24,
-    "type": "single",
-    "question": "调试不是测试，但是始终作为测试的结果发生。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "测试负责暴露错误，调试负责定位和修复错误；调试通常由测试发现问题后触发。"
-  },
-  {
-    "id": "Q176",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 1,
-    "type": "single",
-    "question": "通过严格的测试，可以在交付给客户之前从程序中消除所有缺陷。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "测试只能尽可能发现缺陷，不能证明所有缺陷都被消除。"
-  },
-  {
-    "id": "Q177",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 2,
-    "type": "single",
-    "question": "下列哪项是可测试软件的特征",
-    "options": [
-      {
-        "key": "A",
-        "text": "可观察性"
-      },
-      {
-        "key": "B",
-        "text": "简单性"
-      },
-      {
-        "key": "C",
-        "text": "稳定性"
-      },
-      {
-        "key": "D",
-        "text": "以上所有"
-      }
-    ],
-    "answer": "D",
-    "explanation": "可测试软件应容易观察结果、控制输入、结构简单稳定，所以这些都是特征。"
-  },
-  {
-    "id": "Q178",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 3,
-    "type": "single",
-    "question": "需要设计测试用例来演示每个程序功能的可操作性的测试技术被称为",
-    "options": [
-      {
-        "key": "A",
-        "text": "黑盒测试"
-      },
-      {
-        "key": "B",
-        "text": "玻璃盒测试"
-      },
-      {
-        "key": "C",
-        "text": "灰盒测试"
-      },
-      {
-        "key": "D",
-        "text": "白盒测试"
-      }
-    ],
-    "answer": "A",
-    "explanation": "黑盒测试从外部功能出发，看输入输出是否满足规格，不关心内部代码。"
-  },
-  {
-    "id": "Q179",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 4,
-    "type": "single",
-    "question": "需要设计测试用例来执行软件模块的内部逻辑的测试技术被称为",
-    "options": [
-      {
-        "key": "A",
-        "text": "行为测试"
-      },
-      {
-        "key": "B",
-        "text": "黑盒测试"
-      },
-      {
-        "key": "C",
-        "text": "灰盒测试"
-      },
-      {
-        "key": "D",
-        "text": "白盒测试"
-      }
-    ],
-    "answer": "D",
-    "explanation": "白盒测试根据程序内部逻辑设计用例，关注路径、条件、循环等。"
-  },
-  {
-    "id": "Q180",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 5,
-    "type": "single",
-    "question": "什么类型的错误会被黑盒测试遗漏，而可以被白盒测试检测出?",
-    "options": [
-      {
-        "key": "A",
-        "text": "行为错误"
-      },
-      {
-        "key": "B",
-        "text": "逻辑错误"
-      },
-      {
-        "key": "C",
-        "text": "性能错误"
-      },
-      {
-        "key": "D",
-        "text": "排版错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "黑盒只看外部行为，内部逻辑路径错误可能刚好没有暴露；白盒更容易发现逻辑错误。"
-  },
-  {
-    "id": "Q181",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 6,
-    "type": "single",
-    "question": "程序流程图与程序流图相同。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "程序流程图偏算法流程，程序流图是白盒测试中用于表示控制流节点和边的抽象图，二者不完全相同。"
-  },
-  {
-    "id": "Q182",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 7,
-    "type": "single",
-    "question": "环复杂度度量为设计人员提供了关于的数量信息",
-    "options": [
-      {
-        "key": "A",
-        "text": "程序中的循环"
-      },
-      {
-        "key": "B",
-        "text": "程序中的错误"
-      },
-      {
-        "key": "C",
-        "text": "程序中的独立路径"
-      },
-      {
-        "key": "D",
-        "text": "程序中的语句"
-      }
-    ],
-    "answer": "C",
-    "explanation": "环复杂度衡量程序中线性独立路径数量，用来估计基本路径测试数量。"
-  },
-  {
-    "id": "Q183",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 8,
-    "type": "single",
-    "question": "程序的环复杂度可以直接从算法的PDL 表示中计算出来，而无需绘制程序流图。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "PDL 中的控制结构足以推导环复杂度，不一定非要先画完整流图。"
-  },
-  {
-    "id": "Q184",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 9,
-    "type": "single",
-    "question": "条件测试是一种控制结构测试技术，用于设计测试用例的标准是",
-    "options": [
-      {
-        "key": "A",
-        "text": "依赖于基本路径测试"
-      },
-      {
-        "key": "B",
-        "text": "测试程序模块中的逻辑条件"
-      },
-      {
-        "key": "C",
-        "text": "根据变量的位置和使用选择测试路径"
-      },
-      {
-        "key": "D",
-        "text": "专注于测试循环结构的有效性"
-      }
-    ],
-    "answer": "B",
-    "explanation": "条件测试专门针对逻辑条件，如复合条件、布尔表达式等。"
-  },
-  {
-    "id": "Q185",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 10,
-    "type": "single",
-    "question": "数据流测试是一种控制结构测试技术，用于设计测试用例的标准是",
-    "options": [
-      {
-        "key": "A",
-        "text": "依赖于基本路径测试"
-      },
-      {
-        "key": "B",
-        "text": "测试程序模块中的逻辑条件"
-      },
-      {
-        "key": "C",
-        "text": "根据变量的位置和使用选择测试路径"
-      },
-      {
-        "key": "D",
-        "text": "专注于测试循环结构的有效性"
-      }
-    ],
-    "answer": "C",
-    "explanation": "数据流测试关注变量在哪里定义、在哪里使用，以及定义—使用路径。"
-  },
-  {
-    "id": "Q186",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 11,
-    "type": "single",
-    "question": "循环测试是一种控制结构测试技术，用于设计测试用例的标准",
-    "options": [
-      {
-        "key": "A",
-        "text": "依赖于基本路径测试"
-      },
-      {
-        "key": "B",
-        "text": "测试程序模块中的逻辑条件"
-      },
-      {
-        "key": "C",
-        "text": "根据变量的位置和使用选择测试路径"
-      },
-      {
-        "key": "D",
-        "text": "专注于测试循环结构的有效性"
-      }
-    ],
-    "answer": "D",
-    "explanation": "循环测试专门测试简单循环、嵌套循环等循环结构是否正确。"
-  },
-  {
-    "id": "Q187",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 12,
-    "type": "single",
-    "question": "黑盒测试试图找出以下哪些错误",
-    "options": [
-      {
-        "key": "A",
-        "text": "错误或缺失的功能"
-      },
-      {
-        "key": "B",
-        "text": "接口错误"
-      },
-      {
-        "key": "C",
-        "text": "性能错误"
-      },
-      {
-        "key": "D",
-        "text": "以上所有"
-      }
-    ],
-    "answer": "D",
-    "explanation": "黑盒测试能发现功能缺失、接口问题、性能问题等外部可观察错误。"
-  },
-  {
-    "id": "Q188",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 13,
-    "type": "single",
-    "question": "基于图的测试方法只能用于面向对象的系统",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "按本题题库口径，基于图的测试放在面向对象测试语境下，因此判断为正确；实际教材版本可能表述更宽。"
-  },
-  {
-    "id": "Q189",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 14,
-    "type": "single",
-    "question": "等价类测试将输入域划分为测试用例可以导出的数据类，以减少必须开发的测试用例的 总数。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "等价类把输入划成有效/无效类别，每类选代表值，减少测试用例数量。"
-  },
-  {
-    "id": "Q190",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 15,
-    "type": "single",
-    "question": "边界值分析只能用于白盒测试。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "边界值分析属于黑盒常用技术，不是只能用于白盒。"
-  },
-  {
-    "id": "Q191",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 16,
-    "type": "single",
-    "question": "比较测试通常是在产品发布之前测试两个竞争产品，作为客户市场分析的一部分。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "比较测试通过对比多个版本或竞争产品，常用于发布前评估质量和市场表现。"
-  },
-  {
-    "id": "Q192",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 17,
-    "type": "single",
-    "question": "正交阵列测试使测试设计者可以尽可能大地使测试用例覆盖相对较小的输入域。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "正交阵列用较少组合覆盖多因素取值，适合输入组合很多但不能全测的情况。"
-  },
-  {
-    "id": "Q193",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 18,
-    "type": "single",
-    "question": "面向对象软件中的测试用例设计“尽可能小”的原则，是由独立操作的算法细节驱动的。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "面向对象测试“尽可能小”不是只由单个操作算法决定，还要考虑类状态和对象交互。"
-  },
-  {
-    "id": "Q194",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 19,
-    "type": "single",
-    "question": "在对象内封装属性和操作使得在测试期间很容易获取对象的状态信息。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "封装会隐藏对象内部状态，测试时反而不容易直接获取状态信息。"
-  },
-  {
-    "id": "Q195",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 20,
-    "type": "single",
-    "question": "用例可以为面向对象软件的黑盒设计和基于状态的测试提供有用的输入。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "用例描述用户与系统交互，可直接转成黑盒场景测试，也可辅助状态测试。"
-  },
-  {
-    "id": "Q196",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 21,
-    "type": "single",
-    "question": "基于故障的测试最好用来进行",
-    "options": [
-      {
-        "key": "A",
-        "text": "传统的软件测试"
-      },
-      {
-        "key": "B",
-        "text": "关键的或可疑的操作和类的测试"
-      },
-      {
-        "key": "C",
-        "text": "用例验证"
-      },
-      {
-        "key": "D",
-        "text": "操作者算法的白盒测试"
-      }
-    ],
-    "answer": "B",
-    "explanation": "基于故障的测试优先瞄准最可能出错、最关键或最可疑的类和操作。"
-  },
-  {
-    "id": "Q197",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 22,
-    "type": "single",
-    "question": "OO 类操作测试变得更加困难，因为",
-    "options": [
-      {
-        "key": "A",
-        "text": "封装"
-      },
-      {
-        "key": "B",
-        "text": "继承C 多态性"
-      },
-      {
-        "key": "D",
-        "text": "B 和C"
-      }
-    ],
-    "answer": "D",
-    "explanation": "继承和多态会让同一操作在不同类中行为不同，测试覆盖和组合更复杂。"
-  },
-  {
-    "id": "Q198",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 23,
-    "type": "single",
-    "question": "基于场景的测试",
-    "options": [
-      {
-        "key": "A",
-        "text": "专注于参与者和软件交互"
-      },
-      {
-        "key": "B",
-        "text": "忽略了规格说明中的错误"
-      },
-      {
-        "key": "C",
-        "text": "忽略了子系统交互中的错误"
-      },
-      {
-        "key": "D",
-        "text": "A 和B"
-      }
-    ],
-    "answer": "D",
-    "explanation": "基于场景测试围绕参与者与软件交互；它可能忽略规格说明本身的错误，所以不能替代需求评审。"
-  },
-  {
-    "id": "Q199",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 24,
-    "type": "single",
-    "question": "深层结构测试的设计不用来",
-    "options": [
-      {
-        "key": "A",
-        "text": "检查对象行为"
-      },
-      {
-        "key": "B",
-        "text": "测试通信机制"
-      },
-      {
-        "key": "C",
-        "text": "测试对象依赖关系"
-      },
-      {
-        "key": "D",
-        "text": "测试用户可观察到的结构"
-      }
-    ],
-    "answer": "D",
-    "explanation": "深层结构测试关注对象内部行为、通信和依赖，不是测试用户可见的外部结构。"
-  },
-  {
-    "id": "Q200",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 25,
-    "type": "single",
-    "question": "随机顺序测试用于引导测试不同类的实例的生命轨迹。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "A",
-    "explanation": "随机顺序测试通过随机事件序列观察对象生命周期轨迹，适合状态相关测试。"
-  },
-  {
-    "id": "Q201",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 26,
-    "type": "single",
-    "question": "以下哪一种技术对类层面的分区测试无效",
-    "options": [
-      {
-        "key": "A",
-        "text": "基于属性的分区"
-      },
-      {
-        "key": "B",
-        "text": "基于类别的分区"
-      },
-      {
-        "key": "C",
-        "text": "等效类分区"
-      },
-      {
-        "key": "D",
-        "text": "基于状态的分区"
-      }
-    ],
-    "answer": "C",
-    "explanation": "类层面分区通常按属性、类别、状态分区；等价类分区是更一般的黑盒输入域方法。"
-  },
-  {
-    "id": "Q202",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 27,
-    "type": "single",
-    "question": "多类测试太复杂了，无法使用随机测试用例进行测试。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "多类测试虽然复杂，但仍可以使用随机测试用例辅助覆盖对象交互。"
-  },
-  {
-    "id": "Q203",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 28,
-    "type": "single",
-    "question": "源自行为类模型的测试应该基于",
-    "options": [
-      {
-        "key": "A",
-        "text": "数据流图"
-      },
-      {
-        "key": "B",
-        "text": "对象关系图"
-      },
-      {
-        "key": "C",
-        "text": "状态图"
-      },
-      {
-        "key": "D",
-        "text": "用例图"
-      }
-    ],
-    "answer": "C",
-    "explanation": "行为类模型描述状态变化，因此导出的测试应基于状态图。"
-  },
-  {
-    "id": "Q204",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 29,
-    "type": "single",
-    "question": "C/S 架构不能被正确测试，因为网络负载是高度可变的。",
-    "options": [
-      {
-        "key": "A",
-        "text": "正确"
-      },
-      {
-        "key": "B",
-        "text": "错误"
-      }
-    ],
-    "answer": "B",
-    "explanation": "C/S 架构虽然受网络负载影响，但可以通过模拟、压力测试和环境控制进行正确测试。"
-  },
-  {
-    "id": "Q205",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 30,
-    "type": "single",
-    "question": "实时软件给测试带来了新的潜在困难，这个困难与以下哪项相关？",
-    "options": [
-      {
-        "key": "A",
-        "text": "性能"
-      },
-      {
-        "key": "B",
-        "text": "可靠性"
-      },
-      {
-        "key": "C",
-        "text": "安全性"
-      },
-      {
-        "key": "D",
-        "text": "时间"
-      }
-    ],
-    "answer": "D",
-    "explanation": "实时软件的难点在时间约束，结果正确还不够，必须在规定时间内完成。"
-  },
-  {
-    "id": "Q206",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 31,
-    "type": "single",
-    "question": "黑盒测试是从_____观点出发的测试，白盒测试是从______观点出发的测试",
-    "options": [
-      {
-        "key": "A",
-        "text": "开发人员，管理人员"
-      },
-      {
-        "key": "B",
-        "text": "用户，管理人员"
-      },
-      {
-        "key": "C",
-        "text": "用户，开发人员"
-      },
-      {
-        "key": "D",
-        "text": "开发人员，用户"
-      }
-    ],
-    "answer": "C",
-    "explanation": "黑盒站在用户角度看功能是否满足；白盒站在开发者角度看代码内部逻辑是否覆盖。"
-  },
-  {
-    "id": "Q207",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 32,
-    "type": "single",
-    "question": "使用白盒测试时，确定测试用例应根据____和指定的覆盖标准",
-    "options": [
-      {
-        "key": "A",
-        "text": "程序的内部逻辑"
-      },
-      {
-        "key": "B",
-        "text": "程序的复杂结构"
-      },
-      {
-        "key": "C",
-        "text": "使用说明书"
-      },
-      {
-        "key": "D",
-        "text": "程序的功能"
-      }
-    ],
-    "answer": "A",
-    "explanation": "白盒测试用例依据程序内部逻辑和覆盖准则设计，例如语句、分支、路径覆盖。"
-  },
-  {
-    "id": "Q208",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 33,
-    "type": "single",
-    "question": "软件测试的目的是_____",
-    "options": [
-      {
-        "key": "A",
-        "text": "证明软件的正确性"
-      },
-      {
-        "key": "B",
-        "text": "找出软件中存在的所有错误"
-      },
-      {
-        "key": "C",
-        "text": "证明软件中存在错误"
-      },
-      {
-        "key": "D",
-        "text": "尽可能多地发现软件中的错误"
-      }
-    ],
-    "answer": "D",
-    "explanation": "测试的目标不是证明软件正确，而是在有限时间内尽可能多地发现错误。"
-  },
-  {
-    "id": "Q209",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 34,
-    "type": "single",
-    "question": "从下列叙述中，选出依次分别与需求分析、设计、编码相对应的软件测试：",
-    "options": [
-      {
-        "key": "A",
-        "text": "集成测试，确认测试，单元测试"
-      },
-      {
-        "key": "B",
-        "text": "单元测试，集成测试，确认测试"
-      },
-      {
-        "key": "C",
-        "text": "单元测试，确认测试，集成测试"
-      },
-      {
-        "key": "D",
-        "text": "确认测试，集成测试，单元测试"
-      }
-    ],
-    "answer": "D",
-    "explanation": "需求对应确认测试，设计对应集成测试，编码对应单元测试，这是 V 模型的基本映射。"
-  },
-  {
-    "id": "Q210",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 35,
-    "type": "single",
-    "question": "白盒测试方法可用于测试程序的内部结构，此方法将程序作为______的集合",
-    "options": [
-      {
-        "key": "A",
-        "text": "路径"
-      },
-      {
-        "key": "B",
-        "text": "循环"
-      },
-      {
-        "key": "C",
-        "text": "编码"
-      },
-      {
-        "key": "D",
-        "text": "测试"
-      }
-    ],
-    "answer": "A",
-    "explanation": "白盒测试把程序看作控制路径的集合，通过覆盖路径来发现内部逻辑问题。"
-  },
-  {
-    "id": "Q211",
-    "chapter": "第15章｜测试技术",
-    "originalChapter": "第十五章 测试技术",
-    "number": 36,
-    "type": "single",
-    "question": "一般来说，与测试数据无关的文档是____",
-    "options": [
-      {
-        "key": "A",
-        "text": "需求规格说明书"
-      },
-      {
-        "key": "B",
-        "text": "设计说明书"
-      },
-      {
-        "key": "C",
-        "text": "源程序"
-      },
-      {
-        "key": "D",
-        "text": "项目开发计划"
-      }
-    ],
-    "answer": "D",
-    "explanation": "测试数据主要依据需求、设计和源程序设计；项目开发计划偏管理安排，通常与具体测试数据无直接关系。"
-  }
-];
-
-window.CHAPTERS = [
-  {
-    "id": "第1章｜软件工程导论",
-    "title": "第1章｜软件工程导论",
-    "count": 12
-  },
-  {
-    "id": "第2.1章｜过程通用视图",
-    "title": "第2.1章｜过程通用视图",
-    "count": 8
-  },
-  {
-    "id": "第2.2章｜过程模型",
-    "title": "第2.2章｜过程模型",
-    "count": 13
-  },
-  {
-    "id": "第3章｜快速软件开发 / 敏捷",
-    "title": "第3章｜快速软件开发 / 敏捷",
-    "count": 9
-  },
-  {
-    "id": "第4章｜需求工程",
-    "title": "第4章｜需求工程",
-    "count": 23
-  },
-  {
-    "id": "第5-6章｜建立分析模型",
-    "title": "第5-6章｜建立分析模型",
-    "count": 24
-  },
-  {
-    "id": "第7章｜设计工程",
-    "title": "第7章｜设计工程",
-    "count": 22
-  },
-  {
-    "id": "第8章｜体系结构设计",
-    "title": "第8章｜体系结构设计",
-    "count": 12
-  },
-  {
-    "id": "第9章｜构件级设计",
-    "title": "第9章｜构件级设计",
-    "count": 18
-  },
-  {
-    "id": "第10章｜用户界面设计",
-    "title": "第10章｜用户界面设计",
-    "count": 10
-  },
-  {
-    "id": "第14章｜测试策略",
-    "title": "第14章｜测试策略",
-    "count": 24
-  },
-  {
-    "id": "第15章｜测试技术",
-    "title": "第15章｜测试技术",
-    "count": 36
+    "answer": "ABD",
+    "explanation": "特征选择中启发式搜索策略的典型代表；C项穷举搜索属于全局最优最优搜索。"
   }
 ];

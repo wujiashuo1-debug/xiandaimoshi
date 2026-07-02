@@ -1,4 +1,4 @@
-const CACHE_NAME = 'software-engineering-quiz-v3-cache-1';
+const CACHE_NAME = 'modern-pattern-recognition-quiz-v1-cache-1';
 const ASSETS = [
   './',
   './index.html',
@@ -9,7 +9,7 @@ const ASSETS = [
   './assets/icon.svg',
   './assets/icon-192.png',
   './assets/icon-512.png',
-  './assets/software_engineering_question_book.pdf'
+  './assets/modern_pattern_recognition_question_bank_150.md'
 ];
 
 self.addEventListener('install', event => {

@@ -3,7 +3,7 @@
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-  const KEY = 'se_quiz_v3_shared';
+  const KEY = 'mpr_quiz_v1_shared';
   const OLD_V2 = 'se_quiz_mobile_v2';
   const OLD_V1_PROGRESS = 'se_quiz_progress_v1';
   const OLD_V1_MISTAKES = 'se_quiz_mistakes_v1';
@@ -274,7 +274,7 @@
     const id = view === 'chapters' ? 'mChaptersView' : view === 'mine' ? 'mMineView' : `m${cap(view)}View`;
     $(`#${id}`).classList.add('active');
     $$('.m-nav').forEach(b => b.classList.toggle('active', b.dataset.mView === view));
-    $('#mTitle').textContent = MOBILE_TITLES[view] || '软件工程刷题';
+    $('#mTitle').textContent = MOBILE_TITLES[view] || '现代模式识别刷题';
     window.scrollTo({ top: 0, behavior: 'smooth' });
     renderMobileCurrent();
     updateMobileActionBars();
@@ -460,7 +460,7 @@
     const root = $('#mChapterCards');
     if (term) {
       const matches = QUESTION_BANK.filter(q => searchable(q).includes(term)).slice(0, 80);
-      if (!matches.length) return root.innerHTML = `<div class="mobile-empty">没搜到。换个关键词，例如“螺旋模型”“白盒测试”。</div>`;
+      if (!matches.length) return root.innerHTML = `<div class="mobile-empty">没搜到。换个关键词，例如“贝叶斯”“PCA”“K-Means”。</div>`;
       root.innerHTML = matches.map(q => `<article class="mobile-chapter-card mobile-search-result">
         <div class="mobile-q-top"><span class="tag">${q.id}</span>${typeTag(q)}<span class="pill">${esc(q.chapter)}</span></div>
         <h3>${esc(q.question)}</h3>
@@ -827,13 +827,13 @@
   }
 
   function exportData(output) {
-    const payload = JSON.stringify({ exportedAt: new Date().toISOString(), app: 'software-engineering-quiz-v3', data }, null, 2);
+    const payload = JSON.stringify({ exportedAt: new Date().toISOString(), app: 'modern-pattern-recognition-quiz-v1', data }, null, 2);
     if (output) output.value = payload;
     const blob = new Blob([payload], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `software-engineering-quiz-progress-${new Date().toISOString().slice(0,10)}.json`;
+    a.download = `modern-pattern-recognition-quiz-progress-${new Date().toISOString().slice(0,10)}.json`;
     document.body.appendChild(a);
     a.click();
     a.remove();

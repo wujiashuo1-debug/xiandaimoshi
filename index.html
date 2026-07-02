@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#111827" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="软件工程刷题" />
-  <title>软件工程刷题 V4｜桌面+手机带解析双端版</title>
+  <meta name="apple-mobile-web-app-title" content="现代模式识别刷题" />
+  <title>现代模式识别刷题 V4｜现代模式识别题库·双端带解析版</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="assets/icon-192.png" />
@@ -15,16 +15,16 @@
 </head>
 <body>
   <div class="device-hint">
-    <strong>软件工程刷题 V4</strong>
+    <strong>现代模式识别刷题 V4</strong>
     <span>电脑端保留原来的章节列表逻辑；手机端使用独立刷题界面。</span>
   </div>
 
   <div id="desktopShell" class="desktop-shell" aria-label="电脑端界面">
     <aside class="desktop-sidebar">
       <div class="desktop-brand">
-        <div class="desktop-logo">SE</div>
+        <div class="desktop-logo">PR</div>
         <div>
-          <h1>软件工程刷题站</h1>
+          <h1>现代模式识别刷题站</h1>
           <p>章节学习 · 刷题 · 错题复盘</p>
         </div>
       </div>
@@ -40,16 +40,16 @@
       <div id="dChapterList" class="desktop-chapter-list"></div>
 
       <div class="source-box">
-        <strong>原始资料</strong>
-        <span>题目来自你上传的中文习题册。</span>
-        <a href="assets/software_engineering_question_book.pdf" target="_blank" rel="noopener">打开原 PDF</a>
+        <strong>原始题库</strong>
+        <span>题目来自你上传的现代模式识别期末冲刺题库。</span>
+        <a href="assets/modern_pattern_recognition_question_bank_150.md" target="_blank" rel="noopener">打开原题库 MD</a>
       </div>
     </aside>
 
     <main class="desktop-main">
       <header class="desktop-topbar">
         <div>
-          <p class="eyebrow">Software Engineering Quiz</p>
+          <p class="eyebrow">Modern Pattern Recognition Quiz</p>
           <h2 id="dPageTitle">章节学习</h2>
         </div>
         <div class="desktop-search-wrap">
@@ -67,8 +67,8 @@
       <section id="dLearnView" class="desktop-view active">
         <div class="desktop-panel intro-panel">
           <div>
-            <h3>先学再刷，别硬背答案</h3>
-            <p>电脑端保留 V1 的逻辑：左边选章节，右边批量浏览题目，适合大屏快速复习。</p>
+            <h3>先理解再刷，别只背答案</h3>
+            <p>电脑端保留原来的逻辑：左边选模块，右边批量浏览题目，适合大屏快速复习。</p>
           </div>
           <div class="toolbar">
             <button id="dShowAllAnswers" class="secondary">展开全部答案</button>
@@ -82,7 +82,7 @@
         <div class="desktop-panel practice-settings">
           <div>
             <h3>刷题设置</h3>
-            <p>单选、判断、多选自动识别。多选题必须全选正确才算对。</p>
+            <p>单选、多选自动识别。多选题必须全选正确才算对。</p>
           </div>
           <div class="settings-grid">
             <label><span>题目范围</span><select id="dPracticeScope"></select></label>
@@ -154,7 +154,7 @@
   <div id="mobileShell" class="mobile-shell" aria-label="手机端界面">
     <header class="mobile-header">
       <div>
-        <p class="eyebrow">Software Engineering</p>
+        <p class="eyebrow">Pattern Recognition</p>
         <h1 id="mTitle">章节</h1>
       </div>
       <button id="mInstallBtn" class="mobile-ghost" hidden>添加到桌面</button>
@@ -181,7 +181,7 @@
         </div>
 
         <div class="mobile-search-card">
-          <input id="mSearch" type="search" placeholder="搜题目关键词，例如：螺旋模型 / 黑盒测试" autocomplete="off" />
+          <input id="mSearch" type="search" placeholder="搜题目关键词，例如：贝叶斯 / PCA / K-Means" autocomplete="off" />
         </div>
 
         <div id="mChapterCards" class="mobile-chapter-list"></div>
@@ -248,7 +248,7 @@
         <div id="mProgressList" class="mobile-progress-list"></div>
 
         <div class="mobile-tool-card">
-          <a href="assets/software_engineering_question_book.pdf" target="_blank" rel="noopener" class="mobile-secondary wide as-link">打开原 PDF</a>
+          <a href="assets/modern_pattern_recognition_question_bank_150.md" target="_blank" rel="noopener" class="mobile-secondary wide as-link">打开原题库 MD</a>
           <button id="mExportData" class="mobile-secondary wide">导出学习记录</button>
           <label class="mobile-file wide">导入学习记录<input id="mImportData" type="file" accept="application/json" /></label>
           <button id="mResetData" class="mobile-ghost danger-text wide">重置全部记录</button>
