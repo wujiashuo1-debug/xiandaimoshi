@@ -1,11 +1,1 @@
-现代模式识别刷题网站｜稳定版
-
-本版本核心只有 index.html。电脑或手机都可以直接打开。
-
-GitHub Pages 部署：
-1. 把 index.html、sw.js、assets 文件夹上传到仓库根目录。
-2. Settings → Pages → Deploy from branch → main / root。
-3. 等 Actions 变绿。
-4. 打开 Pages 链接。
-
-如果之前旧版本显示 0 总题数，部署稳定版后请清一次浏览器网站数据。
+打开 index.html 即可本地预览；部署 GitHub Pages 时上传整个文件夹内的所有文件到仓库根目录。

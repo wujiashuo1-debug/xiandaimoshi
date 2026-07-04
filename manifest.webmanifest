@@ -1,7 +1,7 @@
 {
-  "name": "现代模式识别刷题 V1",
-  "short_name": "模式识别刷题",
-  "description": "现代模式识别期末冲刺题库刷题站，桌面端保留章节刷题逻辑，手机端独立移动刷题界面，支持解析、错题本和进度记录。",
+  "name": "文本与Web挖掘刷题 V2",
+  "short_name": "Web挖掘刷题",
+  "description": "V4结构刷题网站，支持章节学习、刷题、错题本、进度记录和MathJax公式渲染。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
