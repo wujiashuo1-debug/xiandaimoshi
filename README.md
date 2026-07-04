@@ -1,28 +1,31 @@
-# 现代模式识别刷题网站｜稳定版·双端带解析
+# 文本与 Web 挖掘刷题网站｜多文件工程版
 
-这是稳定版：**核心题库、样式和逻辑已内联到 `index.html`**，不再依赖 `questions.js` / `app.js` / `style.css` 外部加载，因此更适合 GitHub Pages 部署。
+这是按你喜欢的“完整网站工程结构”重新整理的版本。
 
-## 为什么出稳定版
-之前显示 `0 总题数` 的根因不是页面没部署，而是题库数据或旧 Service Worker 缓存没有正常生效。稳定版做了三件事：
+## 文件结构
 
-1. 题库直接写进 `index.html`，不会再因为 `questions.js` 路径/缓存问题导致题库为 0。
-2. 不再注册 PWA Service Worker。
-3. 附带 `sw.js` 清理旧缓存，覆盖旧版后可自动注销旧 Service Worker。
+- `index.html`：网页入口
+- `style.css`：样式
+- `app.js`：刷题逻辑
+- `questions.js`：题库数据
+- `README.md`：说明
 
-## 部署方式
-把本文件夹里的内容上传到 GitHub 仓库根目录即可。最少只需要：
+## GitHub Pages 上传方式
 
-- `index.html`
-- `sw.js`
-- `assets/modern_pattern_recognition_question_bank_150.md`（可选，只用于打开原题库）
+新建仓库后，把以上文件直接上传到仓库根目录。仓库首页必须直接看到：
 
-仓库根目录必须直接看到 `index.html`。
+```text
+index.html
+style.css
+app.js
+questions.js
+README.md
+```
 
-## 部署后若仍显示旧页面
-浏览器可能还被旧 Service Worker 控制。处理方式：
+然后在 Settings → Pages 中选择：
 
-- 先强制刷新一次。
-- Safari：设置 → 隐私 → 管理网站数据 → 删除 `wujiashuo1-debug.github.io`。
-- Chrome：地址栏左侧网站设置 → 清除网站数据。
+- Source: Deploy from a branch
+- Branch: main
+- Folder: / root
 
-然后重新打开网站。
+本版本不包含 `sw.js`，不注册 Service Worker，避免旧缓存导致题库显示 0 的问题。
